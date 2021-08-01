@@ -1,0 +1,77 @@
+.tapbar {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;
+  background: #f7f7f7;
+  padding: 5px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tapbar__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  &:hover > .tapbar__label {
+    color: $accent;
+  }
+  // Я твой рот ебал
+  &:hover > .tapbar__icon {
+    fill: $accent !important;
+  }
+  &.active > .tapbar__label {
+    color: $accent;
+  }
+  &.active > .tapbar__icon {
+    fill: $accent;
+  }
+}
+// Прийдётся сделать по старинке через вставку svg в html
+
+.tapbar__icon {
+  width: 100%;
+  height: 18px;
+  margin-top: 6px;
+  margin-bottom: auto;
+  fill: $accent;
+}
+
+.tapbar__label {
+  margin: 0 auto 0 auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #58575c;
+}
+
+.tapbar__item-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 12.5%;
+  width: 15px;
+  height: 15px;
+  transform: translate(25%, 0%);
+  background: $accent;
+  border-radius: 50em;
+
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+
+  color: #ffffff;
+}
+
+@media (min-width: 420px) {
+  .tapbar {
+    display: none;
+  }
+}
