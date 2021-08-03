@@ -9,7 +9,16 @@
 
 <body>
 	@@include('components/page-blocks/_header.html')
-	<main class="main"></main>
+	<div class="wrapper">
+		<main class="main">
+			@@include('components/page-blocks/_slider.html')
+			@@include('components/page-blocks/_products-row.html')
+			@@include('components/page-blocks/_products-row.html')
+			@@include('components/page-blocks/_products-row.html')
+			
+		</main>
+	</div>
+	
 	@@include('components/page-blocks/_footer.html')
 	@@include('components/page-blocks/_scripts.html')
 </body>

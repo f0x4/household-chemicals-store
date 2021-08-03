@@ -7,6 +7,7 @@
   padding: 5px 10px 10px 10px;
   display: flex;
   justify-content: space-between;
+  z-index: 12;
 }
 
 .tapbar__item {
@@ -17,25 +18,27 @@
   &:hover > .tapbar__label {
     color: $accent;
   }
-  // Я твой рот ебал
-  &:hover > .tapbar__icon {
-    fill: $accent !important;
+
+  &:hover > .tapbar__icon > path {
+    fill: $accent;
   }
   &.active > .tapbar__label {
     color: $accent;
   }
-  &.active > .tapbar__icon {
+  &.active > .tapbar__icon > path {
     fill: $accent;
   }
 }
-// Прийдётся сделать по старинке через вставку svg в html
 
 .tapbar__icon {
   width: 100%;
   height: 18px;
   margin-top: 6px;
   margin-bottom: auto;
-  fill: $accent;
+
+  path {
+    fill: #a9a9a9;
+  }
 }
 
 .tapbar__label {
@@ -70,7 +73,7 @@
   color: #ffffff;
 }
 
-@media (min-width: 420px) {
+@media (min-width: 425px) {
   .tapbar {
     display: none;
   }

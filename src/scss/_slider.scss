@@ -1,0 +1,123 @@
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider {
+  position: relative;
+  margin: 20px 40px;
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -30px 0px 0px 0px;
+    z-index: 2;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .slick-arrow.slick-prev {
+    left: 14px;
+
+    background: url("/img/svg/sl-arrow_l.svg") 0 0 / 26% no-repeat;
+    background-color: #fff;
+    background-position: 40% 50%;
+  }
+  .slick-arrow.slick-next {
+    right: 14px;
+    background: url("/img/svg/sl-arrow_r.svg") 0 0 / 26% no-repeat;
+    background-color: #fff;
+    background-position: 60% 50%;
+  }
+  .slick-arrow.slick-disabled {
+    opacity: 0.2;
+  }
+  .slick-dots {
+    position: relative;
+    top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      list-style: none;
+      margin: 0px 5px;
+    }
+    button {
+      font-size: 0;
+      width: 9px;
+      height: 9px;
+      background-color: #b5e5d7;
+      border-radius: 50%;
+    }
+    li.slick-active {
+      button {
+        background-color: #08a979;
+      }
+    }
+  }
+}
+.slider__item {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.slider__item-img {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cccccc;
+  font-family: Roboto;
+  font-size: 39px;
+  background: #f2f2f2;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .slider__item {
+    height: 330px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    margin-right: 36px;
+    margin-left: 36px;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+  .slider__item {
+    height: 240px;
+  }
+}
+
+@media (max-width: 425px) {
+  .slider {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+  .slick-dots {
+    top: 9px !important;
+  }
+}
+@media (max-width: 375px) {
+  .slider__item {
+    height: 200px;
+  }
+}
+@media (max-width: 320px) {
+  .slider {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .slider__item {
+    height: 300px;
+  }
+}

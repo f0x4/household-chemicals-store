@@ -1,0 +1,38 @@
+
+<section class="navigation">
+    <div class="navigation__dropdown">
+        <button class="dropdown__btn" id="topDropdownBtn" onclick="dropLevel1()" >
+            <span>Каталог товаров</span> 
+            <img src="img/svg/arrow.svg" class="dropdown__icon" alt="arrow">
+        </button>
+        <aside id="dropdownContent" id="dropdown__content" class="dropdown__content">
+            <div class="flyout__wrapper">
+                @@include('../bem-blocks/_flyout.html')
+                @@include('../bem-blocks/_flyout.html')
+                @@include('../bem-blocks/_flyout.html')
+                @@include('../bem-blocks/_flyout.html')
+                @@include('../bem-blocks/_flyout.html')
+            </div>
+        </aside>
+    </div>
+    <div class="navigation__search">
+        <input type="text" placeholder="Поиск товаров">
+        <button class="search-button">
+            <img class="search-button__icon" src="img/svg/search.svg" alt="search">
+        </button>
+    </div>
+    <a href="#" class="navigation__link nav-link">
+        <svg class="nav-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#02C087"/>
+            <path d="M11.7289 4.57198C11.8373 4.34329 12.1627 4.34329 12.2711 4.57198L14.2245 8.69354C14.2683 8.78581 14.3559 8.8495 14.4572 8.86258L18.9807 9.44679C19.2317 9.4792 19.3322 9.78869 19.1482 9.96244L15.8321 13.0939C15.7578 13.164 15.7243 13.2671 15.7432 13.3674L16.5854 17.8501C16.6321 18.0988 16.3689 18.29 16.1468 18.1687L12.1438 15.9825C12.0542 15.9336 11.9458 15.9336 11.8562 15.9825L7.85324 18.1687C7.63113 18.29 7.36787 18.0988 7.4146 17.8501L8.25682 13.3674C8.27568 13.2671 8.24219 13.164 8.16795 13.0939L4.85176 9.96244C4.66776 9.78869 4.76832 9.4792 5.0193 9.44679L9.54279 8.86258C9.64406 8.8495 9.73173 8.78581 9.77546 8.69354L11.7289 4.57198Z" fill="white"/>
+        </svg>
+        <span>Бонусная программа</span>  
+    </a>
+    <a href="#" class="navigation__link nav-link">
+        <svg class="nav-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#02C087"/>
+            <path d="M17.0909 9.45457H15.1818V6.90912H6.27273C5.57273 6.90912 5 7.48185 5 8.18185V15.1818H6.27273C6.27273 16.2382 7.12545 17.0909 8.18182 17.0909C9.23818 17.0909 10.0909 16.2382 10.0909 15.1818H13.9091C13.9091 16.2382 14.7618 17.0909 15.8182 17.0909C16.8745 17.0909 17.7273 16.2382 17.7273 15.1818H19V12L17.0909 9.45457ZM8.18182 16.1364C7.65364 16.1364 7.22727 15.71 7.22727 15.1818C7.22727 14.6537 7.65364 14.2273 8.18182 14.2273C8.71 14.2273 9.13636 14.6537 9.13636 15.1818C9.13636 15.71 8.71 16.1364 8.18182 16.1364ZM16.7727 10.4091L18.02 12H15.1818V10.4091H16.7727ZM15.8182 16.1364C15.29 16.1364 14.8636 15.71 14.8636 15.1818C14.8636 14.6537 15.29 14.2273 15.8182 14.2273C16.3464 14.2273 16.7727 14.6537 16.7727 15.1818C16.7727 15.71 16.3464 16.1364 15.8182 16.1364Z" fill="white"/>
+        </svg>
+        <span>Доставка</span> 
+    </a>
+</section>
