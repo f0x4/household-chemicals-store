@@ -1,0 +1,16 @@
+.green-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  white-space: nowrap;
+
+  color: $accent;
+
+  > img {
+    display: inline-block;
+    width: 12px;
+    margin-left: 8px;
+  }
+}

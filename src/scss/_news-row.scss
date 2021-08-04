@@ -1,10 +1,10 @@
-.products-row {
+.news-row {
   display: flex;
   align-items: center;
   margin-top: 60px;
   padding: 0 0 0 40px;
 }
-.products-row__title {
+.news-row__title {
   max-width: 230px;
   margin-left: 10px;
   margin-right: 20px;
@@ -21,50 +21,40 @@
 
     color: #58575c;
   }
-
-  > .short-link {
-    display: none;
-  }
 }
 
-.products-row__row {
+.news-row__row {
   display: flex;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
 @media (max-width: 1280px) {
-  .products-row {
+  .news-row {
     padding-left: 40px;
   }
 }
 @media (max-width: 1024px) {
-  .products-row__title {
+  .news-row__title {
     padding-right: 12px;
     margin-right: 0;
   }
 }
 
 @media (max-width: 768px) {
-  .product {
-    margin-left: 15px;
-    nav-right: 15px;
-  }
-
-  .products-row {
+  .news-row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: 70px;
 
     padding: 0 0 0 0;
   }
 
-  .products-row__row {
+  .news-row__row {
     & > :nth-child(1) {
       margin-left: 36px;
     }
@@ -73,7 +63,7 @@
     }
   }
 
-  .products-row__title {
+  .news-row__title {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -93,12 +83,12 @@
 }
 
 @media (max-width: 425px) {
-  .products-row__title {
+  .news-row__title {
     margin-bottom: 46px;
     margin-right: 16px;
     margin-left: 16px;
   }
-  .products-row__row {
+  .news-row__row {
     & > :nth-child(1) {
       margin-left: 16px;
     }
@@ -108,10 +98,7 @@
   }
 }
 @media (max-width: 375px) {
-  .products-row {
-    margin-top: 70px;
-  }
-  .products-row__title {
+  .news-row__title {
     > h3 {
       font-size: 19px;
       line-height: 20px;
@@ -121,19 +108,10 @@
       font-size: 14px;
       line-height: 19px;
     }
-    > .full-link {
-      display: none;
-    }
-    > .short-link {
-      display: block;
-    }
   }
 }
 @media (max-width: 320px) {
-  .products-row {
-    margin-top: 50px;
-  }
-  .products-row__title {
+  .news-row__title {
     align-items: center;
     margin-bottom: 30px;
     margin-right: 10px;
@@ -148,7 +126,7 @@
       line-height: 13px;
     }
   }
-  .products-row__row {
+  .news-row__row {
     & > :nth-child(1) {
       margin-left: 10px;
     }

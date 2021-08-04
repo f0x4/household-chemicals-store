@@ -4,11 +4,17 @@
   width: 232px;
   min-width: 232px;
   height: 365px;
+  padding: 13px 15px 14px;
 
   background: #ffffff;
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
   border-radius: 2px;
+
+  // Отступы для теней
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   &:hover {
     background: #ffffff;
@@ -23,31 +29,11 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-top: 13px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .product__label {
   display: flex;
   height: 22px;
-
-  span {
-    position: relative;
-    top: 2px;
-    left: -30px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-
-    cursor: default;
-
-    letter-spacing: 0.02em;
-
-    color: #ffffff;
-  }
 }
 
 .product__like {
@@ -55,8 +41,11 @@
   width: 22px;
   background: url(/img/svg/product-like.svg) 0 0/100% no-repeat;
   background-position: 50% 50%;
+  background-size: contain;
   &:hover {
     background: url(/img/svg/product-like-active.svg) 0 0/100% no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
   }
 }
 
@@ -72,15 +61,12 @@
 }
 
 .product__middle {
-  padding-left: 15px;
-  padding-right: 15px;
   span {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
-
     letter-spacing: 0.02em;
 
     color: #58575c;
@@ -108,8 +94,8 @@
   justify-content: center;
   align-items: center;
   margin-right: 6px;
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
 
   background: #f2f2f2;
   box-sizing: border-box;
@@ -127,10 +113,13 @@
     span {
       color: #252525;
       opacity: 1;
+      margin-right: 1.5px;
     }
   }
   span {
+    letter-spacing: -0.04em;
     opacity: 0.4;
+    margin-top: 1px;
   }
 }
 
@@ -139,9 +128,6 @@
   display: flex;
 
   align-content: flex-end;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
   > div {
     display: flex;
     flex-direction: column;
@@ -179,7 +165,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 12px;
   margin-top: 2px;
   margin-left: 12px;
 
@@ -190,7 +176,10 @@
   border-radius: 12px;
 
   span {
-    margin: 0 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 1px;
+    line-height: 12px;
   }
 }
 
@@ -214,5 +203,146 @@
     width: 212px;
     min-width: 212px;
     height: 345px;
+    padding: 10px 13px 11px;
+  }
+
+  .product__image {
+    img {
+      max-width: 137px;
+      max-height: 137px;
+    }
+  }
+
+  .product__middle {
+    > span {
+      font-size: 11px;
+    }
+    h4 {
+      font-size: 14px;
+    }
+  }
+
+  .product__cost {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .product {
+    width: 159px;
+    min-width: 159px;
+    height: 297px;
+    padding: 7px 10px 7px;
+  }
+
+  .product__label {
+    height: 18px;
+  }
+
+  .product__like {
+    width: 19px;
+    height: 18px;
+  }
+
+  .product__image {
+    margin-top: 1px;
+    img {
+      max-width: 118px;
+      max-height: 118px;
+    }
+  }
+
+  .product__middle {
+    > span {
+      font-size: 11px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+  }
+
+  .product__cost {
+    font-size: 14px;
+  }
+
+  .product__discount {
+    line-height: 14px;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+
+  .product__button-basket {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 320px) {
+  .product {
+    width: 126px;
+    min-width: 126px;
+    height: 235px;
+    padding: 10px 8px 8px;
+  }
+
+  .product__label {
+    height: 14px;
+  }
+  .product__like {
+    width: 14px;
+    height: 13.5px;
+  }
+
+  .product__image {
+    img {
+      max-width: 90px;
+      max-height: 90px;
+    }
+  }
+
+  .product__middle {
+    > span {
+      font-size: 9px;
+    }
+    h4 {
+      font-size: 9px;
+      line-height: 11px;
+    }
+  }
+
+  .product__size {
+    margin-top: 4px;
+  }
+  .product__size-item {
+    width: 14px;
+    height: 14px;
+    span {
+      font-size: 9px;
+      line-height: 9px;
+      margin: 0;
+    }
+  }
+
+  .product__cost {
+    font-size: 12px;
+  }
+  .product__cost-strike {
+    font-size: 9px;
+    line-height: 9px;
+  }
+  .product__discount {
+    font-size: 9px;
+    line-height: 9px;
+    margin-left: 5px;
+    margin-top: -2px;
+
+    span {
+      line-height: 12px;
+      margin: 0 4px;
+    }
+  }
+  .product__button-basket {
+    width: 20px;
+    height: 20px;
   }
 }

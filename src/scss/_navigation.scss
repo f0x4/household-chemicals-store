@@ -109,6 +109,12 @@
   .navigation {
     padding: 0 36px;
   }
+  .dropdown__btn {
+    min-width: 244px;
+  }
+  .dropdown__content {
+    width: 244px;
+  }
 }
 
 @media (max-width: 425px) {
