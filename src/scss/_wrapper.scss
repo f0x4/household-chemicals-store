@@ -1,9 +1,14 @@
 .wrapper {
   width: 100%;
   max-width: 1280px;
-  padding-bottom: 60px; // Для ТапБара временно
+  padding-bottom: 60px;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding-bottom: 80px;
+  }
 }

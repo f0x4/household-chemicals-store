@@ -26,13 +26,13 @@
   .slick-arrow.slick-prev {
     left: 14px;
 
-    background: url("/img/svg/sl-arrow_l.svg") 0 0 / 26% no-repeat;
+    background: url("../img/svg/sl-arrow_l.svg") 0 0 / 26% no-repeat;
     background-color: #fff;
     background-position: 45% 50%;
   }
   .slick-arrow.slick-next {
     right: 14px;
-    background: url("/img/svg/sl-arrow_r.svg") 0 0 / 26% no-repeat;
+    background: url("../img/svg/sl-arrow_r.svg") 0 0 / 26% no-repeat;
     background-color: #fff;
     background-position: 60% 50%;
   }
@@ -126,6 +126,6 @@
     margin-left: 10px;
   }
   .slider__item {
-    height: 300px;
+    height: 280px;
   }
 }

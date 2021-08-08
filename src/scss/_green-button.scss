@@ -1,13 +1,12 @@
-.search-button {
+.green-button {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #08a979;
   cursor: pointer;
   border-radius: 2px;
-}
-
-.search-button__icon {
-  padding-top: 1px;
-  height: 18px;
+  > img {
+    padding-top: 1px;
+    height: 18px;
+  }
 }

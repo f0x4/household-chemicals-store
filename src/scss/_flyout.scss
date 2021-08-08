@@ -1,102 +1,62 @@
 .flyout {
-  position: inherit;
-  z-index: 5;
-}
-.flyout:first-child {
-  padding-top: 14px;
-}
-
-.flyout > ul {
-  top: -1px;
-  min-width: 260px;
-  display: none;
-}
-
-/*hover*/
-
-.flyout > .flyout__content:hover,
-.flyout a:hover + ul {
-  display: block;
-  img {
-    opacity: 0;
-  }
-}
-.flyout > .flyout__content:hover,
-.flyout a:hover {
-  > img {
-    opacity: 0;
-  }
-}
-
-.flyout__link {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding-right: 21px;
-  padding-bottom: 16px;
-  padding-left: 21px;
-
+  padding: 8px 20px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 20px;
   color: #58575c;
-  &:hover {
-    color: #08a979;
-    > img {
-      opacity: 0;
-    }
-  }
-
   > img {
-    height: 10px;
-    vertical-align: middle;
-    margin-left: auto;
+    width: 5px;
   }
 }
 
-.flyout__content {
+.flyout-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -1px;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 8px 0;
+
   background: #ffffff;
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
-  box-shadow: 0px 9px 15px -4px rgba(224, 228, 229, 0.62);
+  box-shadow: 0px 9px 15px rgba(224, 228, 229, 0.62);
   border-radius: 2px;
-}
 
-.flyout__content {
-  > :first-child .flyout__link {
-    padding-top: 14px;
-  }
-}
-
-/*responsive*/
-@media (min-width: 579px) {
-  .flyout__content {
-    position: absolute;
-    left: 100%;
-  }
-}
-
-@media (max-width: 579px) {
-  .flyout__content {
-    border: none;
-    box-sizing: border-box;
-    box-shadow: none;
-    > li {
-      padding-left: 20px;
-    }
-    > :first-child .flyout__link {
-      padding-top: 0;
+  z-index: 1;
+  > a {
+    display: block;
+    padding: 8px 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #58575c;
+    &:hover {
+      color: $accent;
     }
   }
+  > :nth-child(1) {
+    font-weight: bold;
+    color: $accent;
+  }
 }
 
-a.toggle-menu {
-  position: absolute;
-  right: 0px;
-  padding: 20px;
-  font-size: 27px;
-  background-color: #ccc;
-  color: #23364b;
-  top: 0px;
+.flyout:hover {
+  > span {
+    color: $accent;
+  }
+  > img {
+    display: none;
+  }
+  .flyout-content {
+    display: block;
+  }
 }

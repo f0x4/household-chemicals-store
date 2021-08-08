@@ -1,26 +1,33 @@
 
 <section class="navigation">
-    <div class="navigation__dropdown">
-        <button class="dropdown__btn" id="topDropdownBtn" onclick="dropLevel1()" >
+    <div class="navigation__catalog-dropdown">
+        <button class="catalog-dropdown__btn" onclick="dropDownCategories()" >
             <span>Каталог товаров</span> 
-            <img src="img/svg/arrow.svg" class="dropdown__icon" alt="arrow">
+            <img src="img/svg/arrow.svg" class="catalog-dropdown__icon" alt="arrow">
         </button>
-        <aside id="dropdownContent" id="dropdown__content" class="dropdown__content">
-            <div class="flyout__wrapper">
-                @@include('../bem-blocks/_flyout.html')
-                @@include('../bem-blocks/_flyout.html')
-                @@include('../bem-blocks/_flyout.html')
-                @@include('../bem-blocks/_flyout.html')
-                @@include('../bem-blocks/_flyout.html')
-            </div>
+        <aside id="catalog-dropdown__content" class="catalog-dropdown__content">
+            <a href="#">Все товары</a>
+            @@include('../bem-blocks/_flyout.html')
+            @@include('../bem-blocks/_flyout.html')
+            @@include('../bem-blocks/_flyout.html')
+            @@include('../bem-blocks/_flyout.html')
+            @@include('../bem-blocks/_flyout.html')
+            @@include('../bem-blocks/_flyout.html')
         </aside>
     </div>
-    <div class="navigation__search">
-        <input type="text" placeholder="Поиск товаров">
-        <button class="search-button">
-            <img class="search-button__icon" src="img/svg/search.svg" alt="search">
-        </button>
+    <div class="navigation__search-container">
+        <div  class="navigation__search">
+            <input class="navigation__search-input" type="text" placeholder="Поиск товаров">
+            
+            <button class="green-button">
+                <img src="img/svg/search.svg" alt="search">
+            </button>
+        </div>
+        <div class="navigation__search-content">
+            LOREM IPSUM DOLAR SIT AMET
+        </div>
     </div>
+    
     <a href="#" class="navigation__link nav-link">
         <svg class="nav-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="12" fill="#02C087"/>

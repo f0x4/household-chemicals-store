@@ -1,4 +1,10 @@
-@import 'base/*.scss';
-@import 'global/*.scss';
-@import '**/_*.scss';
-@import '../components/**/*.scss';
+@import "base/*.scss";
+@import "global/*.scss";
+@import "**/_*.scss";
+@import "../components/**/*.scss";
+
+@media (max-width: 425px) {
+  body {
+    padding-bottom: 60px;
+  }
+}
