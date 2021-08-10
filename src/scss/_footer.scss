@@ -247,6 +247,15 @@
     }
   }
 }
+@media (max-width: 767px) {
+  .footer__bottom-bar {
+    > :nth-child(2) {
+      border-left: none;
+      border-right: none;
+    }
+  }
+}
+
 @media (max-width: 425px) {
   .footer__container {
     padding: 0 16px;

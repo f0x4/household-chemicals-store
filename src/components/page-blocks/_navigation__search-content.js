@@ -1,15 +1,28 @@
 // < Search Content >
 
+function mobileScrollLockOn() {
+	if (window.innerWidth <= 425) {
+		document.body.style.overflow = "hidden";
+	}
+}
+function mobileScrollLockOff() {
+	if (window.innerWidth <= 425) {
+		document.body.removeAttribute('style');
+	}
+}
+
+
 function searchContentShow() {
 	let content = document.getElementById("navigation__search-content")
 
-	content.classList.add("show");
+	content.classList.add("_show");
+	mobileScrollLockOn();
 };
 
 function searchContentHide() {
 	setTimeout(function() {
 		let content = document.getElementById("navigation__search-content")
-		content.classList.remove('show');
+		content.classList.remove('_show');
   	}, 200);
 };
 
@@ -19,9 +32,15 @@ function searchContentClose(event) {
 
 	var bit = event.target.compareDocumentPosition(navSearchContent);
 	
-	if ((!event.target.matches("#navigation__search-input")) && ((!event.target.matches(".header__search")))  && (bit !== 10)) {
-		if ((navSearchContent.classList.contains('show'))) {
-			navSearchContent.classList.remove('show');
+	var isSearchInput = event.target.matches("#navigation__search-input");
+	var isHeaderSearch = event.target.matches(".header__search");
+	var isSearchIcon = event.target.matches(".search-icon");
+	var isGreenButton = event.target.matches(".green-button");
+	
+	if ((!isSearchInput) && (!isHeaderSearch) && (!isSearchIcon) && (!isGreenButton) && (bit !== 10)) {
+		if ((navSearchContent.classList.contains('_show'))) {
+			navSearchContent.classList.remove('_show');
+			document.body.removeAttribute('style');
 		}
 	}
 }
@@ -52,7 +71,9 @@ class SearchContent {
 	    if (this.windowInnerWidth > 425) {
 	    	this.searchContent.style.left = searchCords.left + "px";
 	    	this.searchContent.style.top = searchCords.top + searchCords.height + 4 + "px";
+			return;
 	    }
+		this.searchContent.removeAttribute('style');
     }
 	
     resizing() {
@@ -69,12 +90,9 @@ class SearchContent {
 	    	this.searchContent.style.width = searchWidth + 2 + "px";
             return;
 	    }
-    }
-
-	
+		this.searchContent.removeAttribute('style');
+    }	
 }
-
-
 
 document.addEventListener('DOMContentLoaded', function(){
     let searchContent = new SearchContent()

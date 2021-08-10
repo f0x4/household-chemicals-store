@@ -4,8 +4,8 @@ function dropDownCategories() {
 	let content = document.getElementById("catalog-dropdown__content")
 	let dropdownIcon = document.querySelector(".catalog-dropdown__icon")
 
-	content.classList.toggle("show");
-	dropdownIcon.classList.toggle("show-ico");
+	content.classList.toggle("_show");
+	dropdownIcon.classList.toggle("_show-ico");
 };
 
 // Close the dropdown menu if the user clicks outside of it
@@ -18,8 +18,8 @@ window.addEventListener('click', function(event) {
 
 	  	for (let i = 0; i < dropdowns.length; i++) {
 			var openDropdown = dropdowns[i];
-			if ((openDropdown.classList.contains('show'))) {
-			  openDropdown.classList.remove('show');
+			if ((openDropdown.classList.contains('_show'))) {
+			  openDropdown.classList.remove('_show');
 			}
 	  	}
 
@@ -27,8 +27,8 @@ window.addEventListener('click', function(event) {
 
 	  	for (let i = 0; i < icons.length; i++) {
 			var openDropdown = icons[i];
-			if ((openDropdown.classList.contains('show-ico'))) {
-				openDropdown.classList.remove('show-ico');
+			if ((openDropdown.classList.contains('_show-ico'))) {
+				openDropdown.classList.remove('_show-ico');
 			}
 	  	}
 	}
