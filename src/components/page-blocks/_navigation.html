@@ -1,6 +1,5 @@
-
-<section class="navigation">
-    <div class="navigation__catalog-dropdown">
+<section id="navigation" class="navigation">
+    <div id="navigation__catalog-dropdown" class="navigation__catalog-dropdown">
         <button class="catalog-dropdown__btn" onclick="dropDownCategories()" >
             <span>Каталог товаров</span> 
             <img src="img/svg/arrow.svg" class="catalog-dropdown__icon" alt="arrow">
@@ -16,15 +15,12 @@
         </aside>
     </div>
     <div class="navigation__search-container">
-        <div  class="navigation__search">
-            <input class="navigation__search-input" type="text" placeholder="Поиск товаров">
+        <div id="navigation__search" class="navigation__search">
+            <input id="navigation__search-input" oninput="searchContentShow()" type="text" placeholder="Поиск товаров">
             
             <button class="green-button">
                 <img src="img/svg/search.svg" alt="search">
             </button>
-        </div>
-        <div class="navigation__search-content">
-            LOREM IPSUM DOLAR SIT AMET
         </div>
     </div>
     

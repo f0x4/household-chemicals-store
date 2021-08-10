@@ -1,0 +1,63 @@
+.search-content-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  > img {
+    width: 48px;
+    height: 48px;
+  }
+  > a {
+    margin-left: 16px;
+    margin-right: auto;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #58575c;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+  }
+  > button {
+    min-width: 26px;
+    height: 26px;
+    background: url(/img/svg/button-basket.svg) 0 0/100% no-repeat;
+    background-position: 50% 50%;
+    transition: 3s cubic-bezier(1, 0, 0.8, 1);
+
+    &:active {
+      background: url(/img/svg/basket-active.svg) 0 0/100% no-repeat;
+      background-position: 50% 50%;
+      transition: 0.1ms ease;
+    }
+  }
+}
+
+.search-content-item__cost {
+  white-space: nowrap;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #58575c;
+}
+.search-content-item__cost-strike {
+  align-self: flex-end;
+  white-space: nowrap;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  text-decoration-line: line-through;
+  color: #58575c;
+  opacity: 0.5;
+}

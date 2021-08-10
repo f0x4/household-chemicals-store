@@ -9,26 +9,32 @@ function dropDownCategories() {
 };
 
 // Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-	if ((!event.target.matches('.catalog-dropdown__btn')) && (!event.target.matches('.catalog-dropdown__icon'))) {
-	  var dropdowns = document.getElementsByClassName("catalog-dropdown__content");
-	  var i;
-	  for (i = 0; i < dropdowns.length; i++) {
-		var openDropdown = dropdowns[i];
-		if ((openDropdown.classList.contains('show'))) {
-		  openDropdown.classList.remove('show');
-		}
-	  }
-	  
-	  var icons = document.getElementsByClassName("catalog-dropdown__icon");
-	  var i;
-	  for (i = 0; i < icons.length; i++) {
-		var openDropdown = icons[i];
-		if ((openDropdown.classList.contains('show-ico'))) {
-			openDropdown.classList.remove('show-ico');
-		}
-	  }
+window.addEventListener('click', function(event) {
+	var mainRoot = document.getElementById("navigation__catalog-dropdown");
+	var bit = event.target.compareDocumentPosition(mainRoot);
+
+	if ((!event.target.matches(".catalog-dropdown__btn")) && (bit !== 10)) {
+		var dropdowns = document.getElementsByClassName("catalog-dropdown__content");
+
+	  	for (let i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if ((openDropdown.classList.contains('show'))) {
+			  openDropdown.classList.remove('show');
+			}
+	  	}
+
+	  	var icons = document.getElementsByClassName("catalog-dropdown__icon");
+
+	  	for (let i = 0; i < icons.length; i++) {
+			var openDropdown = icons[i];
+			if ((openDropdown.classList.contains('show-ico'))) {
+				openDropdown.classList.remove('show-ico');
+			}
+	  	}
 	}
-}
+
+
+});
 
 // </ Dropdown Categories >
+
