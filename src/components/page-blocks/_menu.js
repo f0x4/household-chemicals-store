@@ -45,11 +45,34 @@ if (isMobile.any()) {
 // Меню бургер
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
+
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
-    document.body.classList.toggle("_lock");
-    iconMenu.classList.toggle("_active");
-    menuBody.classList.toggle("_active");
+    if (iconMenu.classList.contains('_active')) {
+      // <search>
+      let navSearchContent = document.getElementById("navigation__search-content");
+
+			navSearchContent.classList.remove('_show');
+			document.body.removeAttribute('style');
+
+      let headerSearch = document.getElementById("header__search") // heder search
+			headerSearch.classList.remove("_open");
+		
+			let headerLogo = document.getElementById("header__logo") // heder search
+			headerLogo.style.display = "block";
+      // </search>
+
+      // <menu>
+      document.body.classList.remove("_lock");
+      iconMenu.classList.remove("_active");
+      menuBody.classList.remove("_active");
+      // </menu>
+
+      return;
+		}
+    document.body.classList.add("_lock");
+    iconMenu.classList.add("_active");
+    menuBody.classList.add("_active");
   });
 }
 

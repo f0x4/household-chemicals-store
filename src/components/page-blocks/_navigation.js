@@ -13,7 +13,7 @@ window.addEventListener('click', function(event) {
 	var mainRoot = document.getElementById("navigation__catalog-dropdown");
 	var bit = event.target.compareDocumentPosition(mainRoot);
 
-	if ((!event.target.matches(".catalog-dropdown__btn")) && (bit !== 10)) {
+	if (bit !== 10) {
 		var dropdowns = document.getElementsByClassName("catalog-dropdown__content");
 
 	  	for (let i = 0; i < dropdowns.length; i++) {

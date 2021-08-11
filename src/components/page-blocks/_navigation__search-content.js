@@ -17,6 +17,15 @@ function searchContentShow() {
 
 	content.classList.add("_show");
 	mobileScrollLockOn();
+
+	let iconMenu = document.querySelector(".menu__icon"); // menu
+	iconMenu.classList.add("_active");
+
+	let headerSearch = document.getElementById("header__search") // heder search
+	headerSearch.classList.add("_open");
+
+	let headerLogo = document.getElementById("header__logo") // heder search
+	headerLogo.style.display = "none";
 };
 
 function searchContentHide() {
@@ -41,6 +50,15 @@ function searchContentClose(event) {
 		if ((navSearchContent.classList.contains('_show'))) {
 			navSearchContent.classList.remove('_show');
 			document.body.removeAttribute('style');
+
+			let iconMenu = document.querySelector(".menu__icon"); // menu
+			iconMenu.classList.remove("_active");
+
+			let headerSearch = document.getElementById("header__search") // heder search
+			headerSearch.classList.remove("_open");
+		
+			let headerLogo = document.getElementById("header__logo") // heder search
+			headerLogo.style.display = "block";
 		}
 	}
 }

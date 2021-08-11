@@ -30,7 +30,7 @@
 	<header class="header">
     <div class="branding">
     <div class="branding__container">
-        <a href="" class="header__logo">
+        <a href="" id="header__logo" class="header__logo">
             <img src="img/svg/logo.svg" alt="logo">
         </a>
         <div class="header__menu menu">
@@ -88,9 +88,13 @@
                 </a>
             </li>
         </ul>
-        <button class="header__search green-button" onclick="searchContentShow()">
-            <img class="search-icon" src="img/svg/search.svg" alt="search">
-        </button>
+        <div id="header__search" class="header__search">
+            <input type="text">
+            <button class="green-button" onclick="searchContentShow()">
+                <img class="search-icon" src="img/svg/search.svg" alt="search">
+            </button>
+        </div>
+        
     </div>
 </div>
     <section id="navigation" class="navigation">
