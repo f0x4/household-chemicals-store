@@ -25,12 +25,12 @@
   > button {
     min-width: 26px;
     height: 26px;
-    background: url(/img/svg/button-basket.svg) 0 0/100% no-repeat;
+    background: url(../img/svg/button-basket.svg) 0 0/100% no-repeat;
     background-position: 50% 50%;
     transition: 3s cubic-bezier(1, 0, 0.8, 1);
 
     &:active {
-      background: url(/img/svg/basket-active.svg) 0 0/100% no-repeat;
+      background: url(../img/svg/basket-active.svg) 0 0/100% no-repeat;
       background-position: 50% 50%;
       transition: 0.1ms ease;
     }
