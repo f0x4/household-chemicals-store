@@ -6,12 +6,6 @@ function mobileScrollLockOn() {
 	}
 }
 
-function mobileScrollLockOff() {
-	if (window.innerWidth > 425) {
-		document.body.removeAttribute('style');
-	}
-}
-
 function searchContentShow() {
 	let content = document.getElementById("navigation__search-content")
 
@@ -215,8 +209,6 @@ window.addEventListener('resize', function() {
   searchContent.positioning()
   searchContent.resizing()
 
-  mobileScrollLockOff()
-  mobileScrollLockOn()
   onResizeClose()
 });
 
