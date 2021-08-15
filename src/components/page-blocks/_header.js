@@ -1,7 +1,7 @@
 // < Search Content >
 
 function mobileScrollLockOn() {
-	if (window.innerWidth <= 425) {
+	if (window.innerWidth <= 460) {
 		document.body.style.overflow = "hidden";
 	}
 }
@@ -75,7 +75,7 @@ class SearchContent {
 
       var searchCords = getCoords(search);
 
-	    if (windowInnerWidth > 425) {
+	    if (windowInnerWidth > 460) {
 	    	searchContent.style.left = searchCords.left + "px";
 	    	searchContent.style.top = searchCords.top + searchCords.height + 4 + "px";
 			  return;
@@ -88,7 +88,7 @@ class SearchContent {
       let searchContent = document.getElementById("navigation__search-content");
       let search = document.getElementById("navigation__search");
 
-      if ((windowInnerWidth > 425) && (windowInnerWidth <= 1024)) {
+      if ((windowInnerWidth > 460) && (windowInnerWidth <= 1024)) {
 	    	let navWidth = document.getElementById("navigation").clientWidth;
 	    	let dropdownWidth = document.getElementById("navigation__catalog-dropdown").clientWidth;
             
@@ -186,7 +186,7 @@ if (iconMenu) {
       document.body.classList.remove("_lock");
       iconMenu.classList.remove("_active");
       menuBody.classList.remove("_active");
-      searchContent.closeIfClickOutside(body);
+      searchContent.closeIfClickOutside(document.body);
       
       return;
 		}
