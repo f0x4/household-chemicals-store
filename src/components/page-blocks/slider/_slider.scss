@@ -101,11 +101,11 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 460px) {
   .slider {
     padding-bottom: 40px;
-    margin-right: 16px;
-    margin-left: 16px;
+    margin-right: 16px; // 16px
+    margin-left: 16px; // 16px
   }
   .slick-dots {
     top: 9px !important;
@@ -122,8 +122,8 @@
 @media (max-width: 320px) {
   .slider {
     padding-bottom: 40px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 10px; // 10px
+    margin-left: 10px; // 10px
   }
   .slider__item {
     height: 280px;

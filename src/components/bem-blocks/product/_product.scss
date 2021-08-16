@@ -42,12 +42,12 @@
 .product__like {
   height: 22px;
   width: 22px;
-  background: url(/img/svg/product-like.svg) 0 0/100% no-repeat;
+  background: url(../img/svg/product-like.svg) 0 0/100% no-repeat;
   background-position: 50% 50%;
   transition: 2s cubic-bezier(1, 0, 0.9, 1);
 
   &:active {
-    background: url(/img/svg/product-like-active.svg) 0 0/100% no-repeat;
+    background: url(../img/svg/product-like-active.svg) 0 0/100% no-repeat;
     background-position: 50% 50%;
     transition: 0.1ms ease;
   }
@@ -193,12 +193,12 @@
   width: 32px;
   height: 32px;
   align-self: flex-end;
-  background: url(/img/svg/button-basket.svg) 0 0/100% no-repeat;
+  background: url(../img/svg/button-basket.svg) 0 0/100% no-repeat;
   background-position: 50% 50%;
   transition: 2s cubic-bezier(1, 0, 0.9, 1);
 
   &:active {
-    background: url(/img/svg/basket-active.svg) 0 0/100% no-repeat;
+    background: url(../img/svg/basket-active.svg) 0 0/100% no-repeat;
     background-position: 50% 50%;
 
     transition: 0.1ms ease;
@@ -234,7 +234,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 460px) {
   .product {
     width: 159px;
     min-width: 159px;
