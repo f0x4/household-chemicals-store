@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Authorization"
-AuthUserFile /var/www/html/chisto.pro-front/build/.htpasswd
-Require valid-user
