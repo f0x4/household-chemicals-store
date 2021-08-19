@@ -1,0 +1,18 @@
+.breadcrumbs-and-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 40px 40px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs-and-filter {
+    margin: 35px 36px;
+  }
+}
+
+@media (max-width: 460px) {
+  .breadcrumbs-and-filter {
+    margin: 20px 16px 40px;
+  }
+}

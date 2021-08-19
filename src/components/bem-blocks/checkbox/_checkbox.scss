@@ -1,0 +1,60 @@
+.checkbox {
+  > label {
+    display: flex;
+    align-items: center;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #252525;
+  }
+
+  > input[type="checkbox"] {
+    display: none;
+  }
+
+  > input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
+    margin-right: 14px;
+    // margin-top: -2px; // for 16px
+    height: 14px;
+    width: 14px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s;
+  }
+  > label:hover::before {
+    border: 1px solid $accent;
+  }
+  > input[type="checkbox"]:checked + label:hover::before {
+    border: none;
+  }
+
+  > input[type="checkbox"]:checked + label:before {
+    background: url("../img/svg/check.svg") 55% 50% / 72% no-repeat $accent;
+  }
+  span {
+    margin-left: auto;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 15px;
+    color: #58575c;
+    opacity: 0.5;
+  }
+
+  > input[type="checkbox"][disabled="disabled"] + label:before {
+    display: none;
+  }
+  > input[type="checkbox"][disabled="disabled"] + label {
+    padding-left: 28px;
+  }
+}

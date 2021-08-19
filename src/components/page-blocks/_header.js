@@ -186,7 +186,7 @@ if (iconMenu) {
       document.body.classList.remove("_lock");
       iconMenu.classList.remove("_active");
       menuBody.classList.remove("_active");
-      searchContent.closeIfClickOutside(document.body);
+      searchContent.closeIfClickOutside(content);
       
       return;
 		}

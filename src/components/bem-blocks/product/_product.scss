@@ -12,9 +12,11 @@
   border-radius: 2px;
 
   // Отступы для теней
+  /*
   margin-bottom: 20px;
   margin-left: 10px;
   margin-right: 10px;
+  */
 
   transition: 0.3s ease;
 
@@ -234,7 +236,7 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 490px) {
   .product {
     width: 159px;
     min-width: 159px;
@@ -284,7 +286,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 374px) {
   .product {
     width: 126px;
     min-width: 126px;

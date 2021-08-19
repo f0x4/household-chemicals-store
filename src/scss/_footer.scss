@@ -254,15 +254,6 @@
       border-right: none;
     }
   }
-  .footer__newsletter {
-    > div {
-      width: 100%;
-    }
-  }
-  .footer__email {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 
 @media (max-width: 460px) {
@@ -293,6 +284,11 @@
       width: 100%;
       max-width: 100%;
     }
+  }
+  .footer__email {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
   }
   .footer__email-checkbox {
     > label {

@@ -1,0 +1,31 @@
+.reset-all-filter-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 11px;
+
+  padding: 6px 13px;
+  width: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 35px;
+
+  background: #f2f2f2;
+  color: #58575c;
+
+  opacity: 0.5;
+  border-radius: 2px;
+
+  transition: all ease 0.3s;
+
+  &.active {
+    color: $accent;
+    background: #c1eadd;
+    opacity: 1;
+    > svg > path {
+      stroke: $accent !important;
+    }
+  }
+}
