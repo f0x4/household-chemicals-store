@@ -343,7 +343,7 @@
 			<section class="sidebar-and-content">
     <div class="catalog-filters__container">
 
-    <button id="reset-all-filter-btn" class="reset-all-filter-btn">
+    <button id="reset-all-filter-btn" class="reset-all-filter-btn" onclick="resetAll(event)">
     <span>Сбросить все</span>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 1L11 11" stroke="#58575C"/>
@@ -360,7 +360,7 @@
         <div id="search-filter-types" class="search-filter-types">
 
     <div class="filter-search-input">
-    <input class="filter-search-input__input" type="text" placeholder="Поиск по списку" onkeyup="filter(event)">
+    <input class="filter-search-input__input" type="text" placeholder="Поиск по списку" oninput="filter(event)">
     <button class="filter-search-input__btn"><img src="../img/svg/search-input.svg" alt="search-input"></button>
 </div>
 
@@ -417,7 +417,7 @@
     </div>
 
 
-    <button class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
+    <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
 
 </div>
 
@@ -439,7 +439,7 @@
     <div class="catalog-filters__panel">
         <div class="filter-brand">
     <div class="filter-search-input">
-    <input class="filter-search-input__input" type="text" placeholder="Поиск по списку" onkeyup="filter(event)">
+    <input class="filter-search-input__input" type="text" placeholder="Поиск по списку" oninput="filter(event)">
     <button class="filter-search-input__btn"><img src="../img/svg/search-input.svg" alt="search-input"></button>
 </div>
 
@@ -496,7 +496,7 @@
     </div>
 
 
-    <button class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
+    <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
 
 </div>
 
@@ -552,7 +552,7 @@
         
     </div>
 
-    <button class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
+    <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
 
 </div>
 
@@ -569,7 +569,8 @@
 
 </div>
 
-    <div class="catalog-list">
+    <div>
+        <div class="catalog-list">
     <div class="product">
     <div class="product__top">
         <div class="product__label">
@@ -823,14 +824,57 @@
     </div>
 </div>
 </div>
+        <nav class="pagination">
 
+    <a class="pagination_btn previous" href="#">Назад</a>
+
+    <ul class="pagination_items">
+
+        <li class="pagination_item active">
+            <a href="#">1</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">2</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">3</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">4</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">5</a>
+        </li>
+        
+        <li class="pagination_item dots">
+            <a>...</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">145</a>
+        </li>
+
+    </ul>
+    
+    <a class="pagination_btn next" href="#">Дальше</a>
+
+    <a class="pagination_btn all" href="#">Показать все товары</a>
+
+</nav>
+
+    </div>
+    
 </section>
 
 
 
 		</main>
 	</div>
-	 
+
 	<footer class="footer">
     <div class="footer__container">
     <div class="footer__branding">

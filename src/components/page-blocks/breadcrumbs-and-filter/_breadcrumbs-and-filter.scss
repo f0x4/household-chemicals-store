@@ -2,17 +2,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 40px 40px;
+  padding: 0 40px;
+  margin: 46px 0;
+}
+
+@media (max-width: 1024px) {
+  .breadcrumbs-and-filter {
+    padding: 0 40px;
+    margin: 36px 0;
+  }
 }
 
 @media (max-width: 768px) {
   .breadcrumbs-and-filter {
-    margin: 35px 36px;
+    margin: 46px 0;
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 490px) {
   .breadcrumbs-and-filter {
-    margin: 20px 16px 40px;
+    display: block;
+    padding: 0 16px;
+    margin: 60px 0 40px;
+  }
+  .breadcrumbs {
+    margin-bottom: 40px;
   }
 }

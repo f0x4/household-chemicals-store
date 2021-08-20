@@ -1,7 +1,8 @@
 .reset-filter-btn {
   display: block;
   margin-left: auto;
-  padding-bottom: 8px;
+  margin-top: -8px;
+  max-height: 0;
 
   font-family: Roboto;
   font-style: normal;
@@ -9,4 +10,10 @@
   font-size: 14px;
   line-height: 35px;
   color: #08a979;
+
+  transition: ease-in-out 0.3s;
+
+  &.active {
+    max-height: 43px;
+  }
 }

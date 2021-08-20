@@ -19,6 +19,9 @@
   opacity: 0.5;
   a {
     color: inherit;
+    &:hover {
+      color: $accent;
+    }
   }
   span {
     width: 3px;

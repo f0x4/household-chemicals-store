@@ -1,7 +1,12 @@
 // Поиск 
-function filter(event) {
+function filter(event, target) {
     var input, filter, div, container, label, i;
-    input = event.target;
+    if (target) {
+        input = target;
+    } else {
+        input = event.target;
+    }
+    
     filter = input.value.toUpperCase();
     div = input.parentNode;
     container = div.parentNode;
