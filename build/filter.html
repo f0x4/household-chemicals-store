@@ -210,7 +210,7 @@
         <span>Доставка</span> 
     </a>
 </section>
-    <menu class="tapbar">
+    <menu id="tapbar" class="tapbar">
     <a href="/" class="tapbar__item tapbar__item-home">
         <svg class="tapbar__icon" width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.356916 6.34889C0.132663 6.50907 -0.000427246 6.76769 -0.000427246 7.04328V17.8397C-0.000427246 18.311 0.381623 18.693 0.852906 18.693H5.19068C5.66197 18.693 6.04402 18.311 6.04402 17.8397V12.293C6.04402 11.8217 6.42607 11.4397 6.89735 11.4397H10.0262C10.4975 11.4397 10.8796 11.8217 10.8796 12.293V17.8397C10.8796 18.311 11.2616 18.693 11.7329 18.693H16.0707C16.542 18.693 16.924 18.311 16.924 17.8397V7.04328C16.924 6.76769 16.7909 6.50907 16.5667 6.34889L8.95779 0.913971C8.66108 0.702041 8.26251 0.702041 7.96581 0.913971L0.356916 6.34889Z" fill="#08A979"/>
@@ -335,37 +335,63 @@
     </ol>
 </nav>
 
-	<button class="button-filter">
+	<button class="button-filter" onclick="filterOpenBtn()">
     <img src="./img/svg/filter.svg" alt="filter">
     Фильтр
 </button>
 </div>
 			<section class="sidebar-and-content">
-    <div class="catalog-filters__container">
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        markAllAccordions()
+    });
+</script>
+<div id="catalog-filters__container" class="catalog-filters__container">
 
-    <button id="reset-all-filter-btn" class="reset-all-filter-btn" onclick="resetAll(event)">
+    <div id="catalog-filters__mobile-nav" class="catalog-filters__mobile-nav">
+        <button class="catalog-filters__back" onclick="backBtn()">
+            <img src="./img/svg/arrow-left.svg" alt="arrow-left">
+            <span>Назад</span>
+        </button>
+        <div class="catalog-filters__title">
+            <span>Фильтры</span>
+        </div>
+        <button id="catalog-filters__reset" class="catalog-filters__reset" onclick="resetAll(event)">
+            <span class="full">Сбросить всё</span>
+            <span class="short">Сбросить</span>
+        </button>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        markAllInputs()
+    });
+</script>
+<button id="reset-all-filter-btn" class="reset-all-filter-btn" onclick="resetAll(event)">
     <span>Сбросить все</span>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 1L11 11" stroke="#58575C"/>
         <path d="M11 1L1 11" stroke="#58575C"/>
     </svg>
+
 </button>
 
 
-    <button class="catalog-filters">
-        <span>Тип товара</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-        <div id="search-filter-types" class="search-filter-types">
+    <div id="catalog-filters__wrapper" class="catalog-filters__wrapper">
+        <button class="catalog-filters">
+            <span>Тип товара</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            <div id="filter" class="filter">
 
     <div class="filter-search-input">
     <input class="filter-search-input__input" type="text" placeholder="Поиск по списку" oninput="filter(event)">
-    <button class="filter-search-input__btn"><img src="../img/svg/search-input.svg" alt="search-input"></button>
+    <button class="filter-search-input__btn"><img src="./img/svg/search-input.svg" alt="search-input"></button>
 </div>
 
-    <div>
-
+    
+    <div class="filter__items">
         <div class="checkbox">
             <input type="checkbox" id="checkbox-gell" name="checkbox-gell" />
             <label for="checkbox-gell">
@@ -373,7 +399,7 @@
                 <span>8</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-spray" name="checkbox-spray" />
             <label for="checkbox-spray">
@@ -381,7 +407,7 @@
                 <span>3</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-gell-1" name="checkbox-gell" disabled="disabled" />
             <label for="checkbox-gell-1">
@@ -389,7 +415,7 @@
                 <span>0</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-spray-1" name="checkbox-spray" />
             <label for="checkbox-spray-1">
@@ -397,7 +423,7 @@
                 <span>3</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-gell-2" name="checkbox-gell" />
             <label for="checkbox-gell-2">
@@ -405,7 +431,7 @@
                 <span>8</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-spray-2" name="checkbox-spray"/>
             <label for="checkbox-spray-2">
@@ -413,46 +439,47 @@
                 <span>3</span>
             </label>
         </div>
-        
     </div>
+    
+        
+    
 
 
     <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
 
 </div>
 
-    </div>
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Цена</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            
 
-    <button class="catalog-filters">
-        <span>Цена</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-        
-
-    </div>
-
-    <button class="catalog-filters">
-        <span>Бренд</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-        <div class="filter-brand">
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Бренд</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            <div class="filter">
     <div class="filter-search-input">
     <input class="filter-search-input__input" type="text" placeholder="Поиск по списку" oninput="filter(event)">
-    <button class="filter-search-input__btn"><img src="../img/svg/search-input.svg" alt="search-input"></button>
+    <button class="filter-search-input__btn"><img src="./img/svg/search-input.svg" alt="search-input"></button>
 </div>
 
-    <div>
-
-        <div class="checkbox">
+    <div class="filter__items">
+            <div class="checkbox">
             <input type="checkbox" id="checkbox-brand" />
             <label for="checkbox-brand">
                 Бренд
                 <span>1</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-ne-brand" />
             <label for="checkbox-ne-brand">
@@ -460,7 +487,7 @@
                 <span>8</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-brand-1" />
             <label for="checkbox-brand-1">
@@ -468,7 +495,7 @@
                 <span>0</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-ne-brand-1" />
             <label for="checkbox-ne-brand-1">
@@ -476,7 +503,7 @@
                 <span>4</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-brand-2" />
             <label for="checkbox-brand-2">
@@ -484,7 +511,7 @@
                 <span>3</span>
             </label>
         </div>
-        
+
         <div class="checkbox">
             <input type="checkbox" id="checkbox-ne-brand-2" />
             <label for="checkbox-ne-brand-2">
@@ -492,80 +519,91 @@
                 <span>9</span>
             </label>
         </div>
-        
-    </div>
-
-
-    <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
-
-</div>
-
-    </div>
-
-    <button class="catalog-filters">
-        <span>Вес товара</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-
-    </div>
-
-    <button class="catalog-filters">
-        <span>Объём</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-        <div class="filter-size">
-
-    <div class="checkbox">
-        <input type="checkbox" id="checkbox-size" />
-        <label for="checkbox-size">
-            0 – 0.25 л 
-            <span>34</span>
-        </label>
-    </div>
-
-    <div class="checkbox">
-        <input type="checkbox" id="checkbox-size-1" />
-        <label for="checkbox-size-1">
-            0.25 – 0.5 л 
-            <span>14</span>
-        </label>
-    </div>
-
-    <div class="checkbox">
-        <input type="checkbox" id="checkbox-size-2" />
-        <label for="checkbox-size-2">
-            0.5 – 0.75 л 
-            <span>11</span>
-        </label>
-    </div>
-
-    <div class="checkbox">
-        
-        <input type="checkbox" id="checkbox-size-3" />
-
-        <label for="checkbox-size-3">
-            0.75 – 2 л 
-            <span>4</span>
-        </label>
-        
     </div>
 
     <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
 
 </div>
 
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Вес товара</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+        
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Объём</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            <div class="filter">
+    <div class="filter__items">
+        <div class="checkbox">
+            <input type="checkbox" id="checkbox-size" />
+            <label for="checkbox-size">
+                0 – 0.25 л 
+                <span>34</span>
+            </label>
+        </div>
+    
+        <div class="checkbox">
+            <input type="checkbox" id="checkbox-size-1" />
+            <label for="checkbox-size-1">
+                0.25 – 0.5 л 
+                <span>14</span>
+            </label>
+        </div>
+    
+        <div class="checkbox">
+            <input type="checkbox" id="checkbox-size-2" />
+            <label for="checkbox-size-2">
+                0.5 – 0.75 л 
+                <span>11</span>
+            </label>
+        </div>
+    
+        <div class="checkbox">
+            
+            <input type="checkbox" id="checkbox-size-3" />
+    
+            <label for="checkbox-size-3">
+                0.75 – 2 л 
+                <span>4</span>
+            </label>
+            
+        </div>
     </div>
 
+    <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
+
+</div>
+
+        </div>
+    
+        <div class="filter-popularity__container">
     <div class="filter-popularity">
-<input type="checkbox" id="checkbox-popularity" />
-
-    <label for="checkbox-popularity">
-        По популярности
-    </label>
-
+        <input type="checkbox" id="checkbox-popularity" />
+        
+        <label for="checkbox-popularity">
+            По популярности
+        </label>
+    
+    </div>
 </div>
+
+
+        
+
+    </div>
+    <div id="catalog-filters__show" class="catalog-filters__show">
+        <button id="catalog-filters__show-btn" class="catalog-filters__show-btn" onclick="showClick()">Показать товары</button>
+    </div>
+    
+
 
 </div>
 
@@ -893,25 +931,34 @@
     </div>
 
     <div class="footer__links">
-        <h5>Компания</h5>
-        <a href="#">Акции</a>
-        <a href="#">Новости</a>
-        <a href="#">Полезные статьи</a>
-        <a href="#">Контакты</a>
+        <div>
+            <h5>Компания</h5>
+            <a href="#">Акции</a>
+            <a href="#">Новости</a>
+            <a href="#">Полезные статьи</a>
+            <a href="#">Контакты</a>
+        </div>
+        
     </div>
 
     <div class="footer__links">
-        <h5>Покупателям</h5>
-        <a href="#">Доставка</a>
-        <a href="#">Оплата</a>
-        <a href="#">Бонусная программа</a>
-        <a href="#">Как заказать</a>
-        <a href="#">Обмен и возврат</a>
+        <div>
+            <h5>Покупателям</h5>
+            <a href="#">Доставка</a>
+            <a href="#">Оплата</a>
+            <a href="#">Бонусная программа</a>
+            <a href="#">Как заказать</a>
+            <a href="#">Обмен и возврат</a>
+        </div>
+        
     </div>
 
     <div class="footer__links">
-        <h5>Информация</h5>
-        <a href="#">Карта сайта</a>
+        <div>
+            <h5>Информация</h5>
+            <a href="#">Карта сайта</a>
+        </div>
+        
     </div>
 
     <div class="footer__newsletter">

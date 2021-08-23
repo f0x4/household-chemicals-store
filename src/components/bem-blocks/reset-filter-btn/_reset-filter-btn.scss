@@ -11,9 +11,35 @@
   line-height: 35px;
   color: #08a979;
 
-  transition: ease-in-out 0.3s;
+  transition: max-height ease-in-out 0.3s;
 
   &.active {
     max-height: 43px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .catalog-filters.active + .catalog-filters__panel {
+    .reset-filter-btn {
+      display: none;
+      position: fixed;
+      top: 32px;
+      right: 40px;
+      min-height: none !important;
+
+      padding-left: 40px;
+      transition: none !important;
+
+      font-size: 18px;
+      line-height: 35px;
+      font-weight: normal !important;
+      font-style: normal !important;
+
+      background-color: #fff;
+
+      &.active {
+        display: block;
+      }
+    }
   }
 }

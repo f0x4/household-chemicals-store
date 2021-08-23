@@ -6,7 +6,8 @@
   justify-content: space-between;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 40px 0;
+  padding: 0 40px;
+
   > :nth-child(n + 1) {
     margin-top: 40px;
   }
@@ -56,7 +57,7 @@
 
 // < Footer  Links >
 .footer__links {
-  > h5 {
+  h5 {
     margin-bottom: 30px;
 
     font-family: Roboto;
@@ -70,7 +71,7 @@
 
     color: #252525;
   }
-  > a {
+  a {
     display: block;
     margin-bottom: 20px;
 
@@ -196,7 +197,7 @@
   justify-content: center;
   width: 100%;
   border-top: 1px solid #e8e8e8;
-  padding: 30px 0;
+  padding: 30px 40px;
   margin-top: 42px;
   > a {
     text-align: center;
@@ -219,9 +220,13 @@
 
 @media (max-width: 1024px) {
   .footer__container {
+    padding: 0;
     flex-wrap: wrap;
     > :nth-child(5) {
       flex-basis: 100%;
+    }
+    > div {
+      padding: 0 40px;
     }
   }
   .footer__newsletter {
@@ -258,15 +263,18 @@
 
 @media (max-width: 460px) {
   .footer__container {
-    padding: 0 16px;
+    > div {
+      padding: 0 16px;
+    }
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 460px) {
   .footer__container {
     border-top: 1px solid #e8e8e8;
     > :nth-child(5) {
       order: -1;
-      margin-top: 30px;
+      padding: 30px 16px;
+      margin: 0;
     }
   }
   .footer__newsletter {
@@ -321,6 +329,7 @@
     justify-content: left;
     padding-top: 20px;
     margin-top: 50px;
+    padding: 20px 0;
     > a {
       text-align: left;
       flex-basis: 100%;

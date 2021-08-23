@@ -1,6 +1,9 @@
 // Приводит все элементы в начальное состояния
 function reset(event){
 
+    let mobileShowBtn = document.getElementById("catalog-filters__show-btn");
+    let resetAllBtn = document.getElementById("reset-all-filter-btn");
+
     var parentNode = event.target.parentNode
     
     var uncheck = parentNode.getElementsByTagName('input');
@@ -38,13 +41,13 @@ function reset(event){
             })
         }
     }
-        
-
-    
-    
 
     if ((notEmptyInputs.length == 0) && (changesCounter.length == 0)) {
         resetAllBtn.classList.remove("active");
+        let anovherRessetBtn = document.getElementById("catalog-filters__reset");
+        anovherRessetBtn.classList.remove("active");
+        mobileShowBtn.classList.remove("active");
+
     }
 
 }

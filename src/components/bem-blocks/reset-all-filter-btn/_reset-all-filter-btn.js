@@ -1,98 +1,114 @@
-var resetAllBtn = document.getElementById("reset-all-filter-btn");
-
-var allFiltersInputs =  resetAllBtn.parentNode.getElementsByTagName("input");
-
 var changesCounter = [];
 var allCheckbox = [];
 var allSearches = [];
 var notEmptyInputs = [];
 
+function markAllInputs() {
+    let mobileShowBtn = document.getElementById("catalog-filters__show-btn");
+    let resetAllBtn = document.getElementById("reset-all-filter-btn");
+    let mobileResetAllBtn = document.getElementById("catalog-filters__reset");
+    let allFiltersInputs =  resetAllBtn.parentNode.getElementsByTagName("input");
+    for (let i = 0; i < allFiltersInputs.length; i++) {
 
-for (let i = 0; i < allFiltersInputs.length; i++) {
+        if (allFiltersInputs[i].type == 'checkbox') {
 
-    if (allFiltersInputs[i].type == 'checkbox') {
+            allCheckbox.push(allFiltersInputs[i])
 
-        allCheckbox.push(allFiltersInputs[i])
+            allFiltersInputs[i].addEventListener('change', (event) => {
 
-        allFiltersInputs[i].addEventListener('change', (event) => {
-            
-            if (event.target.checked == true) {
-                changesCounter.push(event.target);
+                if (event.target.checked == true) {
+                    changesCounter.push(event.target);
 
-                if (changesCounter.length > 0) {
+                    if (changesCounter.length > 0) {
 
-                    let grandGrandParentNode = event.target.parentNode.parentNode.parentNode;
-                    let btn = grandGrandParentNode.getElementsByClassName("reset-filter-btn");
-                    for (let i = 0; i < btn.length; i++) {
-                        btn[i].classList.add("active");
+                        let grandGrandParentNode = event.target.parentNode.parentNode.parentNode;
+                        let btn = grandGrandParentNode.getElementsByClassName("reset-filter-btn");
+                        for (let i = 0; i < btn.length; i++) {
+                            btn[i].classList.add("active");
+                        }
+
+                        resetAllBtn.classList.add("active");
+                        mobileResetAllBtn.classList.add("active");
+                        mobileShowBtn.classList.add("active");
+
                     }
 
-                    resetAllBtn.classList.add("active");
+                } else {
+                    changesCounter = changesCounter.filter(item => {
+                        return item !== event.target;
+                    })
 
+                    if ((changesCounter.length == 0) && (notEmptyInputs.length == 0)) {
+
+                        let grandGrandParentNode = event.target.parentNode.parentNode.parentNode;
+                        let btn = grandGrandParentNode.getElementsByClassName("reset-filter-btn");
+                        console.log(grandGrandParentNode)
+                        for (let i = 0; i < btn.length; i++) {
+                            btn[i].classList.remove("active");
+                        }
+
+                        resetAllBtn.classList.remove("active");
+                        mobileResetAllBtn.classList.remove("active");
+                        mobileShowBtn.classList.remove("active");
+
+                    }
                 }
 
-            } else {
-                changesCounter = changesCounter.filter(item => {
-                    return item !== event.target;
-                })
+            });
+        }
+        if (allFiltersInputs[i].type == 'text') {
 
-                if ((changesCounter.length == 0) && (notEmptyInputs.length == 0)) {
+            allSearches.push(allFiltersInputs[i])
 
-                    let grandGrandParentNode = event.target.parentNode.parentNode.parentNode;
+            allFiltersInputs[i].addEventListener('input', (event) => {
+                console.log(changesCounter, allSearches, notEmptyInputs)
+                allSearches.forEach(search => {
+                    if (search.value !== '') {
+                        notEmptyInputs.push(search)
+                    } else {
+                        notEmptyInputs = notEmptyInputs.filter(item => {
+                            return item !== search;
+                        })
+                    }
+                });
+
+                if ((notEmptyInputs.length == 0) && (changesCounter.length == 0)) {
+
+                    let grandGrandParentNode = event.target.parentNode.parentNode;
                     let btn = grandGrandParentNode.getElementsByClassName("reset-filter-btn");
                     for (let i = 0; i < btn.length; i++) {
                         btn[i].classList.remove("active");
                     }
 
                     resetAllBtn.classList.remove("active");
-
+                    mobileResetAllBtn.classList.remove("active");
+                    mobileShowBtn.classList.remove("active");
                 }
-            }
-            
-        });
-    }
-    if (allFiltersInputs[i].type == 'text') {
+                if (notEmptyInputs.length > 0) {
 
-        allSearches.push(allFiltersInputs[i])
+                    let grandGrandParentNode = event.target.parentNode.parentNode;
+                    let btn = grandGrandParentNode.getElementsByClassName("reset-filter-btn");
+                    for (let i = 0; i < btn.length; i++) {
+                        btn[i].classList.add("active");
+                    }
 
-        allFiltersInputs[i].addEventListener('input', (event) => {
-            console.log(changesCounter, allSearches, notEmptyInputs)
-            allSearches.forEach(search => {
-                if (search.value !== '') {
-                    notEmptyInputs.push(search)
-                } else {
-                    notEmptyInputs = notEmptyInputs.filter(item => {
-                        return item !== search;
-                    })
+                    resetAllBtn.classList.add("active");
+                    mobileResetAllBtn.classList.add("active");
+                    mobileShowBtn.classList.add("active");
                 }
+
             });
-
-            if ((notEmptyInputs.length == 0) && (changesCounter.length == 0)) {
-
-                let grandGrandParentNode = event.target.parentNode.parentNode.parentNode;
-                let btn = grandGrandParentNode.getElementsByClassName("reset-filter-btn");
-                for (let i = 0; i < btn.length; i++) {
-                    btn[i].classList.remove("active");
-                }
-
-                resetAllBtn.classList.remove("active");
-            }
-            if (notEmptyInputs.length > 0) {
-
-                let grandGrandParentNode = event.target.parentNode.parentNode.parentNode;
-                let btn = grandGrandParentNode.getElementsByClassName("reset-filter-btn");
-                for (let i = 0; i < btn.length; i++) {
-                    btn[i].classList.add("active");
-                }
-
-                resetAllBtn.classList.add("active");
-            }
-            
-        });
+        }
     }
 }
 
+
 function resetAll(event) {
+    let mobileShowBtn = document.getElementById("catalog-filters__show-btn");
+    let resetAllBtn = document.getElementById("reset-all-filter-btn");
+    let mobileResetAllBtn = document.getElementById("catalog-filters__reset");
+    let allFiltersInputs =  resetAllBtn.parentNode.getElementsByTagName("input");
+
     for (let i = 0; i < allFiltersInputs.length; i++) {
 
         if (allFiltersInputs[i].type == 'checkbox') {
@@ -112,6 +128,8 @@ function resetAll(event) {
     notEmptyInputs = [];
 
     resetAllBtn.classList.remove("active");
+    mobileResetAllBtn.classList.remove("active");
+    mobileShowBtn.classList.remove("active");
 
     let btn = document.getElementsByClassName("reset-filter-btn");
     for (let i = 0; i < btn.length; i++) {

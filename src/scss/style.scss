@@ -6,6 +6,11 @@
 // Отступ для тапбара
 @media (max-width: 460px) {
   body {
+    padding-bottom: 90px;
+  }
+}
+@media (max-width: 375px) {
+  body {
     padding-bottom: 60px;
   }
 }

@@ -3,12 +3,9 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(231px, 1fr));
-}
-
-.product {
-  width: none !important;
-  max-width: none !important;
-  min-width: 100% !important;
+  .product {
+    margin: 0;
+  }
 }
 
 @media (max-width: 1024px) {

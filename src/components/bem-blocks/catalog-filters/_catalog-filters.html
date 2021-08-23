@@ -1,47 +1,76 @@
-<div class="catalog-filters__container">
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        markAllAccordions()
+    });
+</script>
+<div id="catalog-filters__container" class="catalog-filters__container">
+
+    <div id="catalog-filters__mobile-nav" class="catalog-filters__mobile-nav">
+        <button class="catalog-filters__back" onclick="backBtn()">
+            <img src="./img/svg/arrow-left.svg" alt="arrow-left">
+            <span>Назад</span>
+        </button>
+        <div class="catalog-filters__title">
+            <span>Фильтры</span>
+        </div>
+        <button id="catalog-filters__reset" class="catalog-filters__reset" onclick="resetAll(event)">
+            <span class="full">Сбросить всё</span>
+            <span class="short">Сбросить</span>
+        </button>
+    </div>
 
     @@include('../reset-all-filter-btn/_reset-all-filter-btn.html')
 
-    <button class="catalog-filters">
-        <span>Тип товара</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-        @@include('../filter-types/_filter-types.html')
+    <div id="catalog-filters__wrapper" class="catalog-filters__wrapper">
+        <button class="catalog-filters">
+            <span>Тип товара</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            @@include('../filter-types/_filter-types.html')
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Цена</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            @@include('../filter-price/_filter-price.html')
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Бренд</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            @@include('../filter-brand/_filter-brand.html')
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Вес товара</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+        
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Объём</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            @@include('../filter-size/_filter-size.html')
+        </div>
+    
+        @@include('../filter-popularity/_filter-popularity.html')
+
+        
+
     </div>
-
-    <button class="catalog-filters">
-        <span>Цена</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-        @@include('../filter-price/_filter-price.html')
+    <div id="catalog-filters__show" class="catalog-filters__show">
+        <button id="catalog-filters__show-btn" class="catalog-filters__show-btn" onclick="showClick()">Показать товары</button>
     </div>
+    
 
-    <button class="catalog-filters">
-        <span>Бренд</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-        @@include('../filter-brand/_filter-brand.html')
-    </div>
-
-    <button class="catalog-filters">
-        <span>Вес товара</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-
-    </div>
-
-    <button class="catalog-filters">
-        <span>Объём</span>
-        <img src="./img/svg/arrow-down.svg" alt="arrow-down">
-    </button>
-    <div class="catalog-filters__panel">
-        @@include('../filter-size/_filter-size.html')
-    </div>
-
-    @@include('../filter-popularity/_filter-popularity.html')
 
 </div>

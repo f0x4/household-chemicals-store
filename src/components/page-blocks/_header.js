@@ -10,9 +10,7 @@ function searchContentShow() {
 	let content = document.getElementById("navigation__search-content")
 
 	content.classList.add("_show");
-  if (window.innerWidth) {
-    
-  }
+
 	mobileScrollLockOn();
 
   /*
@@ -106,20 +104,20 @@ class SearchContent {
 
     // Close search content if the user clicks outside of it or outside of input
     closeIfClickOutside(event) {
-      let windowInnerWidth = window.innerWidth;
       let searchContent = document.getElementById("navigation__search-content");
-      let search = document.getElementById("navigation__search");
 
       var bit = event.target.compareDocumentPosition(searchContent);
       var exceptionsArray = ["#navigation__search-input", ".header__search", ".search-icon", ".green-button", ".header__search-input", ".branding__container"]
 
       var isTargetOneOfTheExceptions = exceptionsArray.some(element => {
         let isTargetAnExeption = event.target.matches(element);
-      
+
         return isTargetAnExeption;
+        
       });
     
     	if ((!isTargetOneOfTheExceptions) && (bit !== 10)) {
+
     		if (this.isOpen()) {
     			searchContent.classList.remove('_show');
     			document.body.removeAttribute('style');
@@ -208,8 +206,6 @@ document.addEventListener('DOMContentLoaded', function(){
 window.addEventListener('resize', function() {
   searchContent.positioning()
   searchContent.resizing()
-
-  onResizeClose()
 });
 
 window.addEventListener('click', function(event) {

@@ -11,9 +11,6 @@
   .sidebar-and-content {
     padding: 0 40px;
   }
-  .catalog-filters__container {
-    display: none;
-  }
 }
 @media (max-width: 768px) {
   .sidebar-and-content {
@@ -24,5 +21,10 @@
 @media (max-width: 460px) {
   .sidebar-and-content {
     padding: 0 16px;
+  }
+}
+@media (max-width: 320px) {
+  .sidebar-and-content {
+    padding: 0 10px;
   }
 }
