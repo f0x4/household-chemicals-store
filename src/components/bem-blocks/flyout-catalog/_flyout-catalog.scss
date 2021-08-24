@@ -1,4 +1,5 @@
 .flyout-catalog {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +12,9 @@
   color: #58575c;
   > img {
     width: 5px;
+  }
+  &:active {
+    color: $accent;
   }
 }
 
@@ -50,16 +54,16 @@
     line-height: 20px;
     color: $accent;
   }
+  &.active {
+    display: block;
+  }
 }
 
-.flyout-catalog:hover {
+.flyout-catalog.active {
   > span {
     color: $accent;
   }
   > img {
     display: none;
-  }
-  .flyout-catalog__content {
-    display: block;
   }
 }

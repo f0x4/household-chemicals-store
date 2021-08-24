@@ -1,3 +1,4 @@
+
 function markAllAccordions() {
   window.addEventListener("resize", closeFilters);
   var tapbar = document.getElementById("tapbar");

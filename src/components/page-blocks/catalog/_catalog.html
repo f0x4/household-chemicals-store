@@ -1,5 +1,5 @@
 <div class="catalog">
-    <button class="catalog__back-button">
+    <button class="catalog__back-button" onclick="catalogBack()">
         <img src="img/svg/arrow-right.svg" alt="arow-left">
         Назад
     </button>
@@ -18,6 +18,11 @@
         @@include('../../bem-blocks/flyout-catalog/_flyout-catalog.html')
         @@include('../../bem-blocks/flyout-catalog/_flyout-catalog.html')
         @@include('../../bem-blocks/flyout-catalog/_flyout-catalog.html')
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) { 
+                markAllFlyoutCatalogs()
+            });
+        </script>
     </div>
     <div class="catalog__items">
         @@include('../catalog__item/_catalog__item.html')
@@ -33,4 +38,5 @@
         @@include('../catalog__item/_catalog__item.html')
         @@include('../catalog__item/_catalog__item.html')
     </div>
+    
 </div>

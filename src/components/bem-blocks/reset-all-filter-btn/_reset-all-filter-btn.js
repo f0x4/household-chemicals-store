@@ -1,7 +1,7 @@
 var changesCounter = [];
+var notEmptyInputs = [];
 var allCheckbox = [];
 var allSearches = [];
-var notEmptyInputs = [];
 
 function markAllInputs() {
     let mobileShowBtn = document.getElementById("catalog-filters__show-btn");
