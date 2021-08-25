@@ -22,7 +22,7 @@ function reset(event){
         for(var i = 0; i < cleen.length; i++) {
         
             cleen[i].value = '';
-            filter(event)
+            filter(event, cleen[i])
         }
     }
 

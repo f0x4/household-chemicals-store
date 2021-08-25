@@ -50,11 +50,19 @@
         <h5>Лучшие предложния у вас в почте</h5>
         <div>
             <div class="footer__email">
-                <input type="text" placeholder="Электронная почта">
-                <button class="green-button">Подписаться</button>
+                <input id="footer__email-input" type="text" placeholder="Электронная почта" oninput="checkEmail()" onchange="checkEmailShowStatus()">
+                <button class="green-button" disabled="disabled" >Подписаться</button>
             </div>
-            <div class="footer__email-checkbox">
-                <input type="checkbox" id="check_email" name="check_email" />
+            <div id="footer__email-error" class="footer__email-error">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10.5" cy="10.5" r="10" stroke="#FC3C3C"/>
+                    <rect x="9.5" y="8.50647" width="2" height="6.98695" fill="#FC3C3C"/>
+                    <circle cx="10.5" cy="6.50647" r="1" fill="#FC3C3C"/>
+                </svg>
+                <span>Адрес электронной почты должен содержать символ «@».</span>
+            </div>
+            <div id="footer__email-checkbox" class="footer__email-checkbox">
+                <input type="checkbox" id="check_email" name="check_email" onchange="checkEmail()" />
                 <label for="check_email">Я согласен с <a href="#">условиями передачи</a>  данных</label>
             </div>
         </div>

@@ -9,4 +9,8 @@
     padding-top: 1px;
     height: 18px;
   }
+  &:disabled {
+    background: #f2f2f2;
+    color: rgba(88, 87, 92, 0.5);
+  }
 }
