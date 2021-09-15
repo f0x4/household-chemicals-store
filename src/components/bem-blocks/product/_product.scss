@@ -1,8 +1,6 @@
 .product {
   display: flex;
   flex-direction: column;
-  width: 232px;
-  min-width: 232px;
   height: 365px;
   padding: 13px 15px 14px;
 
@@ -207,8 +205,6 @@
 
 @media (max-width: 768px) {
   .product {
-    width: 212px;
-    min-width: 212px;
     height: 345px;
     padding: 10px 13px 11px;
   }
@@ -234,10 +230,8 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 490px) {
   .product {
-    width: 159px;
-    min-width: 159px;
     height: 297px;
     padding: 7px 10px 7px;
   }
@@ -284,10 +278,8 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 374px) {
   .product {
-    width: 126px;
-    min-width: 126px;
     height: 235px;
     padding: 10px 8px 8px;
   }

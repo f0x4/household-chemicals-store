@@ -1,0 +1,69 @@
+.flyout-catalog {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #58575c;
+  > img {
+    width: 5px;
+  }
+  &:active {
+    color: $accent;
+  }
+}
+
+.flyout-catalog__content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 130px;
+  width: 100%;
+  height: 100%;
+  background: #fcfcfc;
+  padding: 8px 0;
+
+  background: #fcfcfc;
+  border-radius: 2px;
+
+  z-index: 1;
+  > a {
+    display: block;
+    padding: 10px 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #58575c;
+    &:hover {
+      color: $accent;
+    }
+  }
+  > :nth-child(1) {
+    padding-top: 6px;
+    padding-bottom: 16px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: $accent;
+  }
+  &.active {
+    display: block;
+  }
+}
+
+.flyout-catalog.active {
+  > span {
+    color: $accent;
+  }
+  > img {
+    display: none;
+  }
+}

@@ -1,0 +1,138 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid #e8e8e8;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.pagination_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 90px;
+  height: 30px;
+
+  background: #c1eadd;
+  border-radius: 2px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #08a979;
+
+  &.next {
+    margin-left: 50px;
+  }
+  &.previous {
+    display: none;
+    margin-right: 50px;
+  }
+  &.all {
+    margin-left: auto;
+
+    width: auto;
+    height: auto;
+
+    background: none;
+    border-radius: 0;
+
+    white-space: nowrap;
+  }
+}
+
+.pagination_items {
+  display: flex;
+  > :nth-last-child(1) {
+    margin: 0;
+  }
+}
+.pagination_item {
+  margin-right: 25px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  a {
+    color: #58575c;
+    &:hover {
+      color: $accent;
+    }
+  }
+  &.active {
+    a {
+      color: $accent;
+    }
+  }
+  &.dots {
+    a {
+      cursor: default;
+      color: #58575c;
+      &:hover {
+        color: #58575c;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pagination {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .pagination_btn {
+    width: 99px;
+    height: 33px;
+    font-size: 16px;
+  }
+  .pagination_item {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .pagination {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  .pagination_btn {
+    width: 99px;
+    height: 33px;
+    font-size: 16px;
+  }
+  .pagination_item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 680px) {
+  .pagination {
+    flex-direction: column;
+    padding: 0;
+    border: none;
+    margin-top: 50px;
+    margin-bottom: 95px;
+  }
+  .pagination_btn {
+    order: -1;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+
+    &.all {
+      display: none;
+    }
+    &.next {
+      margin: 0;
+    }
+  }
+  .pagination_items {
+    margin-top: 40px;
+  }
+}

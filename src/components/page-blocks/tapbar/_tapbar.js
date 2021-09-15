@@ -5,7 +5,7 @@ $(document).ready( function() {
   
     // Search through each link, compare href to current page
     $(".tapbar__item").each( function(){
-        if( $(this).attr("href") == page || $(this).attr("href") == "" )
+        if( $(this).attr("href") === page ||  (( page === "") && ($(this).attr("href") == "/")) )
         $(this).addClass("active");
     })
   });

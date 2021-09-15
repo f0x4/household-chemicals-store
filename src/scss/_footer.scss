@@ -6,7 +6,8 @@
   justify-content: space-between;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 40px 0;
+  padding: 0 40px;
+
   > :nth-child(n + 1) {
     margin-top: 40px;
   }
@@ -56,7 +57,7 @@
 
 // < Footer  Links >
 .footer__links {
-  > h5 {
+  h5 {
     margin-bottom: 30px;
 
     font-family: Roboto;
@@ -70,7 +71,7 @@
 
     color: #252525;
   }
-  > a {
+  a {
     display: block;
     margin-bottom: 20px;
 
@@ -133,6 +134,7 @@
     letter-spacing: 0.01em;
 
     color: #ffffff;
+    transition: all 0.3s;
   }
   > input {
     padding-left: 12px;
@@ -152,6 +154,53 @@
     }
   }
 }
+
+.footer__email-error {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid $error;
+  border-radius: 2px;
+  padding: 20px 15px;
+  position: absolute;
+  margin-top: -10px;
+  background-color: #ffffff;
+  width: 363px;
+  > svg {
+    min-width: 21px;
+    height: 21px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 65px;
+    bottom: 75px;
+    border: 10px solid transparent;
+    border-bottom: 15px solid $error;
+  }
+  &::after {
+    border-bottom: 15px solid white;
+    bottom: 74px;
+  }
+  > span {
+    padding-left: 15px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #252525;
+  }
+  &.active {
+    display: flex;
+  }
+}
+
 .footer__email-checkbox {
   > label {
     font-family: Roboto;
@@ -196,7 +245,7 @@
   justify-content: center;
   width: 100%;
   border-top: 1px solid #e8e8e8;
-  padding: 30px 0;
+  padding: 30px 40px;
   margin-top: 42px;
   > a {
     text-align: center;
@@ -219,9 +268,13 @@
 
 @media (max-width: 1024px) {
   .footer__container {
+    padding: 0;
     flex-wrap: wrap;
     > :nth-child(5) {
       flex-basis: 100%;
+    }
+    > div {
+      padding: 0 40px;
     }
   }
   .footer__newsletter {
@@ -254,28 +307,35 @@
       border-right: none;
     }
   }
-  .footer__newsletter {
-    > div {
-      width: 100%;
-    }
-  }
-  .footer__email {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 
 @media (max-width: 460px) {
+  .footer__email-error {
+    width: auto;
+    margin-right: 16px;
+    margin-top: 0;
+  }
   .footer__container {
-    padding: 0 16px;
+    > div {
+      padding: 0 16px;
+    }
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 340px) {
+  .footer__email-error {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+@media (max-width: 460px) {
   .footer__container {
     border-top: 1px solid #e8e8e8;
     > :nth-child(5) {
       order: -1;
-      margin-top: 30px;
+      padding: 30px 16px;
+      margin: 0;
     }
   }
   .footer__newsletter {
@@ -293,6 +353,11 @@
       width: 100%;
       max-width: 100%;
     }
+  }
+  .footer__email {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
   }
   .footer__email-checkbox {
     > label {
@@ -325,6 +390,7 @@
     justify-content: left;
     padding-top: 20px;
     margin-top: 50px;
+    padding: 20px 0;
     > a {
       text-align: left;
       flex-basis: 100%;

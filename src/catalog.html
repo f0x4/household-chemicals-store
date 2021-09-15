@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Easy-webdev-startpack v3.0",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<div class="wrapper">
+		<main class="main">
+			@@include('components/page-blocks/slider/_slider.html')
+			@@include('components/page-blocks/breadcrumbs-section/_breadcrumbs-section.html')
+			@@include('components/page-blocks/catalog/_catalog.html')
+
+		</main>
+	</div>
+	 
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+<style>
+	@media (max-width: 460px) {
+	  .slider {
+	    display: none;
+	  }
+	  .breadcrumbs-section {
+	    display: none;
+	  }
+	  .footer {
+	    display: none;
+	  }
+	}
+</style>
+
+</html>

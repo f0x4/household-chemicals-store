@@ -1,0 +1,30 @@
+.sidebar-and-content {
+  display: flex;
+  padding: 0 40px 0 40px;
+
+  > div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar-and-content {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar-and-content {
+    padding: 0 36px;
+  }
+}
+
+@media (max-width: 460px) {
+  .sidebar-and-content {
+    padding: 0 16px;
+  }
+}
+@media (max-width: 320px) {
+  .sidebar-and-content {
+    padding: 0 10px;
+  }
+}

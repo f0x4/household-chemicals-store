@@ -1,0 +1,28 @@
+.button-filter {
+  display: none;
+  padding: 6px 17px;
+  background: rgba(193, 234, 221, 1);
+  border-radius: 2px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 35px;
+
+  color: #08a979;
+
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+
+  > img {
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .button-filter {
+    display: block;
+  }
+}
