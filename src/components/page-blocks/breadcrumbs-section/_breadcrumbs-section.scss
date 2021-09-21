@@ -7,3 +7,13 @@
     margin: 60px 36px 30px;
   }
 }
+@media (max-width: 460px) {
+  .breadcrumbs-section {
+    margin: 60px 16px 30px;
+  }
+}
+@media (max-width: 320px) {
+  .breadcrumbs-section {
+    margin: 60px 10px 30px;
+  }
+}
