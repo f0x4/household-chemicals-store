@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Избраное",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<div class="wrapper">
+		<main class="main">
+
+			@@include('components/page-blocks/breadcrumbs-section/_breadcrumbs-section.html')
+			@@include('components/page-blocks/title-and-button/_title-and-button.html',{"title":"Избраное"})
+			@@include('components/page-blocks/favorites-list/_favorites-list.html')
+
+		</main>
+	</div>
+	 
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+<style>
+    .breadcrumbs-section {
+        margin-top: 65px;
+    }
+	@media (max-width: 1024px) {
+        .breadcrumbs-section {
+            margin-top: 50px;
+        }
+	}
+	@media (max-width: 768px) {
+        .breadcrumbs-section {
+            margin-top: 40px;
+        }
+	}
+	@media (max-width: 460px) {
+        .breadcrumbs-section {
+            margin-top: 30px;
+        }
+	}
+	@media (max-width: 320px) {
+        .breadcrumbs-section {
+            margin-top: 25px;
+        }
+	}
+</style>
+
+</html>
