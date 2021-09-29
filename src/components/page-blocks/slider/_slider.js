@@ -1,7 +1,7 @@
 // < Slider >
 
 $(document).ready(function(){
-	$('.slider').slick({
+	$('.slider-header').slick({
 		arrows:true,
 		dots:true,
 		slidesToShow:1,

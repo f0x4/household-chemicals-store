@@ -1,0 +1,132 @@
+.product {
+  margin-left: 15px;
+  nav-right: 15px;
+}
+
+.interesting-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+
+  padding: 0 0 0 0;
+}
+
+.interesting-row__row {
+  & > :nth-child(1) {
+    margin-left: 36px;
+  }
+  & > :nth-last-child(1) {
+    margin-right: 36px;
+  }
+  .product {
+    width: 212px;
+    min-width: 211px;
+  }
+}
+
+.interesting-row__row {
+  display: flex;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .product {
+    width: 232px;
+    min-width: 231px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    margin-left: 15px;
+    nav-right: 15px;
+  }
+
+  .interesting-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+
+    padding: 0 0 0 0;
+  }
+
+  .interesting-row__row {
+    & > :nth-child(1) {
+      margin-left: 36px;
+    }
+    & > :nth-last-child(1) {
+      margin-right: 36px;
+    }
+    .product {
+      width: 212px;
+      min-width: 211px;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .interesting-row__row {
+    & > :nth-child(1) {
+      margin-left: 16px;
+    }
+    & > :nth-last-child(1) {
+      margin-right: 16px;
+    }
+    .product {
+      width: 159px;
+      min-width: 158px;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .interesting-row {
+    margin-top: 70px;
+  }
+  .interesting-row__title {
+    > h3 {
+      font-size: 19px;
+      line-height: 20px;
+      width: 130px;
+    }
+    > span {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .interesting-row {
+    margin-top: 50px;
+  }
+  .interesting-row__title {
+    align-items: center;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    > h3 {
+      font-size: 18px;
+      line-height: 19px;
+      width: 125px;
+    }
+    > span {
+      font-size: 13px;
+      line-height: 13px;
+    }
+  }
+  .interesting-row__row {
+    & > :nth-child(1) {
+      margin-left: 10px;
+    }
+    & > :nth-last-child(1) {
+      margin-right: 10px;
+    }
+    .product {
+      width: 126px;
+      min-width: 125px;
+    }
+  }
+}

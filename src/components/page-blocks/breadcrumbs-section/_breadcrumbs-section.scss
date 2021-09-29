@@ -1,19 +1,24 @@
 .breadcrumbs-section {
-  margin: 46px 40px 30px;
+  margin: 65px 40px 40px;
 }
 
+@media (max-width: 1024px) {
+  .breadcrumbs-section {
+    margin: 50px 36px 40px;
+  }
+}
 @media (max-width: 768px) {
   .breadcrumbs-section {
-    margin: 60px 36px 30px;
+    margin: 40px 36px 35px;
   }
 }
 @media (max-width: 460px) {
   .breadcrumbs-section {
-    margin: 60px 16px 30px;
+    margin: 25px 16px 38px;
   }
 }
 @media (max-width: 320px) {
   .breadcrumbs-section {
-    margin: 60px 10px 30px;
+    margin: 20px 10px 20px;
   }
 }
