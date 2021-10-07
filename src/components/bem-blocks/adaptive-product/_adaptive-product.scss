@@ -1,4 +1,4 @@
-.basket-product {
+.adaptive-product {
   display: flex;
   flex-direction: column;
   height: 365px;
@@ -26,18 +26,18 @@
   }
 }
 
-.basket-product__top {
+.adaptive-product__top {
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 
-.basket-product__label {
+.adaptive-product__label {
   display: flex;
   height: 22px;
 }
 
-.basket-product__like {
+.adaptive-product__like {
   height: 22px;
   width: 22px;
   background: url(../img/svg/product-like.svg) 0 0/100% no-repeat;
@@ -51,7 +51,7 @@
   }
 }
 
-.basket-product__image {
+.adaptive-product__image {
   display: flex;
   justify-content: center;
 
@@ -62,7 +62,7 @@
   }
 }
 
-.basket-product__middle {
+.adaptive-product__middle {
   span {
     font-family: Roboto;
     font-style: normal;
@@ -86,12 +86,12 @@
   }
 }
 
-.basket-product__size {
+.adaptive-product__size {
   display: flex;
   margin-top: 9px;
 }
 
-.basket-product__size-item {
+.adaptive-product__size-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +126,7 @@
   }
 }
 
-.basket-product__bottom {
+.adaptive-product__bottom {
   margin-top: auto;
   display: flex;
 
@@ -138,7 +138,7 @@
   }
 }
 
-.basket-product__cost-strike {
+.adaptive-product__cost-strike {
   align-self: flex-start;
   font-family: Roboto;
   font-style: normal;
@@ -153,7 +153,7 @@
 
   opacity: 0.5;
 }
-.basket-product__cost {
+.adaptive-product__cost {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -162,7 +162,7 @@
 
   color: #58575c;
 }
-.basket-product__discount {
+.adaptive-product__discount {
   align-self: flex-start;
   font-family: Roboto;
   font-style: normal;
@@ -186,7 +186,7 @@
   }
 }
 
-.basket-product__button-basket {
+.adaptive-product__button-basket {
   margin-left: auto;
   width: 32px;
   height: 32px;
@@ -204,19 +204,19 @@
 }
 
 @media (max-width: 768px) {
-  .basket-product {
+  .adaptive-product {
     height: 345px;
     padding: 10px 13px 11px;
   }
 
-  .basket-product__image {
+  .adaptive-product__image {
     img {
       max-width: 137px;
       max-height: 137px;
     }
   }
 
-  .basket-product__middle {
+  .adaptive-product__middle {
     > span {
       font-size: 11px;
     }
@@ -225,27 +225,27 @@
     }
   }
 
-  .basket-product__cost {
+  .adaptive-product__cost {
     font-size: 16px;
   }
 }
 
 @media (max-width: 490px) {
-  .basket-product {
+  .adaptive-product {
     height: 297px;
     padding: 7px 10px 7px;
   }
 
-  .basket-product__label {
+  .adaptive-product__label {
     height: 18px;
   }
 
-  .basket-product__like {
+  .adaptive-product__like {
     width: 19px;
     height: 18px;
   }
 
-  .basket-product__image {
+  .adaptive-product__image {
     margin-top: 1px;
     img {
       max-width: 118px;
@@ -253,7 +253,7 @@
     }
   }
 
-  .basket-product__middle {
+  .adaptive-product__middle {
     > span {
       font-size: 11px;
     }
@@ -262,44 +262,44 @@
     }
   }
 
-  .basket-product__cost {
+  .adaptive-product__cost {
     font-size: 14px;
   }
 
-  .basket-product__discount {
+  .adaptive-product__discount {
     line-height: 14px;
     margin-left: 5px;
     margin-top: 3px;
   }
 
-  .basket-product__button-basket {
+  .adaptive-product__button-basket {
     width: 26px;
     height: 26px;
   }
 }
 
 @media (max-width: 374px) {
-  .basket-product {
+  .adaptive-product {
     height: 235px;
     padding: 10px 8px 8px;
   }
 
-  .basket-product__label {
+  .adaptive-product__label {
     height: 14px;
   }
-  .basket-product__like {
+  .adaptive-product__like {
     width: 14px;
     height: 13.5px;
   }
 
-  .basket-product__image {
+  .adaptive-product__image {
     img {
       max-width: 90px;
       max-height: 90px;
     }
   }
 
-  .basket-product__middle {
+  .adaptive-product__middle {
     > span {
       font-size: 9px;
     }
@@ -309,10 +309,10 @@
     }
   }
 
-  .basket-product__size {
+  .adaptive-product__size {
     margin-top: 4px;
   }
-  .basket-product__size-item {
+  .adaptive-product__size-item {
     width: 14px;
     height: 14px;
     span {
@@ -322,14 +322,14 @@
     }
   }
 
-  .basket-product__cost {
+  .adaptive-product__cost {
     font-size: 12px;
   }
-  .basket-product__cost-strike {
+  .adaptive-product__cost-strike {
     font-size: 9px;
     line-height: 9px;
   }
-  .basket-product__discount {
+  .adaptive-product__discount {
     font-size: 9px;
     line-height: 9px;
     margin-left: 5px;
@@ -340,7 +340,7 @@
       margin: 0 4px;
     }
   }
-  .basket-product__button-basket {
+  .adaptive-product__button-basket {
     width: 20px;
     height: 20px;
   }

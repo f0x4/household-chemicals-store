@@ -1,0 +1,34 @@
+<div class="product-add-to-cart">
+    <div class="product-add-to-cart__price">
+        @@include('../../bem-blocks/product-price/_product-price.html')
+    </div>
+    
+    <div class="product-add-to-cart__container">
+        <div class="product-add-to-cart__quantity">
+            <span>Количество</span>
+            @@include('../../bem-blocks/quantity/_quantity.html')
+        </div>
+        <div class="product-add-to-cart__size">
+            <span>Объём</span>
+            @@include('../../bem-blocks/product-size/_product-size.html')
+        </div>
+    </div>
+    
+    <div class="product-add-to-cart__delivery">
+        <div class="product-add-to-cart__delivery-title">
+            <img src="./img/svg/car.svg" alt="delivery">
+            <span>Доставка</span>
+        </div>
+        <span class="product-add-to-cart__delivery-item">
+            Самовывоз — вторник , 7 сентября
+        </span>
+        <span class="product-add-to-cart__delivery-item">
+            Курьером — завтра, 6 сентября
+        </span>
+    </div>
+    <div class="product-add-to-cart__buttons">
+        <button class="product-add-to-cart__button-add-to-cart">Добавить в корзину</button>
+        <button class="product-add-to-cart__button-buy">Купить в 1 клик</button>
+    </div>
+    
+</div>

@@ -1,36 +1,36 @@
 .product-pic-slider {
   display: flex;
+  min-width: 0;
 }
 .slider-single {
-  display: flex;
-  width: 294px;
-  height: 403px;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  width: 100%;
   .slick-track {
     display: flex;
   }
-  .slick-list {
-    overflow: hidden;
+  .product-pic-slider__item {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
   }
-}
-
-.slider-single {
-  width: 294px;
-  height: 403px;
-
   img {
-    object-fit: contain;
-    width: 294px;
-    height: 403px;
+    width: auto;
+    max-height: 100%;
   }
 }
+
 .slider-nav {
+  min-width: 0;
   height: 214px;
   overflow: hidden;
+  margin-right: 16px;
 
   img {
     object-fit: contain;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 
   .product-pic-slider__item {
@@ -56,4 +56,161 @@
   background: url("../img/svg/sl-arrow-down.svg") 0 0 / 26% no-repeat;
   background-color: #fff;
   background-position: 50% 50%;
+}
+
+@media (max-width: 1024px) {
+  .slider-single {
+    .product-pic-slider__item {
+      height: 360px;
+    }
+  }
+
+  .product-pic-slider {
+    flex-direction: column;
+  }
+
+  .slider-nav__container {
+    order: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .slider-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 229px;
+    height: 69px;
+    overflow: hidden;
+    margin-right: 0;
+
+    .slick-track {
+      display: flex;
+    }
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .product-pic-slider__item {
+      width: 67px;
+      height: 67px;
+      border: 1px solid #c4c4c43f;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+  .slider-nav__prev,
+  .slider-nav__next {
+    width: 67px;
+    height: 67px;
+  }
+  .slider-nav__prev {
+    margin-bottom: 0;
+    background: url("../img/svg/sl-arrow-up.svg") 0 0 / 26% no-repeat;
+    background-color: #fff;
+    background-position: 50% 50%;
+    transform: rotate(-90deg);
+  }
+  .slider-nav__next {
+    margin-top: 0;
+    background: url("../img/svg/sl-arrow-down.svg") 0 0 / 26% no-repeat;
+    background-color: #fff;
+    background-position: 50% 50%;
+    transform: rotate(-90deg);
+  }
+}
+@media (max-width: 768px) {
+  .slider-single {
+    .product-pic-slider__item {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .product-pic-slider {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+  .slider-nav__container {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 429px;
+  }
+  .slider-nav {
+    display: flex;
+    width: 229px;
+    height: 69px;
+    overflow: hidden;
+    margin-right: 0;
+
+    .slick-track {
+      display: flex;
+    }
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .product-pic-slider__item {
+      width: 67px;
+      height: 67px;
+      border: 1px solid #c4c4c43f;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+  .slider-nav__prev,
+  .slider-nav__next {
+    width: 67px;
+    height: 67px;
+  }
+  .slider-nav__prev {
+    margin-bottom: 0;
+    background: url("../img/svg/sl-arrow-up.svg") 0 0 / 26% no-repeat;
+    background-color: #fff;
+    background-position: 50% 50%;
+    transform: rotate(-90deg);
+  }
+  .slider-nav__next {
+    margin-top: 0;
+    background: url("../img/svg/sl-arrow-down.svg") 0 0 / 26% no-repeat;
+    background-color: #fff;
+    background-position: 50% 50%;
+    transform: rotate(-90deg);
+  }
+}
+@media (max-width: 460px) {
+  .slider-single {
+    .product-pic-slider__item {
+      height: 270px;
+    }
+  }
+  .slider-nav__container {
+    display: none;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    li {
+      list-style: none;
+      margin: 0px 4px;
+    }
+    button {
+      font-size: 0;
+      width: 7px;
+      height: 7px;
+      background-color: #b5e5d7;
+      border-radius: 50%;
+    }
+    li.slick-active {
+      button {
+        background-color: #08a979;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .slider-single {
+    .product-pic-slider__item {
+      height: 211px;
+    }
+  }
 }

@@ -1,0 +1,89 @@
+.quantity {
+  height: 43px;
+  display: inline-block;
+  border: 1px solid #efefef;
+  border-radius: 2px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: #58575c;
+}
+
+.input-text.qty {
+  width: 22px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: transparent;
+
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: #58575c;
+}
+
+.quantity.buttons_added {
+  text-align: left;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.quantity.buttons_added input,
+.quantity.buttons_added button {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  box-shadow: none;
+  border-radius: 2px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.quantity.buttons_added .minus,
+.quantity.buttons_added .plus {
+  margin: auto;
+  height: 100%;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 22px;
+}
+.quantity.buttons_added .minus svg,
+.quantity.buttons_added .plus svg {
+  box-sizing: border-box;
+}
+
+.quantity.buttons_added .minus {
+  border-right: 0;
+  padding: 0 12px 10px 14px;
+}
+
+.quantity.buttons_added .plus {
+  border-left: 0;
+  padding: 0 14px 0 12px;
+}
+
+.quantity.buttons_added .minus:hover,
+.quantity.buttons_added .plus:hover {
+  background: #eeeeee;
+}
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
+.quantity.buttons_added .minus:focus,
+.quantity.buttons_added .plus:focus {
+  outline: none;
+}
