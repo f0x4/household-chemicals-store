@@ -58,6 +58,45 @@
   background-position: 50% 50%;
 }
 
+// Lightbox
+.fslightbox-container {
+  background: rgb(255, 255, 255) !important;
+}
+
+.fslightbox-slide-btn-container-next {
+  right: 9% !important;
+  background: url("../img/svg/sl-arrow_r.svg") 0 0 / 26% no-repeat !important;
+  background-color: #fff0 !important;
+  background-position: 50% 50% !important;
+}
+.fslightbox-slide-btn-container-previous {
+  left: 9% !important;
+  background: url("../img/svg/sl-arrow_l.svg") 0 0 / 26% no-repeat !important;
+  background-color: #fff0 !important;
+  background-position: 50% 50% !important;
+}
+.fslightbox-slide-btn {
+  background: rgba(255, 255, 255, 0) !important;
+}
+.fslightbox-toolbar {
+  top: 150% !important;
+  right: 10% !important;
+  > :nth-child(1) {
+    display: none;
+  }
+  > :nth-last-child(1) {
+    background: url("../img/svg/close.svg") 0 0 / 100% no-repeat !important;
+    background-color: #fff0 !important;
+    background-position: 50% 50% !important;
+  }
+}
+.fslightbox-toolbar {
+  background: rgba(255, 255, 255, 0) !important;
+}
+.fslightbox-slide-number-container {
+  display: none !important;
+}
+
 @media (max-width: 1024px) {
   .slider-single {
     .product-pic-slider__item {
@@ -118,6 +157,10 @@
   }
 }
 @media (max-width: 768px) {
+  .fslightbox-slide-btn-container-next,
+  .fslightbox-slide-btn-container-previous {
+    display: none !important;
+  }
   .slider-single {
     .product-pic-slider__item {
       display: flex;
