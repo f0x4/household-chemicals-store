@@ -317,27 +317,108 @@
                <h3>Смена пароля</h3>
                <button onclick="passwordChangeCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
             </div>
-            <div class="input-password">
-    <span>Ваш пароль</span>
+            <form class="password-change-form">
+                <div class="input-password">
+    <span class="input-password__title">Ваш пароль</span>
     <div class="input-password__container">
-        <input type="password">
-        <button style="display: none;"><img src="./img/svg/eye.svg" alt="show"></button>
+        <input type="password" autocomplete="current-password">
+        <button style="display: none;" type="button" onclick="typeToggle(event)"><img src="./img/svg/eye.svg" alt="show"></button>
+    </div>
+    <span class="input-password__error">Пароль неверный.</span>
+</div>
+                <div class="input-password">
+    <span class="input-password__title">Новый пароль</span>
+    <div class="input-password__container">
+        <input type="password" autocomplete="new-password">
+        <button style="display: block;" type="button" onclick="typeToggle(event)"><img src="./img/svg/eye.svg" alt="show"></button>
+    </div>
+    <span class="input-password__error">Это значение должно содержать от 6 до 20 символов.</span>
+</div>
+                <div class="input-password">
+    <span class="input-password__title">Повторите пароль</span>
+    <div class="input-password__container">
+        <input type="password" autocomplete="new-password">
+        <button style="display: block;" type="button" onclick="typeToggle(event)"><img src="./img/svg/eye.svg" alt="show"></button>
+    </div>
+    <span class="input-password__error">Это значение должно совпадать.</span>
+</div>
+                
+            </form>
+            <button class="green-button" disabled>Изменить</button>
+        </div>
     </div>
 </div>
-            <div class="input-password">
-    <span>Новый пароль</span>
-    <div class="input-password__container">
-        <input type="password">
-        <button style="display: block;"><img src="./img/svg/eye.svg" alt="show"></button>
+
+
+			<div class="profile-edit">
+    <button id="profile-edit__btn" class="profile-edit__btn green-button " onclick="profileEditBtn()"> Сменить пароль</button>
+    <div id="profile-edit__popup" class="profile-edit__popup">
+        <div class="profile-edit__content">
+            <div class="profile-edit__header">
+               <h3>Персональные данные</h3>
+               <button onclick="profileEditCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <form class="profile-edit-form">
+                <div class="input-text">
+    <span class="input-text__title">Имя</span>
+    <div class="input-text__container">
+        <input type="text">
+        <!-- autocomplete="@@autocomplete" -->
     </div>
+    <span class="input-text__error">Ошибка.</span>
 </div>
-            <div class="input-password">
-    <span>Повторите пароль</span>
-    <div class="input-password__container">
-        <input type="password">
-        <button style="display: block;"><img src="./img/svg/eye.svg" alt="show"></button>
+                <div class="input-text">
+    <span class="input-text__title">Фамилия</span>
+    <div class="input-text__container">
+        <input type="text">
+        <!-- autocomplete="@@autocomplete" -->
     </div>
+    <span class="input-text__error">Ошибка.</span>
 </div>
+                <div class="input-text">
+    <span class="input-text__title">Телефон</span>
+    <div class="input-text__container">
+        <input type="text">
+        <!-- autocomplete="@@autocomplete" -->
+    </div>
+    <span class="input-text__error">Ошибка.</span>
+</div>
+                <div class="select-gender">
+    <span>Пол</span>
+    <select class="select" name="gender">
+        <option disabled></option>
+        <option value="Мужской">Мужской</option>
+        <option value="Женскийt">Женский</option>
+    </select>
+</div>
+
+
+                
+<div class="input-date">
+    <span>Дата рождения</span>
+    <div class="input-date__container">
+        <input type="date" id="input-data" min="1900-01-01" max="2099-01-01">
+    </div>
+    <script>
+        document.getElementById('input-data').value = new Date().toLocaleDateString('en-CA')
+        document.getElementById('input-data').max = new Date().toLocaleDateString('en-CA')
+
+    </script>
+</div>
+
+
+                <!-- "autocomplete":"new-password", -->
+
+                <div class="checkbox-sms checkbox">
+                    <input type="checkbox" id="check-sms" name="check-sms" />
+                    <label for="check-sms">Я согласен получать SMS-рассылки</label>
+                </div>
+                <div class="checkbox-news checkbox">
+                    <input type="checkbox" id="check-news" name="check-news" />
+                    <label for="check-news">Подписка на новости</label>
+                </div>
+            </form>
+            <button class="green-button">Сохранить</button>
         </div>
     </div>
 </div>

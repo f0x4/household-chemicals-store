@@ -12,12 +12,12 @@ function passwordChangeBtn() {
             let popup = document.getElementById('password-change__popup')
             popup.classList.contains('password-change__popup-active');
             popup.classList.remove('password-change__popup-active');
-            window.removeEventListener('click', outOfPasswordChangePopup, true);
+            window.removeEventListener('mousedown', outOfPasswordChangePopup, true);
     	}
 
     }
 
-    window.addEventListener('click', outOfPasswordChangePopup, true);
+    window.addEventListener('mousedown', outOfPasswordChangePopup, true);
 
 }
 

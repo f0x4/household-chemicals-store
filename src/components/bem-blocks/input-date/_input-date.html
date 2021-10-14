@@ -1,0 +1,13 @@
+
+<div class="input-date">
+    <span>Дата рождения</span>
+    <div class="input-date__container">
+        <input type="date" id="input-data" min="1900-01-01" max="2099-01-01">
+    </div>
+    <script>
+        document.getElementById('input-data').value = new Date().toLocaleDateString('en-CA')
+        document.getElementById('input-data').max = new Date().toLocaleDateString('en-CA')
+
+    </script>
+</div>
+

@@ -1,4 +1,4 @@
-.input-password {
+.input-text {
   > span {
     font-family: Roboto;
     font-style: normal;
@@ -7,7 +7,7 @@
     line-height: 17px;
   }
 }
-.input-password__container {
+.input-text__container {
   display: flex;
   align-items: center;
   height: 45px;
@@ -37,13 +37,13 @@
     padding: 0 15px 0 7.5px;
   }
 }
-.input-password__title {
+.input-text__title {
   display: block;
   margin-bottom: 6px;
   color: #58575c;
   opacity: 0.6;
 }
-.input-password__error {
+.input-text__error {
   display: none;
   margin-top: 6px;
   margin-bottom: 4px;
