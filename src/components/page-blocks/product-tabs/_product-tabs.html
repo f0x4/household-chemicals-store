@@ -3,7 +3,12 @@
 	<div class="product-tabs__item">
         <span class="active">Характеристики</span>
 		<div class="product-tabs__content">
-			<h1>Характеристики</h1>
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Артикул", "description":"12345"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Код товара", "description":"4014835737617"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Назначение", "description":"Для обработки кожи"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Состав", "description":"В качестве действующих веществ содержит изопропиловый cпирт (2-пропанол) — 48.0%, н-пропиловый спирт (1-пропанол) — 12.0%, полигексаметиленбигуанид гидрохлорида — 0.25%, а также функциональные добавки (увлажняющие и смягчающие кожу)"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Номер документа о соответствии", "description":"RU.77.99.88.002.Е.001370.04.19"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Срок годности", "description":"5 лет"})
 			
         </div>
 	</div>
@@ -11,7 +16,7 @@
 	<div class="product-tabs__item">
 		<span>Описание</span>
 		<div class="product-tabs__content">
-			<h1>Описание</h1>
+			<p>Антисептик для обработки рук</p>
 			
 		</div>
 	</div>
@@ -19,21 +24,30 @@
 	<div class="product-tabs__item">
 		<span>Преимущества</span>
 		<div class="product-tabs__content">
-			<h2>Преимущества</h2>
+			<p>Преимущества:<br><br>
+
+				— влагостойкость и прочность;<br>
+				— материал высокого качества по разумной цене;<br>
+				— обладает отличными гигиеническими свойствами;<br>
+				— нетоксичен и безопасен для использования;<br>
+				— создает благоприятный климат в помещении;<br>
+				— обладает «дышащей» способностью;<br>
+				— качество соответствует жестким мировым стандартам.</p>
 		</div>
 	</div>
 	
 	<div class="product-tabs__item">
 		<span>Отзывы: 8</span>
 		<div class="product-tabs__content">
-			<h2>Отзывы: 8</h2>
+			<p>Отзывы: 8</p>
 		</div>
 	</div>
 	
 	<div class="product-tabs__item">
 		<span>Сертификаты</span>
 		<div class="product-tabs__content">
-			<h2>Сертификаты</h2>
+			@@include('../../bem-blocks/certificate-row/_certificate-row.html', {"title":"Паспорт безопасности", "link":"#"})
+			@@include('../../bem-blocks/certificate-row/_certificate-row.html', {"title":"Сертификат", "link":"#"})
 		</div>
 	</div>
 	

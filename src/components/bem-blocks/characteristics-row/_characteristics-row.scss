@@ -1,0 +1,43 @@
+.characteristics-row {
+  display: flex;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #58575c;
+  > h3 {
+    opacity: 0.5;
+    width: 100%;
+    max-width: 203px;
+  }
+}
+@media (max-width: 1024px) {
+  .characteristics-row {
+    > h3 {
+      max-width: 180px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .characteristics-row {
+    font-size: 14px;
+    > h3 {
+      max-width: 180px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .characteristics-row {
+    font-size: 14px;
+    > h3 {
+      max-width: 180px;
+    }
+  }
+}
+@media (max-width: 460px) {
+  .characteristics-row {
+    display: block;
+  }
+}
