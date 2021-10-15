@@ -1,0 +1,32 @@
+.product-price {
+  display: flex;
+  > div {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+}
+
+.product-price__discount {
+  margin-left: auto;
+  margin-bottom: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration-line: line-through;
+  color: #58575c;
+
+  opacity: 0.5;
+}
+
+.product-price__price {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 21px;
+
+  color: #08a979;
+}

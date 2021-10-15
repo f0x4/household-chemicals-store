@@ -1,0 +1,30 @@
+<div class="profile-edit">
+    <button id="profile-edit__btn" class="profile-edit__btn green-button " onclick="profileEditBtn()"> Сменить пароль</button>
+    <div id="profile-edit__popup" class="profile-edit__popup">
+        <div class="profile-edit__content">
+            <div class="profile-edit__header">
+               <h3>Персональные данные</h3>
+               <button onclick="profileEditCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <form class="profile-edit-form">
+                @@include('../input-text/_input-text.html', {"title":"Имя", "error":"Ошибка."})
+                @@include('../input-text/_input-text.html', {"title":"Фамилия", "error":"Ошибка."})
+                @@include('../input-text/_input-text.html', {"title":"Телефон", "error":"Ошибка."})
+                @@include('../select-gender/_select-gender.html')
+                @@include('../input-date/_input-date.html')
+                <!-- "autocomplete":"new-password", -->
+
+                <div class="checkbox-sms checkbox">
+                    <input type="checkbox" id="check-sms" name="check-sms" />
+                    <label for="check-sms">Я согласен получать SMS-рассылки</label>
+                </div>
+                <div class="checkbox-news checkbox">
+                    <input type="checkbox" id="check-news" name="check-news" />
+                    <label for="check-news">Подписка на новости</label>
+                </div>
+            </form>
+            <button class="green-button">Сохранить</button>
+        </div>
+    </div>
+</div>
+

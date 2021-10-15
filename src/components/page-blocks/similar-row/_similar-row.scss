@@ -1,0 +1,122 @@
+.similar-row {
+  margin-bottom: 100px;
+}
+.similar-row__row {
+  .adaptive-product {
+    width: 100% !important;
+  }
+  .slick-track {
+    display: flex;
+    > :nth-child(1) {
+      margin-left: 40px;
+    }
+    > :nth-last-child(1) {
+      margin-right: 40px;
+    }
+  }
+}
+.similar-row__title {
+  padding-left: 40px;
+  padding-bottom: 50px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #58575c;
+}
+
+@media (max-width: 1024px) {
+  .similar-row__row {
+    .adaptive-product {
+      margin-right: 13px;
+      margin-left: 13px;
+    }
+    .slick-track {
+      > :nth-last-child(1) {
+        display: none;
+      }
+      > :nth-last-child(2) {
+        display: none;
+      }
+      > :nth-last-child(3) {
+        margin-right: 40px;
+      }
+    }
+    .similar-row__title {
+      padding-bottom: 30px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .similar-row__row {
+    .adaptive-product {
+      max-width: 212px;
+      min-width: 159px;
+      margin-left: 13px;
+      margin-right: 13px;
+    }
+    .slick-track {
+      display: flex;
+      > :nth-child(1) {
+        margin-left: 40px;
+      }
+      > :nth-last-child(1) {
+        margin-right: 40px;
+      }
+    }
+  }
+  .similar-row__title {
+    padding-left: 36px;
+    padding-bottom: 26px;
+  }
+}
+@media (max-width: 460px) {
+  .similar-row {
+    margin-bottom: 70px;
+  }
+  .similar-row__row {
+    .adaptive-product {
+      width: auto !important;
+      margin-left: 13px;
+      margin-right: 13px;
+      max-width: 159px;
+      min-width: 126px;
+    }
+    .slick-track {
+      > :nth-child(1) {
+        margin-left: 16px;
+      }
+      > :nth-last-child(1) {
+        margin-right: 16px;
+      }
+      > :nth-last-child(1) {
+        display: block;
+      }
+      > :nth-last-child(2) {
+        display: block;
+      }
+      > :nth-last-child(3) {
+        margin-right: 13px;
+      }
+    }
+  }
+  .similar-row__title {
+    padding-left: 16px;
+    padding-bottom: 36px;
+    font-size: 19px;
+  }
+}
+@media (max-width: 375px) {
+  .similar-row__row {
+    .adaptive-product {
+      max-width: 126px;
+    }
+  }
+  .similar-row__title {
+    padding-left: 10px;
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+}

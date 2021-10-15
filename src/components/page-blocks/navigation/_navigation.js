@@ -10,8 +10,8 @@ function dropDownCategories() {
 
 // Close the dropdown menu if the user clicks outside of it
 window.addEventListener('click', function(event) {
-	var mainRoot = document.getElementById("navigation__catalog-dropdown");
-	var bit = event.target.compareDocumentPosition(mainRoot);
+	let mainRoot = document.getElementById("navigation__catalog-dropdown");
+	let bit = event.target.compareDocumentPosition(mainRoot);
 
 	if (bit !== 10) {
 		var dropdowns = document.getElementsByClassName("catalog-dropdown__content");
