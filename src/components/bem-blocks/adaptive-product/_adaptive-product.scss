@@ -110,7 +110,7 @@
       opacity: 1;
     }
   }
-  &:nth-last-child(1) {
+  &.active {
     border: 1px solid #08a979;
     cursor: default;
     span {
