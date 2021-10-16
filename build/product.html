@@ -501,7 +501,107 @@
             <p class="reviews-tab__sort-item">Оценке</p>
         </div>
         
-        <button class="new-reply">Написать отзыв</button>
+        <div class="review-add">
+    <button id="review-add__btn" class="review-add__btn" onclick="productNewReview()">Написать отзыв</button>
+    <div id="review-add__popup" class="review-add__popup">
+        <div class="review-add__content">
+            <div class="review-add__header">
+               <h3>Новый отзыв</h3>
+               <button onclick="productNewReviewCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <div class="review-add__product-title">Антисептик RAVENOL 4014835737617</div>
+            <div class="review-add-form">
+                <div class="review-rate">
+    <div class="review-rate__title">Ваша оценка</div>
+    <div class="review-rate__stars">
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        
+    </div>
+    
+    <script>
+        const ratingStars = [...document.getElementsByClassName("review-rate__star")];
+
+        function executeRating(stars) {
+          const starClassActive = "review-rate__star yellow";
+          const starClassInactive = "review-rate__star grey";
+          const starsLength = stars.length;
+          let i;
+          stars.map((star) => {
+            star.onclick = () => {
+              i = stars.indexOf(star);
+            
+              if (star.className===starClassInactive) {
+                for (i; i >= 0; --i) stars[i].className = starClassActive;
+              } else {
+                for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+              }
+            };
+          });
+        }
+        executeRating(ratingStars);
+    </script>
+    
+</div>
+                <div class="review-add__title">Комментарий</div>
+                <div class="review-input-text">
+    <div class="review-input-text__container">
+        <input type="text" placeholder="Опишите ваши впечатления">
+    </div>
+</div>
+                <div class="review-input-text">
+    <div class="review-input-text__container">
+        <input type="text" placeholder="Опишите достоинства">
+    </div>
+</div>
+                <div class="review-input-text">
+    <div class="review-input-text__container">
+        <input type="text" placeholder="Опишите недостатки">
+    </div>
+</div>
+                <div class="fille-drag-and-drop">
+    <img class="fille-drag-and-drop__camera-img" src="/img/svg/camera.svg" alt="camera">
+    <div class="fille-drag-and-drop__wraper">
+        <p class="fille-drag-and-drop__description">Прикрепите фото к сообщению, перетащив его в эту область, или <a href="#">выберите файл</a></p>
+        <p class="fille-drag-and-drop__info">*максимум 5 файлов (до 5 Мб каждый) в формате JPEG, PNG, HEIC или WebP</p>
+    </div>
+    
+</div>
+
+                <div class="checkbox-agreement checkbox">
+                    <input type="checkbox" id="check-agreement" name="check-agreement" />
+                    <label for="check-agreement">Я согласен с&nbsp;<a href="#">правилами публикации пользовательского контента</a></label>
+                </div>
+            </div>
+            <button class="green-button" disabled>Отправить отзыв</button>
+        </div>
+    </div>
+</div>
+
+
     </div>
     <div class="review">
         <div>

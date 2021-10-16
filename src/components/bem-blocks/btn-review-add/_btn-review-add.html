@@ -1,0 +1,27 @@
+<div class="review-add">
+    <button id="review-add__btn" class="review-add__btn" onclick="productNewReview()">Написать отзыв</button>
+    <div id="review-add__popup" class="review-add__popup">
+        <div class="review-add__content">
+            <div class="review-add__header">
+               <h3>Новый отзыв</h3>
+               <button onclick="productNewReviewCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <div class="review-add__product-title">Антисептик RAVENOL 4014835737617</div>
+            <div class="review-add-form">
+                @@include('../review-rate/_review-rate.html')
+                <div class="review-add__title">Комментарий</div>
+                @@include('../review-input-text/_review-input-text.html', {"holder":"Опишите ваши впечатления"})
+                @@include('../review-input-text/_review-input-text.html', {"holder":"Опишите достоинства"})
+                @@include('../review-input-text/_review-input-text.html', {"holder":"Опишите недостатки"})
+                @@include('../fille-drag-and-drop/_fille-drag-and-drop.html')
+
+                <div class="checkbox-agreement checkbox">
+                    <input type="checkbox" id="check-agreement" name="check-agreement" />
+                    <label for="check-agreement">Я согласен с&nbsp;<a href="#">правилами публикации пользовательского контента</a></label>
+                </div>
+            </div>
+            <button class="green-button" disabled>Отправить отзыв</button>
+        </div>
+    </div>
+</div>
+

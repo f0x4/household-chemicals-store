@@ -1,0 +1,42 @@
+.fille-drag-and-drop {
+  display: flex;
+  align-items: center;
+  border: 1px dashed rgba(88, 87, 92, 0.3);
+  box-sizing: border-box;
+  border-radius: 2px;
+  min-height: 77px;
+  .fille-drag-and-drop__description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #58575c;
+    margin-bottom: 3px;
+    > a {
+      font-size: 14px;
+      line-height: 17px;
+      text-decoration-line: underline;
+
+      color: #252525;
+    }
+  }
+  .fille-drag-and-drop__info {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #58575c;
+
+    opacity: 0.6;
+  }
+}
+.fille-drag-and-drop__camera-img {
+  width: 32px;
+  height: 32px;
+  margin: auto 18px auto;
+}
+.fille-drag-and-drop__wraper {
+  padding: 11px 38px 11px 0;
+}
