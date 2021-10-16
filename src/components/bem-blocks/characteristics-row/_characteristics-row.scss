@@ -11,29 +11,20 @@
     opacity: 0.5;
     width: 100%;
     max-width: 203px;
+    min-width: 203px;
   }
 }
 @media (max-width: 1024px) {
   .characteristics-row {
     > h3 {
       max-width: 180px;
+      min-width: 180px;
     }
   }
 }
 @media (max-width: 768px) {
   .characteristics-row {
     font-size: 14px;
-    > h3 {
-      max-width: 180px;
-    }
-  }
-}
-@media (max-width: 768px) {
-  .characteristics-row {
-    font-size: 14px;
-    > h3 {
-      max-width: 180px;
-    }
   }
 }
 @media (max-width: 460px) {

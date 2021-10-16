@@ -19,7 +19,7 @@
   }
 }
 
-.product-tabs__item span {
+.product-tabs__item > span {
   padding: 24px 0;
   cursor: pointer;
   position: relative;
@@ -48,6 +48,7 @@
   top: 0;
   left: 0;
   padding-top: 102px;
+  width: 100%;
 
   font-family: Roboto;
   font-style: normal;
@@ -94,7 +95,7 @@
 }
 
 @media (max-width: 768px) {
-  .product-tabs__item span {
+  .product-tabs__item > span {
     font-size: 15px;
   }
   .product-tabs__content {
@@ -105,9 +106,6 @@
 @media (max-width: 700px) {
   .product-tabs {
     display: block;
-    > :nth-last-child(1) span {
-      border: 0;
-    }
   }
 
   .product-tabs__item {

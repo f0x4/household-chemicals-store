@@ -39,7 +39,8 @@
 	<div class="product-tabs__item">
 		<span>Отзывы: 8</span>
 		<div class="product-tabs__content">
-			<p>Отзывы: 8</p>
+			@@include('../../bem-blocks/reviews-tab/_reviews-tab.html')
+			
 		</div>
 	</div>
 	
@@ -47,6 +48,7 @@
 		<span>Сертификаты</span>
 		<div class="product-tabs__content">
 			@@include('../../bem-blocks/certificate-row/_certificate-row.html', {"title":"Паспорт безопасности", "link":"#"})
+			
 			@@include('../../bem-blocks/certificate-row/_certificate-row.html', {"title":"Сертификат", "link":"#"})
 		</div>
 	</div>
