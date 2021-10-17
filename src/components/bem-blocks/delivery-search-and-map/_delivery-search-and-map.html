@@ -1,0 +1,17 @@
+<div class="delivery-search-and-map">
+    <div class="delivery-search-and-map__search">
+        <input type="text" placeholder="Полный адрес">
+        <button class="delivery-search-and-map__clear" onclick="deliverySearchClear()"><img src="/img/svg/close-grey.svg" alt="clear"></button>
+        <button class="delivery-search-and-map__save" disabled>Сохранить</button>
+    </div>
+    <p class="delivery-search-and-map__error">Ошибка</p>
+
+    <div class="delivery-search-and-map__map">
+        
+    </div>
+    <script>
+        function deliverySearchClear() {
+            $(".delivery-search-and-map__search>input").val("");
+        }
+    </script>
+</div>

@@ -1,5 +1,5 @@
 <div class="profile-edit">
-    <button id="profile-edit__btn" class="profile-edit__btn green-button " onclick="profileEditBtn()"> Сменить пароль</button>
+    <button id="profile-edit__btn" class="profile-edit__btn" onclick="profileEditBtn()">Редактировать данные</button>
     <div id="profile-edit__popup" class="profile-edit__popup">
         <div class="profile-edit__content">
             <div class="profile-edit__header">
@@ -10,6 +10,7 @@
                 @@include('../input-text/_input-text.html', {"title":"Имя", "error":"Ошибка."})
                 @@include('../input-text/_input-text.html', {"title":"Фамилия", "error":"Ошибка."})
                 @@include('../input-text/_input-text.html', {"title":"Телефон", "error":"Ошибка."})
+                @@include('../input-text/_input-text.html', {"title":"Email", "error":"Ошибка."})
                 @@include('../select-gender/_select-gender.html')
                 @@include('../input-date/_input-date.html')
                 <!-- "autocomplete":"new-password", -->

@@ -1,13 +1,11 @@
-.profile-edit__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.delivery-address__btn {
   width: 100%;
-  min-width: 317px;
   height: 45px;
-  background: #08a979;
-  border-radius: 2px;
   margin-top: 50px;
+
+  border: 1px solid #08a979;
+  box-sizing: border-box;
+  border-radius: 2px;
 
   font-family: Roboto;
   font-style: normal;
@@ -15,31 +13,29 @@
   font-size: 16px;
   line-height: 20px;
 
-  color: #ffffff;
-  > img {
-    margin-right: 13px;
-  }
+  text-align: center;
+
+  color: #08a979;
 }
 
-.profile-edit__popup {
+.btn-shop-address__popup {
   display: none;
+  overflow: auto;
 }
-.profile-edit__popup-active {
+.btn-shop-address__popup-active {
   display: flex;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
-  background: rgba($color: #6b6b6b, $alpha: 0.1);
+  background: rgba($color: #6b6b6b, $alpha: 0.4);
   z-index: 15;
 }
-
-.profile-edit__content {
+.btn-shop-address__content {
   margin: auto;
-  padding: 30px 20px 36px;
+  padding: 65px 120px;
   width: 100%;
-  max-width: 436px;
   background: #fff;
 
   > .green-button {
@@ -56,19 +52,30 @@
   }
 }
 
-.profile-edit__header {
+.btn-shop-address__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 7px;
 
   > h3 {
+    margin-bottom: 7px;
+
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
+
+    color: #58575c;
+  }
+  > p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
 
     color: #58575c;
   }
@@ -79,7 +86,18 @@
     }
   }
 }
-.profile-edit-form {
+.btn-shop-address__info {
+  margin-bottom: 54px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #58575c;
+}
+.btn-shop-address-form {
   margin-bottom: 36px;
 
   > :nth-child(n + 1) {
@@ -90,25 +108,19 @@
   }
 }
 
-.checkbox-sms {
-  > label {
-    font-size: 14px !important;
-    line-height: 17px !important;
-    color: #252525 !important;
-    &::before {
-      width: 16px !important;
-      height: 16px !important;
-    }
-  }
+.btn-shop-address__title {
+  margin-top: 18px;
+  margin-bottom: 16px !important;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #58575c;
 }
-.checkbox-news {
-  > label {
-    font-size: 14px !important;
-    line-height: 17px !important;
-    color: #252525 !important;
-    &::before {
-      width: 16px !important;
-      height: 16px !important;
-    }
-  }
+
+.z0 {
+  z-index: 0 !important;
 }

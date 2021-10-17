@@ -1,0 +1,20 @@
+<div class="btn-shop-address">
+    <button id="btn-shop-address__btn" class="delivery-address__btn" onclick="profileShopAdress()">Новый адрес</button>
+    <div id="btn-shop-address__popup" class="btn-shop-address__popup">
+        <div class="btn-shop-address__content">
+            <div class="btn-shop-address__header">
+               <h3>Выберите магазин</h3>
+
+               <button onclick="profileShopAdressCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <div class="btn-shop-address__info">От выбора магазина могут зависеть наличие и срок доставки</div>
+            <div class="btn-shop-address-form">
+                @@include('../input-search/_input-search.html')
+                @@include('../review-rate/_review-rate.html')
+                <div class="btn-shop-address__title">Комментарий</div>
+            </div>
+            <button class="green-button">Новый адрес</button>
+        </div>
+    </div>
+</div>
+

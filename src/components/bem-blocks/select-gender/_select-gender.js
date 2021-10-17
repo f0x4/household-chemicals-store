@@ -21,7 +21,7 @@ $('.select').each(function() {
     for (let i = 1; i < selectOptionLength; i++) {
         $('<div>', {
             class: 'new-select__item',
-            html: $('<span>', {
+            html: $('<p>', {
                 text: selectOption.eq(i).text()
             })
         })
@@ -40,7 +40,7 @@ $('.select').each(function() {
                 let chooseItem = $(this).data('value');
 
                 $('select').val(chooseItem).attr('selected', 'selected');
-                selectHead.text( $(this).find('span').text() );
+                selectHead.text( $(this).find('p').text() );
 
                 selectList.slideUp(duration);
                 selectHead.removeClass('on');

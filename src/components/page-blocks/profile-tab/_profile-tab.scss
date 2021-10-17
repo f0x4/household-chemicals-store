@@ -1,0 +1,14 @@
+.profile-tab {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .profile-row {
+    margin-bottom: 14px;
+  }
+  &__item {
+    margin-right: 30px;
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 768px) {
+}

@@ -1,0 +1,15 @@
+<div class="btn-delivery-address">
+    <button id="btn-delivery-address__btn" class="delivery-address__btn" onclick="profileDeliveryAdress()">Новый адрес</button>
+    <div id="btn-delivery-address__popup" class="btn-delivery-address__popup">
+        <div class="btn-delivery-address__content">
+            <div class="btn-delivery-address__header">
+               <h3>Выбрать адрес доставки</h3>
+               <button onclick="profileDeliveryAdressCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <div class="btn-delivery-address-form">
+                @@include('../delivery-search-and-map/_delivery-search-and-map.html')
+            </div>
+        </div>
+    </div>
+</div>
+

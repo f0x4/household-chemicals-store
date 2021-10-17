@@ -1,0 +1,37 @@
+.delivery-address {
+  max-width: 239px;
+}
+.delivery-address__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #58575c;
+}
+.delivery-address__address {
+}
+.delivery-address__item {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #58575c;
+  > img {
+    display: none;
+  }
+}
+.delivery-address__item.current {
+  > img {
+    display: inline-block;
+    margin-left: 26px;
+    margin-bottom: 3px;
+  }
+}

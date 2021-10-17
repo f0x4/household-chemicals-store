@@ -1,41 +1,36 @@
 <div class="profile-tabs">
-
-	<div class="profile-tabs__item">
-        <span class="active">Профиль</span>
-		<div class="profile-tabs__content">
-			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Имя", "description":"Елена"})
-			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Фамилия", "description":"Назаретян"})
-			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Дата рождения", "description":"30.11.1993"})
-			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Телефон", "description":"+7 921 644-38-50"})
-			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Email", "description":"lena_naz93@mail.ru"})
-			@@include('../../bem-blocks/btn-password-change/_btn-password-change.html')
-			@@include('../../bem-blocks/btn-profile-edit/_btn-profile-edit.html')
-
-        </div>
-	</div>
-	
-	<div class="profile-tabs__item">
-		<span>Заказы</span>
-		<div class="profile-tabs__content">
-			
-			
+	<div class="profile-tabs__wrapper">
+		<div class="profile-tabs__item">
+    	    <span class="active">Профиль</span>
+			<div class="profile-tabs__content">
+				@@include('../profile-tab/_profile-tab.html')
+    	    </div>
+		</div>
+		
+		<div class="profile-tabs__item">
+			<span>Заказы</span>
+			<div class="profile-tabs__content">
+				
+				
+			</div>
+		</div>
+		
+		<div class="profile-tabs__item">
+			<span>Подписки</span>
+			<div class="profile-tabs__content">
+				
+			</div>
+		</div>
+		
+		<div class="profile-tabs__item">
+			<span>Скидки</span>
+			<div class="profile-tabs__content">
+				
+				
+			</div>
 		</div>
 	</div>
 	
-	<div class="profile-tabs__item">
-		<span>Подписки</span>
-		<div class="profile-tabs__content">
-			
-		</div>
-	</div>
-	
-	<div class="profile-tabs__item">
-		<span>Скидки</span>
-		<div class="profile-tabs__content">
-			
-			
-		</div>
-	</div>
 	
 	<script>
 
@@ -94,7 +89,7 @@
 						calcHeight();
 						tabsSwitch();	
 					}
-					if (w < 700 ) {
+					if (w < 300 ) {
 						$('.profile-tabs__content').css({'display':'none'})
 					}
 			}

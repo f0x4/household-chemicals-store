@@ -324,78 +324,39 @@
 </div>
 			<h2 class="heading">Личный кабиенет</h2>
 			<div class="profile-tabs">
-
-	<div class="profile-tabs__item">
-        <span class="active">Профиль</span>
-		<div class="profile-tabs__content">
-			<div class="characteristics-row">
+	<div class="profile-tabs__wrapper">
+		<div class="profile-tabs__item">
+    	    <span class="active">Профиль</span>
+			<div class="profile-tabs__content">
+				<div class="profile-tab">
+    <div class="profile-tab__item">
+        <div class="profile-row">
     <h3>Имя</h3>
     <p>Елена</p>
 </div>
 
-			<div class="characteristics-row">
+        <div class="profile-row">
     <h3>Фамилия</h3>
     <p>Назаретян</p>
 </div>
 
-			<div class="characteristics-row">
+        <div class="profile-row">
     <h3>Дата рождения</h3>
     <p>30.11.1993</p>
 </div>
 
-			<div class="characteristics-row">
+        <div class="profile-row">
     <h3>Телефон</h3>
     <p>+7 921 644-38-50</p>
 </div>
 
-			<div class="characteristics-row">
+        <div class="profile-row">
     <h3>Email</h3>
     <p>lena_naz93@mail.ru</p>
 </div>
 
-			<div class="password-change">
-    <button id="password-change__btn" class="password-change__btn" onclick="passwordChangeBtn()"><img src="./img/svg/lock.svg" alt="lock"> Сменить пароль</button>
-    <div id="password-change__popup" class="password-change__popup">
-        <div class="password-change__content">
-            <div class="password-change__header">
-               <h3>Смена пароля</h3>
-               <button onclick="passwordChangeCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
-            </div>
-            <form class="password-change-form">
-                <div class="input-password">
-    <span class="input-password__title">Ваш пароль</span>
-    <div class="input-password__container">
-        <input type="password" autocomplete="current-password">
-        <button style="display: none;" type="button" onclick="typeToggle(event)"><img src="./img/svg/eye.svg" alt="show"></button>
-    </div>
-    <span class="input-password__error">Пароль неверный.</span>
-</div>
-                <div class="input-password">
-    <span class="input-password__title">Новый пароль</span>
-    <div class="input-password__container">
-        <input type="password" autocomplete="new-password">
-        <button style="display: block;" type="button" onclick="typeToggle(event)"><img src="./img/svg/eye.svg" alt="show"></button>
-    </div>
-    <span class="input-password__error">Это значение должно содержать от 6 до 20 символов.</span>
-</div>
-                <div class="input-password">
-    <span class="input-password__title">Повторите пароль</span>
-    <div class="input-password__container">
-        <input type="password" autocomplete="new-password">
-        <button style="display: block;" type="button" onclick="typeToggle(event)"><img src="./img/svg/eye.svg" alt="show"></button>
-    </div>
-    <span class="input-password__error">Это значение должно совпадать.</span>
-</div>
-                
-            </form>
-            <button class="green-button" disabled>Изменить</button>
-        </div>
-    </div>
-</div>
-
-
-			<div class="profile-edit">
-    <button id="profile-edit__btn" class="profile-edit__btn green-button " onclick="profileEditBtn()"> Сменить пароль</button>
+        <div class="profile-edit">
+    <button id="profile-edit__btn" class="profile-edit__btn" onclick="profileEditBtn()">Редактировать данные</button>
     <div id="profile-edit__popup" class="profile-edit__popup">
         <div class="profile-edit__content">
             <div class="profile-edit__header">
@@ -404,7 +365,7 @@
             </div>
             <form class="profile-edit-form">
                 <div class="input-text">
-    <span class="input-text__title">Имя</span>
+    <p class="input-text__title">Имя</p>
     <div class="input-text__container">
         <input type="text">
         <!-- autocomplete="@@autocomplete" -->
@@ -412,7 +373,7 @@
     <span class="input-text__error">Ошибка.</span>
 </div>
                 <div class="input-text">
-    <span class="input-text__title">Фамилия</span>
+    <p class="input-text__title">Фамилия</p>
     <div class="input-text__container">
         <input type="text">
         <!-- autocomplete="@@autocomplete" -->
@@ -420,7 +381,15 @@
     <span class="input-text__error">Ошибка.</span>
 </div>
                 <div class="input-text">
-    <span class="input-text__title">Телефон</span>
+    <p class="input-text__title">Телефон</p>
+    <div class="input-text__container">
+        <input type="text">
+        <!-- autocomplete="@@autocomplete" -->
+    </div>
+    <span class="input-text__error">Ошибка.</span>
+</div>
+                <div class="input-text">
+    <p class="input-text__title">Email</p>
     <div class="input-text__container">
         <input type="text">
         <!-- autocomplete="@@autocomplete" -->
@@ -428,7 +397,7 @@
     <span class="input-text__error">Ошибка.</span>
 </div>
                 <div class="select-gender">
-    <span>Пол</span>
+    <p>Пол</p>
     <select class="select" name="gender">
         <option disabled></option>
         <option value="Мужской">Мужской</option>
@@ -439,15 +408,10 @@
 
                 
 <div class="input-date">
-    <span>Дата рождения</span>
+    <p>Дата рождения</p>
     <div class="input-date__container">
-        <input type="date" id="input-data" min="1900-01-01" max="2099-01-01">
+        <input type="date" min="1900-01-01" max="2099-01-01">
     </div>
-    <script>
-        document.getElementById('input-data').value = new Date().toLocaleDateString('en-CA')
-        document.getElementById('input-data').max = new Date().toLocaleDateString('en-CA')
-
-    </script>
 </div>
 
 
@@ -468,32 +432,209 @@
 </div>
 
 
-
+        <div class="password-change">
+    <button id="password-change__btn" class="password-change__btn" onclick="passwordChangeBtn()"><img src="./img/svg/lock.svg" alt="lock"> Сменить пароль</button>
+    <div id="password-change__popup" class="password-change__popup">
+        <div class="password-change__content">
+            <div class="password-change__header">
+               <h3>Смена пароля</h3>
+               <button onclick="passwordChangeCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <form class="password-change-form">
+                <div class="input-password">
+    <p class="input-password__title">Ваш пароль</p>
+    <div class="input-password__container">
+        <input type="password" autocomplete="current-password">
+        <button style="display: none;" type="button" onclick="typeToggle(event)"><img src="./img/svg/eye.svg" alt="show"></button>
+    </div>
+    <p class="input-password__error">Пароль неверный.</p>
+</div>
+                <div class="input-password">
+    <p class="input-password__title">Новый пароль</p>
+    <div class="input-password__container">
+        <input type="password" autocomplete="new-password">
+        <button style="display: block;" type="button" onclick="typeToggle(event)"><img src="./img/svg/eye.svg" alt="show"></button>
+    </div>
+    <p class="input-password__error">Это значение должно содержать от 6 до 20 символов.</p>
+</div>
+                <div class="input-password">
+    <p class="input-password__title">Повторите пароль</p>
+    <div class="input-password__container">
+        <input type="password" autocomplete="new-password">
+        <button style="display: block;" type="button" onclick="typeToggle(event)"><img src="./img/svg/eye.svg" alt="show"></button>
+    </div>
+    <p class="input-password__error">Это значение должно совпадать.</p>
+</div>
+                
+            </form>
+            <button class="green-button" disabled>Изменить</button>
         </div>
-	</div>
-	
-	<div class="profile-tabs__item">
-		<span>Заказы</span>
-		<div class="profile-tabs__content">
-			
-			
+    </div>
+</div>
+
+
+        
+    </div>
+    <div class="profile-tab__item">
+        <div class="delivery-address">
+    <div class="delivery-address__title">Адрес доставки</div>
+    <div class="delivery-address__address">
+        <div class="delivery-address__item current">Просвещения 24, кв.16 <img src="/img/svg/ok.svg" alt="current"></div>
+        <div class="delivery-address__item">Есенина 18. кв. 17 <img src="/img/svg/ok.svg" alt="current"></div>
+    </div>
+    <div class="btn-delivery-address">
+    <button id="btn-delivery-address__btn" class="delivery-address__btn" onclick="profileDeliveryAdress()">Новый адрес</button>
+    <div id="btn-delivery-address__popup" class="btn-delivery-address__popup">
+        <div class="btn-delivery-address__content">
+            <div class="btn-delivery-address__header">
+               <h3>Выбрать адрес доставки</h3>
+               <button onclick="profileDeliveryAdressCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <div class="btn-delivery-address-form">
+                <div class="delivery-search-and-map">
+    <div class="delivery-search-and-map__search">
+        <input type="text" placeholder="Полный адрес">
+        <button class="delivery-search-and-map__clear" onclick="deliverySearchClear()"><img src="/img/svg/close-grey.svg" alt="clear"></button>
+        <button class="delivery-search-and-map__save" disabled>Сохранить</button>
+    </div>
+    <p class="delivery-search-and-map__error">Ошибка</p>
+
+    <div class="delivery-search-and-map__map">
+        
+    </div>
+    <script>
+        function deliverySearchClear() {
+            $(".delivery-search-and-map__search>input").val("");
+        }
+    </script>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+    </div>
+    <div class="profile-tab__item">
+        <div class="shop-address">
+    <div class="shop-address__title">Адрес доставки</div>
+    <div class="shop-address__address">
+        <div class="shop-address__item">Ленинградское ш., 34-й км., Солнечногорский р-н</div>
+    </div>
+    <div class="btn-shop-address">
+    <button id="btn-shop-address__btn" class="delivery-address__btn" onclick="profileShopAdress()">Новый адрес</button>
+    <div id="btn-shop-address__popup" class="btn-shop-address__popup">
+        <div class="btn-shop-address__content">
+            <div class="btn-shop-address__header">
+               <h3>Выберите магазин</h3>
+
+               <button onclick="profileShopAdressCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <div class="btn-shop-address__info">От выбора магазина могут зависеть наличие и срок доставки</div>
+            <div class="btn-shop-address-form">
+                <div class="input-search">
+    <input type="text" placeholder="Поиск магазина">
+    <button class="input-search__btn"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 11h-.79l-.28-.27A6.471 6.471 0 0013 6.5 6.5 6.5 0 106.5 13c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L17.49 16l-4.99-5zm-6 0C4.01 11 2 8.99 2 6.5S4.01 2 6.5 2 11 4.01 11 6.5 8.99 11 6.5 11z" fill="#fff"/></svg></button>
+</div>
+
+                <div class="review-rate">
+    <div class="review-rate__title">Ваша оценка</div>
+    <div class="review-rate__stars">
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        
+    </div>
+    
+    <script>
+        const ratingStars = [...document.getElementsByClassName("review-rate__star")];
+
+        function executeRating(stars) {
+          const starClassActive = "review-rate__star yellow";
+          const starClassInactive = "review-rate__star grey";
+          const starsLength = stars.length;
+          let i;
+          stars.map((star) => {
+            star.onclick = () => {
+              i = stars.indexOf(star);
+            
+              if (star.className===starClassInactive) {
+                for (i; i >= 0; --i) stars[i].className = starClassActive;
+              } else {
+                for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+              }
+            };
+          });
+        }
+        executeRating(ratingStars);
+    </script>
+    
+</div>
+                <div class="btn-shop-address__title">Комментарий</div>
+            </div>
+            <button class="green-button">Новый адрес</button>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+    </div>
+
+</div>
+    	    </div>
+		</div>
+		
+		<div class="profile-tabs__item">
+			<span>Заказы</span>
+			<div class="profile-tabs__content">
+				
+				
+			</div>
+		</div>
+		
+		<div class="profile-tabs__item">
+			<span>Подписки</span>
+			<div class="profile-tabs__content">
+				
+			</div>
+		</div>
+		
+		<div class="profile-tabs__item">
+			<span>Скидки</span>
+			<div class="profile-tabs__content">
+				
+				
+			</div>
 		</div>
 	</div>
 	
-	<div class="profile-tabs__item">
-		<span>Подписки</span>
-		<div class="profile-tabs__content">
-			
-		</div>
-	</div>
-	
-	<div class="profile-tabs__item">
-		<span>Скидки</span>
-		<div class="profile-tabs__content">
-			
-			
-		</div>
-	</div>
 	
 	<script>
 
@@ -552,7 +693,7 @@
 						calcHeight();
 						tabsSwitch();	
 					}
-					if (w < 700 ) {
+					if (w < 300 ) {
 						$('.profile-tabs__content').css({'display':'none'})
 					}
 			}
