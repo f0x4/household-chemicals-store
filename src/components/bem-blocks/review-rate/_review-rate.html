@@ -1,0 +1,55 @@
+<div class="review-rate">
+    <div class="review-rate__title">Ваша оценка</div>
+    <div class="review-rate__stars">
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        
+    </div>
+    
+    <script>
+        const ratingStars = [...document.getElementsByClassName("review-rate__star")];
+
+        function executeRating(stars) {
+          const starClassActive = "review-rate__star yellow";
+          const starClassInactive = "review-rate__star grey";
+          const starsLength = stars.length;
+          let i;
+          stars.map((star) => {
+            star.onclick = () => {
+              i = stars.indexOf(star);
+            
+              if (star.className===starClassInactive) {
+                for (i; i >= 0; --i) stars[i].className = starClassActive;
+              } else {
+                for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+              }
+            };
+          });
+        }
+        executeRating(ratingStars);
+    </script>
+    
+</div>

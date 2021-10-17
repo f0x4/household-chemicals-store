@@ -3,7 +3,12 @@
 	<div class="product-tabs__item">
         <span class="active">Характеристики</span>
 		<div class="product-tabs__content">
-			<h1>Характеристики</h1>
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Артикул", "description":"12345"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Код товара", "description":"4014835737617"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Назначение", "description":"Для обработки кожи"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Состав", "description":"В качестве действующих веществ содержит изопропиловый cпирт (2-пропанол) — 48.0%, н-пропиловый спирт (1-пропанол) — 12.0%, полигексаметиленбигуанид гидрохлорида — 0.25%, а также функциональные добавки (увлажняющие и смягчающие кожу)"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Номер документа о соответствии", "description":"RU.77.99.88.002.Е.001370.04.19"})
+			@@include('../../bem-blocks/characteristics-row/_characteristics-row.html', {"title":"Срок годности", "description":"5 лет"})
 			
         </div>
 	</div>
@@ -11,7 +16,7 @@
 	<div class="product-tabs__item">
 		<span>Описание</span>
 		<div class="product-tabs__content">
-			<h1>Описание</h1>
+			<p>Антисептик для обработки рук</p>
 			
 		</div>
 	</div>
@@ -19,22 +24,101 @@
 	<div class="product-tabs__item">
 		<span>Преимущества</span>
 		<div class="product-tabs__content">
-			<h2>Преимущества</h2>
+			<p>Преимущества:<br><br>
+
+				— влагостойкость и прочность;<br>
+				— материал высокого качества по разумной цене;<br>
+				— обладает отличными гигиеническими свойствами;<br>
+				— нетоксичен и безопасен для использования;<br>
+				— создает благоприятный климат в помещении;<br>
+				— обладает «дышащей» способностью;<br>
+				— качество соответствует жестким мировым стандартам.</p>
 		</div>
 	</div>
 	
 	<div class="product-tabs__item">
 		<span>Отзывы: 8</span>
 		<div class="product-tabs__content">
-			<h2>Отзывы: 8</h2>
+			@@include('../../bem-blocks/reviews-tab/_reviews-tab.html')
+			
 		</div>
 	</div>
 	
 	<div class="product-tabs__item">
 		<span>Сертификаты</span>
 		<div class="product-tabs__content">
-			<h2>Сертификаты</h2>
+			@@include('../../bem-blocks/certificate-row/_certificate-row.html', {"title":"Паспорт безопасности", "link":"#"})
+			
+			@@include('../../bem-blocks/certificate-row/_certificate-row.html', {"title":"Сертификат", "link":"#"})
 		</div>
 	</div>
-	
+	<script>
+
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			function tabsInAccord() {
+				var w = window.innerWidth ? window.innerWidth : $(window).width(), //ширина экрана
+						widthVal = 700, //ширина, меньше которой табы становятся аккордионами
+						speed = 250, //скорость раскрытия аккордионов
+						tab = $('.product-tabs__item > span.active'); //отдельная вкладка
+				
+				if (w < 700 ) {
+					$('.product-tabs__item > span').removeClass('active')
+				
+				}
+				//Высчитываем высоту контейнера
+					function calcHeight() {
+						var tabHeight = 0;
+						$('.product-tabs__item > span.active').next('.product-tabs__content').each(function(){
+							if ($(this).innerHeight() > tabHeight ) {
+								 tabHeight = $(this).innerHeight()
+							 }
+						});
+						$('.product-tabs').height(tabHeight);
+					}
+				
+				function tabsSwitch() {
+					$('.product-tabs__item').off().on('click', 'span', function() {
+						$(this).closest('.product-tabs').find($('.product-tabs__item')).find('.product-tabs__content').removeAttr("style");
+						$(this).addClass('active').next('.product-tabs__content').show().closest('.product-tabs').find($('.product-tabs__item > span.active').not($(this))).removeClass('active');
+						calcHeight();
+					});
+				}
+			
+				function accordOpen() {
+					$('.product-tabs').removeAttr("style");
+					$('.product-tabs__item').off().on('click', 'span', function() {
+							$(this).toggleClass('active').next('.product-tabs__content').slideToggle(speed);
+						});
+				}
+			
+				if (w < widthVal) {
+					if(tab.length > 0) {
+						tab.closest('.product-tabs').find($('.product-tabs__item > span').not(tab).next('.product-tabs__content')).css({'display':'none'});
+						tab.next('.product-tabs__content').slideDown(speed);
+					}
+					accordOpen();
+				} else {
+					if(tab.length === 0 || tab.length > 1) {
+						tab.removeClass('active').next('.product-tabs__content').css({'display':'block'});
+							$('.product-tabs__item:first > span').addClass('active');
+						} else {
+							$('.product-tabs').find('.product-tabs__content').css({'display':'block'});
+						}
+						calcHeight();
+						tabsSwitch();	
+					}
+					if (w < 700 ) {
+						$('.product-tabs__content').css({'display':'none'})
+					}
+			}
+		
+			tabsInAccord();
+		
+			$(window).resize(function () {
+				$('.product-tabs__item').removeClass('active')
+				tabsInAccord();
+			
+			});
+		});
+	</script>
 </div>

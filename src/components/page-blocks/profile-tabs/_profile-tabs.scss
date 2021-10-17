@@ -1,4 +1,4 @@
-.product-tabs {
+.profile-tabs {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   }
 }
 
-.product-tabs__item > span {
+.profile-tabs__item > span {
   padding: 24px 0;
   cursor: pointer;
   position: relative;
@@ -37,11 +37,11 @@
   opacity: 0.5;
 }
 
-.product-tabs__item:not(:nth-last-child(1)) > span {
+.profile-tabs__item:not(:nth-last-child(1)) > span {
   border-right: none;
 }
 
-.product-tabs__content {
+.profile-tabs__content {
   display: none;
   position: absolute;
   opacity: 0;
@@ -66,15 +66,15 @@
   }
 }
 
-.product-tabs__content > * {
+.profile-tabs__content > * {
   position: relative;
 }
 
-.product-tabs__item.active .product-tabs__content {
+.profile-tabs__item.active .profile-tabs__content {
   display: block;
 }
 
-.product-tabs__item > span.active {
+.profile-tabs__item > span.active {
   z-index: 3;
   opacity: 1;
 
@@ -89,31 +89,31 @@
   }
 }
 
-.product-tabs__item > span.active ~ .product-tabs__content {
+.profile-tabs__item > span.active ~ .profile-tabs__content {
   z-index: 1;
   opacity: 1;
 }
 
 @media (max-width: 768px) {
-  .product-tabs__item > span {
+  .profile-tabs__item > span {
     font-size: 15px;
   }
-  .product-tabs__content {
+  .profile-tabs__content {
     font-size: 14px;
   }
 }
 
-@media (max-width: 700px) {
-  .product-tabs {
+@media (max-width: 300px) {
+  .profile-tabs {
     display: block;
   }
 
-  .product-tabs__item {
+  .profile-tabs__item {
     min-height: 35px;
     margin-bottom: 0;
   }
 
-  .product-tabs__item > span {
+  .profile-tabs__item > span {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -133,11 +133,11 @@
     }
   }
 
-  .product-tabs__item span.active {
+  .profile-tabs__item span.active {
     //background: #dedede;
   }
 
-  .product-tabs__content {
+  .profile-tabs__content {
     position: static;
     padding: 16px 0;
     opacity: 1;
@@ -145,7 +145,7 @@
     display: none;
   }
 
-  .product-tabs__item > span.active {
+  .profile-tabs__item > span.active {
     &::after {
       position: unset;
       content: "";
@@ -157,21 +157,21 @@
     }
   }
 
-  .product-tabs {
+  .profile-tabs {
     &::before {
       display: none;
     }
   }
 }
 
-.product-tabs__content > *:last-child {
+.profile-tabs__content > *:last-child {
   margin-bottom: 0;
 }
 @media (max-width: 460px) {
-  .product-tabs__item span {
+  .profile-tabs__item span {
     font-size: 14px;
   }
-  .product-tabs__content {
+  .profile-tabs__content {
     font-size: 14px;
   }
 }

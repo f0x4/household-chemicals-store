@@ -304,7 +304,7 @@
         <a href="#">Показать 52 товара</a>
     </div>
 </div>
-
+ 
 </header>
 
 	<div class="wrapper">
@@ -433,7 +433,36 @@
 	<div class="product-tabs__item">
         <span class="active">Характеристики</span>
 		<div class="product-tabs__content">
-			<h1>Характеристики</h1>
+			<div class="characteristics-row">
+    <h3>Артикул</h3>
+    <p>12345</p>
+</div>
+
+			<div class="characteristics-row">
+    <h3>Код товара</h3>
+    <p>4014835737617</p>
+</div>
+
+			<div class="characteristics-row">
+    <h3>Назначение</h3>
+    <p>Для обработки кожи</p>
+</div>
+
+			<div class="characteristics-row">
+    <h3>Состав</h3>
+    <p>В качестве действующих веществ содержит изопропиловый cпирт (2-пропанол) — 48.0%, н-пропиловый спирт (1-пропанол) — 12.0%, полигексаметиленбигуанид гидрохлорида — 0.25%, а также функциональные добавки (увлажняющие и смягчающие кожу)</p>
+</div>
+
+			<div class="characteristics-row">
+    <h3>Номер документа о соответствии</h3>
+    <p>RU.77.99.88.002.Е.001370.04.19</p>
+</div>
+
+			<div class="characteristics-row">
+    <h3>Срок годности</h3>
+    <p>5 лет</p>
+</div>
+
 			
         </div>
 	</div>
@@ -441,7 +470,7 @@
 	<div class="product-tabs__item">
 		<span>Описание</span>
 		<div class="product-tabs__content">
-			<h1>Описание</h1>
+			<p>Антисептик для обработки рук</p>
 			
 		</div>
 	</div>
@@ -449,24 +478,243 @@
 	<div class="product-tabs__item">
 		<span>Преимущества</span>
 		<div class="product-tabs__content">
-			<h2>Преимущества</h2>
+			<p>Преимущества:<br><br>
+
+				— влагостойкость и прочность;<br>
+				— материал высокого качества по разумной цене;<br>
+				— обладает отличными гигиеническими свойствами;<br>
+				— нетоксичен и безопасен для использования;<br>
+				— создает благоприятный климат в помещении;<br>
+				— обладает «дышащей» способностью;<br>
+				— качество соответствует жестким мировым стандартам.</p>
 		</div>
 	</div>
 	
 	<div class="product-tabs__item">
 		<span>Отзывы: 8</span>
 		<div class="product-tabs__content">
-			<h2>Отзывы: 8</h2>
+			<div class="reviews-tab">
+    <div class="reviews-tab__head">
+        <div class="reviews-tab__sort-by">
+            <p class="reviews-tab__sort-title">Сортировать по:</p>
+            <p class="reviews-tab__sort-item active inverted">Дате</p>
+            <p class="reviews-tab__sort-item">Оценке</p>
+        </div>
+        
+        <div class="review-add">
+    <button id="review-add__btn" class="review-add__btn" onclick="productNewReview()">Написать отзыв</button>
+    <div id="review-add__popup" class="review-add__popup">
+        <div class="review-add__content">
+            <div class="review-add__header">
+               <h3>Новый отзыв</h3>
+               <button onclick="productNewReviewCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <div class="review-add__product-title">Антисептик RAVENOL 4014835737617</div>
+            <div class="review-add-form">
+                <div class="review-rate">
+    <div class="review-rate__title">Ваша оценка</div>
+    <div class="review-rate__stars">
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        <button class="review-rate__star grey">
+            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
+            </svg>
+        </button >
+        
+    </div>
+    
+    <script>
+        const ratingStars = [...document.getElementsByClassName("review-rate__star")];
+
+        function executeRating(stars) {
+          const starClassActive = "review-rate__star yellow";
+          const starClassInactive = "review-rate__star grey";
+          const starsLength = stars.length;
+          let i;
+          stars.map((star) => {
+            star.onclick = () => {
+              i = stars.indexOf(star);
+            
+              if (star.className===starClassInactive) {
+                for (i; i >= 0; --i) stars[i].className = starClassActive;
+              } else {
+                for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+              }
+            };
+          });
+        }
+        executeRating(ratingStars);
+    </script>
+    
+</div>
+                <div class="review-add__title">Комментарий</div>
+                <div class="review-input-text">
+    <div class="review-input-text__container">
+        <input type="text" placeholder="Опишите ваши впечатления">
+    </div>
+</div>
+                <div class="review-input-text">
+    <div class="review-input-text__container">
+        <input type="text" placeholder="Опишите достоинства">
+    </div>
+</div>
+                <div class="review-input-text">
+    <div class="review-input-text__container">
+        <input type="text" placeholder="Опишите недостатки">
+    </div>
+</div>
+                <div class="fille-drag-and-drop">
+    <img class="fille-drag-and-drop__camera-img" src="/img/svg/camera.svg" alt="camera">
+    <div class="fille-drag-and-drop__wraper">
+        <p class="fille-drag-and-drop__description">Прикрепите фото к сообщению, перетащив его в эту область, или <a href="#">выберите файл</a></p>
+        <p class="fille-drag-and-drop__info">*максимум 5 файлов (до 5 Мб каждый) в формате JPEG, PNG, HEIC или WebP</p>
+    </div>
+    
+</div>
+
+                <div class="checkbox-agreement checkbox">
+                    <input type="checkbox" id="check-agreement" name="check-agreement" />
+                    <label for="check-agreement">Я согласен с&nbsp;<a href="#">правилами публикации пользовательского контента</a></label>
+                </div>
+            </div>
+            <button class="green-button" disabled>Отправить отзыв</button>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+    <div class="review">
+        <div>
+            <div class="review__name">Андрей</div>
+            <div class="review__rate">
+                <img src="/img/svg/star-yellow.svg" alt="yellow star">
+                <img src="/img/svg/star-yellow.svg" alt="yellow star">
+                <img src="/img/svg/star-yellow.svg" alt="yellow star">
+                <img src="/img/svg/star-yellow.svg" alt="yellow star">
+                <img src="/img/svg/star-grey.svg" alt="grey star">
+            </div>
+        </div>
+        <div class="review__text">Супер круто офигенно. Супер круто офигенно Супер круто офигенно. Супер круто офигенно Супер круто офигенно</div>
+        <div class="review__date">06.10. 2021</div>
+    </div>
+    <div class="review">
+        <div>
+            <div class="review__name">Андрей</div>
+            <div class="review__rate">
+                <img src="/img/svg/star-yellow.svg" alt="yellow star">
+                <img src="/img/svg/star-yellow.svg" alt="yellow star">
+                <img src="/img/svg/star-yellow.svg" alt="yellow star">
+                <img src="/img/svg/star-yellow.svg" alt="yellow star">
+                <img src="/img/svg/star-grey.svg" alt="grey star">
+            </div>
+        </div>
+        <div class="review__text">Супер круто офигенно. Супер круто офигенно Супер круто офигенно. Супер круто офигенно Супер круто офигенно</div>
+        <div class="review__date">06.10. 2021</div>
+    </div>
+</div>
+			
 		</div>
 	</div>
 	
 	<div class="product-tabs__item">
 		<span>Сертификаты</span>
 		<div class="product-tabs__content">
-			<h2>Сертификаты</h2>
+			<a class="certificate-row" href="#"><img src="/img/svg/certificate.svg" alt="certificate icon"> Паспорт безопасности</a>
+
+			
+			<a class="certificate-row" href="#"><img src="/img/svg/certificate.svg" alt="certificate icon"> Сертификат</a>
+
 		</div>
 	</div>
-	
+	<script>
+
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			function tabsInAccord() {
+				var w = window.innerWidth ? window.innerWidth : $(window).width(), //ширина экрана
+						widthVal = 700, //ширина, меньше которой табы становятся аккордионами
+						speed = 250, //скорость раскрытия аккордионов
+						tab = $('.product-tabs__item > span.active'); //отдельная вкладка
+				
+				if (w < 700 ) {
+					$('.product-tabs__item > span').removeClass('active')
+				
+				}
+				//Высчитываем высоту контейнера
+					function calcHeight() {
+						var tabHeight = 0;
+						$('.product-tabs__item > span.active').next('.product-tabs__content').each(function(){
+							if ($(this).innerHeight() > tabHeight ) {
+								 tabHeight = $(this).innerHeight()
+							 }
+						});
+						$('.product-tabs').height(tabHeight);
+					}
+				
+				function tabsSwitch() {
+					$('.product-tabs__item').off().on('click', 'span', function() {
+						$(this).closest('.product-tabs').find($('.product-tabs__item')).find('.product-tabs__content').removeAttr("style");
+						$(this).addClass('active').next('.product-tabs__content').show().closest('.product-tabs').find($('.product-tabs__item > span.active').not($(this))).removeClass('active');
+						calcHeight();
+					});
+				}
+			
+				function accordOpen() {
+					$('.product-tabs').removeAttr("style");
+					$('.product-tabs__item').off().on('click', 'span', function() {
+							$(this).toggleClass('active').next('.product-tabs__content').slideToggle(speed);
+						});
+				}
+			
+				if (w < widthVal) {
+					if(tab.length > 0) {
+						tab.closest('.product-tabs').find($('.product-tabs__item > span').not(tab).next('.product-tabs__content')).css({'display':'none'});
+						tab.next('.product-tabs__content').slideDown(speed);
+					}
+					accordOpen();
+				} else {
+					if(tab.length === 0 || tab.length > 1) {
+						tab.removeClass('active').next('.product-tabs__content').css({'display':'block'});
+							$('.product-tabs__item:first > span').addClass('active');
+						} else {
+							$('.product-tabs').find('.product-tabs__content').css({'display':'block'});
+						}
+						calcHeight();
+						tabsSwitch();	
+					}
+					if (w < 700 ) {
+						$('.product-tabs__content').css({'display':'none'})
+					}
+			}
+		
+			tabsInAccord();
+		
+			$(window).resize(function () {
+				$('.product-tabs__item').removeClass('active')
+				tabsInAccord();
+			
+			});
+		});
+	</script>
 </div>
 
 </div>

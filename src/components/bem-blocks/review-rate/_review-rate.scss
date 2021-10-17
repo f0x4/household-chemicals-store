@@ -1,0 +1,12 @@
+.review-rate {
+  display: flex;
+}
+.review-rate__title {
+  margin-right: 21px;
+}
+.review-rate__star.yellow svg path {
+  fill: #f9c901 !important;
+}
+.review-rate__star.grey svg path {
+  fill: #dae2e5 !important;
+}

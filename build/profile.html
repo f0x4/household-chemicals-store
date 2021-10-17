@@ -211,7 +211,7 @@
     </a>
 </section>
     <menu id="tapbar" class="tapbar">
-    <a href="/" class="tapbar__item tapbar__item-home">
+    <a href="/" class="tapbar__item tapbar__item-home active">
         <svg class="tapbar__icon" width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.356916 6.34889C0.132663 6.50907 -0.000427246 6.76769 -0.000427246 7.04328V17.8397C-0.000427246 18.311 0.381623 18.693 0.852906 18.693H5.19068C5.66197 18.693 6.04402 18.311 6.04402 17.8397V12.293C6.04402 11.8217 6.42607 11.4397 6.89735 11.4397H10.0262C10.4975 11.4397 10.8796 11.8217 10.8796 12.293V17.8397C10.8796 18.311 11.2616 18.693 11.7329 18.693H16.0707C16.542 18.693 16.924 18.311 16.924 17.8397V7.04328C16.924 6.76769 16.7909 6.50907 16.5667 6.34889L8.95779 0.913971C8.66108 0.702041 8.26251 0.702041 7.96581 0.913971L0.356916 6.34889Z" fill="#08A979"/>
         </svg>
@@ -304,11 +304,55 @@
         <a href="#">Показать 52 товара</a>
     </div>
 </div>
-
+ 
 </header>
 
 	<div class="wrapper">
 		<main class="main">
+			<div class="breadcrumbs-section">
+    <nav class="breadcrumbs">
+    <ol>
+      <li class="breadcrumbs__item">
+        <a href="">Главная</a>
+        <span></span>
+      </li>
+      
+      <li class="breadcrumbs__item">Каталог</li>
+    </ol>
+</nav>
+
+</div>
+			<h2 class="heading">Личный кабиенет</h2>
+			<div class="profile-tabs">
+
+	<div class="profile-tabs__item">
+        <span class="active">Профиль</span>
+		<div class="profile-tabs__content">
+			<div class="characteristics-row">
+    <h3>Имя</h3>
+    <p>Елена</p>
+</div>
+
+			<div class="characteristics-row">
+    <h3>Фамилия</h3>
+    <p>Назаретян</p>
+</div>
+
+			<div class="characteristics-row">
+    <h3>Дата рождения</h3>
+    <p>30.11.1993</p>
+</div>
+
+			<div class="characteristics-row">
+    <h3>Телефон</h3>
+    <p>+7 921 644-38-50</p>
+</div>
+
+			<div class="characteristics-row">
+    <h3>Email</h3>
+    <p>lena_naz93@mail.ru</p>
+</div>
+
 			<div class="password-change">
     <button id="password-change__btn" class="password-change__btn" onclick="passwordChangeBtn()"><img src="./img/svg/lock.svg" alt="lock"> Сменить пароль</button>
     <div id="password-change__popup" class="password-change__popup">
@@ -423,6 +467,107 @@
     </div>
 </div>
 
+
+
+        </div>
+	</div>
+	
+	<div class="profile-tabs__item">
+		<span>Заказы</span>
+		<div class="profile-tabs__content">
+			
+			
+		</div>
+	</div>
+	
+	<div class="profile-tabs__item">
+		<span>Подписки</span>
+		<div class="profile-tabs__content">
+			
+		</div>
+	</div>
+	
+	<div class="profile-tabs__item">
+		<span>Скидки</span>
+		<div class="profile-tabs__content">
+			
+			
+		</div>
+	</div>
+	
+	<script>
+
+
+
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			function tabsInAccord() {
+				var w = window.innerWidth ? window.innerWidth : $(window).width(), //ширина экрана
+						widthVal = 300, //ширина, меньше которой табы становятся аккордионами
+						speed = 250, //скорость раскрытия аккордионов
+						tab = $('.profile-tabs__item > span.active'); //отдельная вкладка
+
+				if (w < 300 ) {
+					$('.profile-tabs__item > span').removeClass('active')
+				
+				}
+				//Высчитываем высоту контейнера
+					function calcHeight() {
+						var tabHeight = 0;
+						$('.profile-tabs__item > span.active').next('.profile-tabs__content').each(function(){
+							if ($(this).innerHeight() > tabHeight ) {
+								 tabHeight = $(this).innerHeight()
+							 }
+						});
+						$('.profile-tabs').height(tabHeight);
+					}
+				
+				function tabsSwitch() {
+					$('.profile-tabs__item').off().on('click', 'span', function() {
+						$(this).closest('.profile-tabs').find($('.profile-tabs__item')).find('.profile-tabs__content').removeAttr("style");
+						$(this).addClass('active').next('.profile-tabs__content').show().closest('.profile-tabs').find($('.profile-tabs__item > span.active').not($(this))).removeClass('active');
+						calcHeight();
+					});
+				}
+
+				function accordOpen() {
+					$('.profile-tabs').removeAttr("style");
+					$('.profile-tabs__item').off().on('click', 'span', function() {
+							$(this).toggleClass('active').next('.profile-tabs__content').slideToggle(speed);
+						});
+				}
+
+				if (w < widthVal) {
+					if(tab.length > 0) {
+						tab.closest('.profile-tabs').find($('.profile-tabs__item > span').not(tab).next('.profile-tabs__content')).css({'display':'none'});
+						tab.next('.profile-tabs__content').slideDown(speed);
+					}
+					accordOpen();
+				} else {
+					if(tab.length === 0 || tab.length > 1) {
+						tab.removeClass('active').next('.profile-tabs__content').css({'display':'block'});
+							$('.profile-tabs__item:first > span').addClass('active');
+						} else {
+							$('.profile-tabs').find('.profile-tabs__content').css({'display':'block'});
+						}
+						calcHeight();
+						tabsSwitch();	
+					}
+					if (w < 700 ) {
+						$('.profile-tabs__content').css({'display':'none'})
+					}
+			}
+
+			tabsInAccord();
+
+			$(window).resize(function () {
+				$('.profile-tabs__item').removeClass('active')
+				tabsInAccord();
+
+			});
+		});
+
+	</script>
+</div>
 
 			
 		</main>
