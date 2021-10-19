@@ -535,69 +535,45 @@
             </div>
             <div class="btn-shop-address__info">От выбора магазина могут зависеть наличие и срок доставки</div>
             <div class="btn-shop-address-form">
-                <div class="input-search">
+                <div class="shops-search-and-map">
+    <div class="shops-search-and-map__search">
+        <div class="input-search">
     <input type="text" placeholder="Поиск магазина">
     <button class="input-search__btn"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 11h-.79l-.28-.27A6.471 6.471 0 0013 6.5 6.5 6.5 0 106.5 13c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L17.49 16l-4.99-5zm-6 0C4.01 11 2 8.99 2 6.5S4.01 2 6.5 2 11 4.01 11 6.5 8.99 11 6.5 11z" fill="#fff"/></svg></button>
 </div>
 
-                <div class="review-rate">
-    <div class="review-rate__title">Ваша оценка</div>
-    <div class="review-rate__stars">
-        <button class="review-rate__star grey">
-            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
-            </svg>
-        </button >
-        <button class="review-rate__star grey">
-            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
-            </svg>
-        </button >
-        <button class="review-rate__star grey">
-            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
-            </svg>
-        </button >
-        <button class="review-rate__star grey">
-            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
-            </svg>
-        </button >
-        <button class="review-rate__star grey">
-            <svg  width="20" height="20" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 7.635L8.09 9.5L7.27 5.985L10 3.62L6.405 3.315L5 0L3.595 3.315L0 3.62L2.73 5.985L1.91 9.5L5 7.635Z" fill="#DAE2E5"/>
-            </svg>
-        </button >
+        <div class="shops-search-and-map__search-items">
+            <div class="shops-search-and-map__search-item">
+                <h4><div class="shop-status"></div>Ленинградское ш., 34-й км., Солнечногорский р-н</h4>
+                <p>Eжедневно, 8:00-22:00<br> 8 (495) 788-49-49 доб. 1771</p>
+                <button class="green-button">Выбрать</button>
+            </div>  
+            <div class="shops-search-and-map__search-item">
+                <h4><div class="shop-status"></div>Ленинградское ш., 34-й км., Солнечногорский р-н</h4>
+                <p>Eжедневно, 8:00-22:00<br> 8 (495) 788-49-49 доб. 1771</p>
+                <button class="green-button">Выбрать</button>
+            </div>  
+            <div class="shops-search-and-map__search-item">
+                <h4><div class="shop-status"></div>Ленинградское ш., 34-й км., Солнечногорский р-н</h4>
+                <p>Eжедневно, 8:00-22:00<br> 8 (495) 788-49-49 доб. 1771</p>
+                <button class="green-button">Выбрать</button>
+            </div>  
+            <div class="shops-search-and-map__search-item">
+                <h4><div class="shop-status"></div>Ленинградское ш., 34-й км., Солнечногорский р-н</h4>
+                <p>Eжедневно, 8:00-22:00<br> 8 (495) 788-49-49 доб. 1771</p>
+                <button class="green-button">Выбрать</button>
+            </div>  
+            <div class="shops-search-and-map__search-item">
+                <h4><div class="shop-status"></div>Ленинградское ш., 34-й км., Солнечногорский р-н</h4>
+                <p>Eжедневно, 8:00-22:00<br> 8 (495) 788-49-49 доб. 1771</p>
+                <button class="green-button">Выбрать</button>
+            </div>  
+        </div>
         
     </div>
-    
-    <script>
-        const ratingStars = [...document.getElementsByClassName("review-rate__star")];
-
-        function executeRating(stars) {
-          const starClassActive = "review-rate__star yellow";
-          const starClassInactive = "review-rate__star grey";
-          const starsLength = stars.length;
-          let i;
-          stars.map((star) => {
-            star.onclick = () => {
-              i = stars.indexOf(star);
-            
-              if (star.className===starClassInactive) {
-                for (i; i >= 0; --i) stars[i].className = starClassActive;
-              } else {
-                for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
-              }
-            };
-          });
-        }
-        executeRating(ratingStars);
-    </script>
-    
+    <div class="shops-search-and-map__map"></div>
 </div>
-                <div class="btn-shop-address__title">Комментарий</div>
             </div>
-            <button class="green-button">Новый адрес</button>
         </div>
     </div>
 </div>

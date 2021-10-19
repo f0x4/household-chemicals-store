@@ -1,0 +1,79 @@
+.shops-search-and-map {
+  display: flex;
+  max-width: 100%;
+}
+.shops-search-and-map__search {
+  width: 100%;
+  max-width: 304px;
+  .input-search {
+    margin-bottom: 38px;
+  }
+}
+.shops-search-and-map__search-items {
+  overflow: auto;
+  height: 100%;
+  > :nth-last-child(1) {
+    margin-bottom: 0;
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &::-webkit-scrollbar-track {
+    background: #fff; /* color of the tracking area */
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #c4c4c4;
+    border-radius: 20px;
+    border: 3px solid #fff;
+  }
+}
+.shops-search-and-map__search-item {
+  margin-bottom: 32px;
+  > h4 {
+    display: flex;
+    margin-bottom: 10px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #252525;
+
+    .shop-status {
+      flex-grow: 1;
+      margin: 4px 12px 4px 0;
+      min-width: 10px;
+      height: 10px;
+      background: $accent;
+      border-radius: 50%;
+    }
+  }
+  > p {
+    margin-bottom: 16px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #58575c;
+  }
+  > button {
+    width: 100%;
+    height: 45px;
+    color: #fff;
+  }
+}
+.shops-search-and-map__map {
+  width: 100%;
+  margin-left: 10px;
+  background: #58575c;
+  border-radius: 2px;
+  opacity: 0.3;
+}
