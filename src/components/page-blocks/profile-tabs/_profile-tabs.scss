@@ -4,7 +4,7 @@
   justify-content: space-between;
   min-height: 35px;
   height: auto;
-  margin: 0 40px;
+  margin: 0 40px 100px;
 
   > :focus {
     outline: 0;
@@ -55,7 +55,7 @@
   opacity: 0;
   top: 0;
   left: 0;
-  padding-top: 102px;
+  padding-top: 118px;
   width: 100%;
 
   font-family: Roboto;
@@ -97,7 +97,7 @@
 
 @media (max-width: 768px) {
   .profile-tabs {
-    margin: 0 36px;
+    margin: 0 36px 100px;
   }
   .profile-tabs__item > span {
     font-size: 15px;
@@ -173,7 +173,7 @@
 }
 @media (max-width: 460px) {
   .profile-tabs {
-    margin: 0 16px;
+    margin: 0 16px 100px;
   }
   .profile-tabs__item span {
     font-size: 14px;
@@ -184,6 +184,6 @@
 }
 @media (max-width: 320px) {
   .profile-tabs {
-    margin: 0 10px;
+    margin: 0 10px 100px;
   }
 }

@@ -1,0 +1,124 @@
+.order__wraper {
+  display: flex;
+}
+.order__number {
+  margin-bottom: 34px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 12px;
+
+  color: #000000;
+}
+.order__head {
+  min-width: 260px;
+  margin-right: 40px;
+  > :nth-child(1) {
+    display: flex;
+    > div {
+      margin-left: 24px;
+      max-width: 164px;
+    }
+
+    img {
+      width: 70px;
+      height: 70px;
+      border: #c4c4c4 solid 1px;
+    }
+    .order__title {
+      margin-bottom: 6px;
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+
+      color: #08a979;
+    }
+    .order__payment {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 21px;
+
+      color: #252525;
+    }
+  }
+  .order__review {
+    margin-top: 30px;
+    > a {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+
+      color: #08a979;
+    }
+  }
+}
+.order__body {
+  max-width: 495px;
+  margin-left: auto;
+  .order__body-title {
+    margin-top: 40px;
+    margin-bottom: 12px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #58575c;
+  }
+  .characteristics-row {
+    margin-bottom: 14px;
+    > h3 {
+      max-width: 200px;
+      min-width: 200px;
+    }
+  }
+}
+.order__btns {
+  display: flex;
+  margin-top: 40px;
+  white-space: nowrap;
+  button {
+    border-radius: 2px;
+    padding: 0 30px;
+    height: 47px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .green-button {
+    color: #fff;
+  }
+  > :nth-last-child(1) {
+    background: #dae2e5;
+    color: #58575c;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order__body-title {
+    margin-top: 30px;
+
+    font-size: 14px;
+  }
+}
+@media (max-width: 460px) {
+  .order__body-title {
+    margin-bottom: 18px;
+
+    line-height: 18px;
+  }
+}
