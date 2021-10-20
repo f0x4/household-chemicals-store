@@ -1,0 +1,294 @@
+.sub {
+  display: flex;
+  flex-direction: column;
+  height: 365px;
+  padding: 13px 15px 20px;
+
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  // Отступы для теней
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    box-shadow: 0px 9px 15px rgba(224, 228, 229, 0.62);
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+}
+
+.sub__top {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.sub__label {
+  display: flex;
+  height: 22px;
+}
+
+.sub__like {
+  height: 22px;
+  width: 22px;
+  background: url(../img/svg/product-like.svg) 0 0/100% no-repeat;
+  background-position: 50% 50%;
+  transition: 2s cubic-bezier(1, 0, 0.9, 1);
+
+  &:active {
+    background: url(../img/svg/product-like-active.svg) 0 0/100% no-repeat;
+    background-position: 50% 50%;
+    transition: 0.1ms ease;
+  }
+}
+
+.sub__image {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 10px;
+  img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+.sub__middle {
+  span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+
+    color: #58575c;
+
+    opacity: 0.5;
+  }
+  h4 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #58575c;
+  }
+}
+
+.sub__size {
+  display: flex;
+  margin-top: 9px;
+}
+
+.sub__size-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+  width: 18px;
+  height: 18px;
+
+  background: #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  &:hover {
+    border: 1px solid #08a979;
+    span {
+      color: #252525;
+      opacity: 1;
+    }
+  }
+  &.active {
+    border: 1px solid #08a979;
+    cursor: default;
+    span {
+      color: #252525;
+      opacity: 1;
+      margin-right: 1.5px;
+    }
+  }
+  span {
+    letter-spacing: -0.04em;
+    opacity: 0.4;
+    margin-top: 1px;
+  }
+}
+
+.sub__bottom {
+  margin-top: auto;
+  display: flex;
+
+  align-content: flex-end;
+
+  > button {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    letter-spacing: 0.01em;
+  }
+}
+
+.sub__unsubscribe-btn {
+  color: #58575c;
+}
+.sub__subscribe-btn {
+  color: #08a979;
+}
+
+@media (max-width: 768px) {
+  .sub {
+    height: 345px;
+    padding: 10px 13px 11px;
+  }
+
+  .sub__image {
+    img {
+      max-width: 137px;
+      max-height: 137px;
+    }
+  }
+
+  .sub__middle {
+    > span {
+      font-size: 11px;
+    }
+    h4 {
+      font-size: 14px;
+    }
+  }
+
+  .sub__cost {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 490px) {
+  .sub {
+    height: 297px;
+    padding: 7px 10px 7px;
+  }
+
+  .sub__label {
+    height: 18px;
+  }
+
+  .sub__like {
+    width: 19px;
+    height: 18px;
+  }
+
+  .sub__image {
+    margin-top: 1px;
+    img {
+      max-width: 118px;
+      max-height: 118px;
+    }
+  }
+
+  .sub__middle {
+    > span {
+      font-size: 11px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+  }
+
+  .sub__cost {
+    font-size: 14px;
+  }
+
+  .sub__discount {
+    line-height: 14px;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+
+  .sub__button-basket {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 374px) {
+  .sub {
+    height: 235px;
+    padding: 10px 8px 8px;
+  }
+
+  .sub__label {
+    height: 14px;
+  }
+  .sub__like {
+    width: 14px;
+    height: 13.5px;
+  }
+
+  .sub__image {
+    img {
+      max-width: 90px;
+      max-height: 90px;
+    }
+  }
+
+  .sub__middle {
+    > span {
+      font-size: 9px;
+    }
+    h4 {
+      font-size: 9px;
+      line-height: 11px;
+    }
+  }
+
+  .sub__size {
+    margin-top: 4px;
+  }
+  .sub__size-item {
+    width: 14px;
+    height: 14px;
+    span {
+      font-size: 9px;
+      line-height: 9px;
+      margin: 0;
+    }
+  }
+
+  .sub__cost {
+    font-size: 12px;
+  }
+  .sub__cost-strike {
+    font-size: 9px;
+    line-height: 9px;
+  }
+  .sub__discount {
+    font-size: 9px;
+    line-height: 9px;
+    margin-left: 5px;
+    margin-top: -2px;
+
+    span {
+      line-height: 12px;
+      margin: 0 4px;
+    }
+  }
+  .sub__button-basket {
+    width: 20px;
+    height: 20px;
+  }
+}
