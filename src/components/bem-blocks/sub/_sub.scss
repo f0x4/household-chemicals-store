@@ -42,12 +42,10 @@
   width: 22px;
   background: url(../img/svg/product-like.svg) 0 0/100% no-repeat;
   background-position: 50% 50%;
-  transition: 2s cubic-bezier(1, 0, 0.9, 1);
 
-  &:active {
+  &.active {
     background: url(../img/svg/product-like-active.svg) 0 0/100% no-repeat;
     background-position: 50% 50%;
-    transition: 0.1ms ease;
   }
 }
 
@@ -67,7 +65,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: 16px;
     letter-spacing: 0.02em;
 
@@ -165,7 +163,7 @@
 
   .sub__middle {
     > span {
-      font-size: 11px;
+      font-size: 11px !important;
     }
     h4 {
       font-size: 14px;
@@ -202,7 +200,7 @@
 
   .sub__middle {
     > span {
-      font-size: 11px;
+      font-size: 11px !important;
     }
     h4 {
       font-size: 12px;
@@ -263,32 +261,19 @@
     width: 14px;
     height: 14px;
     span {
-      font-size: 9px;
+      font-size: 9px !important;
       line-height: 9px;
       margin: 0;
     }
   }
-
-  .sub__cost {
-    font-size: 12px;
-  }
-  .sub__cost-strike {
-    font-size: 9px;
-    line-height: 9px;
-  }
-  .sub__discount {
-    font-size: 9px;
-    line-height: 9px;
-    margin-left: 5px;
-    margin-top: -2px;
-
-    span {
-      line-height: 12px;
-      margin: 0 4px;
+  .sub__bottom {
+    > button {
+      font-size: 10px;
+      line-height: 17px;
     }
   }
-  .sub__button-basket {
-    width: 20px;
-    height: 20px;
+  .sub__code {
+    font-size: 9px;
+    line-height: 10px;
   }
 }

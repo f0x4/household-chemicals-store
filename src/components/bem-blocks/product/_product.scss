@@ -42,12 +42,10 @@
   width: 22px;
   background: url(../img/svg/product-like.svg) 0 0/100% no-repeat;
   background-position: 50% 50%;
-  transition: 2s cubic-bezier(1, 0, 0.9, 1);
 
-  &:active {
+  &.active {
     background: url(../img/svg/product-like-active.svg) 0 0/100% no-repeat;
     background-position: 50% 50%;
-    transition: 0.1ms ease;
   }
 }
 
@@ -193,13 +191,10 @@
   align-self: flex-end;
   background: url(../img/svg/button-basket.svg) 0 0/100% no-repeat;
   background-position: 50% 50%;
-  transition: 2s cubic-bezier(1, 0, 0.9, 1);
 
-  &:active {
+  &.active {
     background: url(../img/svg/basket-active.svg) 0 0/100% no-repeat;
     background-position: 50% 50%;
-
-    transition: 0.1ms ease;
   }
 }
 
