@@ -13,21 +13,45 @@
 
 .tapbar__item {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  &:hover > .tapbar__label {
+  &:hover .tapbar__label {
     color: $accent;
   }
 
-  &:hover > .tapbar__icon > path {
+  &:hover .tapbar__icon > path {
     fill: $accent;
   }
-  &.active > .tapbar__label {
+  &.active .tapbar__label {
     color: $accent;
   }
-  &.active > .tapbar__icon > path {
+  &.active .tapbar__icon > path {
     fill: $accent;
+  }
+
+  &.status-green {
+    &::after {
+      content: "";
+      position: absolute;
+      transform: translate(70%, 0%);
+      width: 10px;
+      height: 10px;
+      background: url("../img/svg/status-green.svg") 0 0 / 100% no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+  &.status-red {
+    &::after {
+      content: "";
+      position: absolute;
+      transform: translate(70%, 0%);
+      width: 10px;
+      height: 10px;
+      background: url("../img/svg/status-red.svg") 0 0 / 100% no-repeat;
+      background-position: 50% 50%;
+    }
   }
 }
 
