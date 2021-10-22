@@ -1,4 +1,5 @@
-$('.similar-row__row').slick({
+document.addEventListener("DOMContentLoaded", function(event) { 
+  $('.similar-row__row').slick({
     dots: false,
     arrows: false,
     infinite: false,
@@ -42,3 +43,5 @@ $('.similar-row__row').slick({
       // instead of a settings object
     ]
   });
+
+});
