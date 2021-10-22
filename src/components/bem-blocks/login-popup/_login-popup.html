@@ -1,0 +1,31 @@
+<div class="login-popup">
+    <!-- onclick="loginPopupBtn()" -->
+    <div id="login-popup__popup" class="login-popup__popup">
+        <div class="login-popup__content">
+            <div class="login-popup__header">
+               <h3>Авторизация</h3>
+               <button onclick="loginPopupCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <p class="login-popup__text">Если у вас нет личного кабинета, <a href="#">зарегистрируйтесь</a></p>
+            <form class="login-popup-form">
+                @@include('../input-text/_input-text.html', {"title":"Email", "error":"Введите адрес электронной почты."})
+                @@include('../input-password-login/_input-password-login.html', {"title":"Пароль", "autocomplete":"password", "error":"Это значение должно содержать от 6 до 20 символов."})
+                
+            </form>
+            <button class="green-button" disabled>Войти</button>
+        </div>
+        <div class="login-popup__content">
+            <div class="login-popup__header">
+               <h3>Восстановить пароль</h3>
+               <button onclick="forgotClose()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <p class="login-popup__text">Введите адрес электронной почты, на который будет выслано письмо для восстановления пароля.</p>
+            <form class="login-popup-form">
+                @@include('../input-text/_input-text.html', {"title":"Email", "error":"Аккаунта с таким email не существует."})
+                
+            </form>
+            <button class="green-button" disabled>Войти</button>
+        </div>
+    </div>
+</div>
+

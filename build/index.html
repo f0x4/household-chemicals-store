@@ -72,9 +72,9 @@
         <a href="#" class="header__phone">+7 (000) 000-00-00</a>
         <ul class="header__links">
             <li>
-                <a class="header__link" href="#">
+                <button class="header__link" onclick="loginPopupBtn()">
                     <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 10.5a5.25 5.25 0 100-10.5 5.25 5.25 0 100 10.5zm0 2.625c-3.504 0-10.5 1.759-10.5 5.25V21h21v-2.625c0-3.491-6.996-5.25-10.5-5.25z" fill="#58575C"/></svg>
-                </a>
+                </button>
             </li>
             <li>
                 <a class="header__link" href="#">
@@ -230,12 +230,12 @@
         </svg>
         <span class="tapbar__label">Корзина</span>
     </a>
-    <a href="/profile" class="tapbar__item tapbar__item-man">
+    <button href="/profile" class="tapbar__item tapbar__item-man" onclick="loginPopupBtn()">
         <svg class="tapbar__icon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 10.5C13.4006 10.5 15.75 8.15063 15.75 5.25C15.75 2.34938 13.4006 0 10.5 0C7.59937 0 5.25 2.34938 5.25 5.25C5.25 8.15063 7.59937 10.5 10.5 10.5ZM10.5 13.125C6.99563 13.125 0 14.8837 0 18.375V21H21V18.375C21 14.8837 14.0044 13.125 10.5 13.125Z" fill="#58575C"/>
         </svg>            
         <span class="tapbar__label">Вход</span>
-    </a>
+    </button>
     <a href="favorites.html" class="tapbar__item tapbar__item-like">
         <svg class="tapbar__icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.5 20.9289L9.88273 19.4565C4.1385 14.2477 0.346191 10.8123 0.346191 6.59616C0.346191 3.16078 3.04542 0.461548 6.48081 0.461548C8.42158 0.461548 10.2843 1.36501 11.5 2.7927C12.7158 1.36501 14.5785 0.461548 16.5193 0.461548C19.9547 0.461548 22.6539 3.16078 22.6539 6.59616C22.6539 10.8123 18.8616 14.2477 13.1173 19.4677L11.5 20.9289Z" fill="#58575C"/>
@@ -304,7 +304,77 @@
         <a href="#">Показать 52 товара</a>
     </div>
 </div>
- 
+    <div class="cookies">
+    <div class="cookies__wrapper">
+        <img src="img/svg/cookie.svg" alt="cookie">
+        <div>
+            <p>Мы используем файлы cookie. Они помогают улучшить ваше взаимодействие с сайтом.</p>
+            <button class="green-button">Принять</button>
+        </div>
+        
+    </div>
+    
+</div>
+    <div class="login-popup">
+    <!-- onclick="loginPopupBtn()" -->
+    <div id="login-popup__popup" class="login-popup__popup">
+        <div class="login-popup__content">
+            <div class="login-popup__header">
+               <h3>Авторизация</h3>
+               <button onclick="loginPopupCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <p class="login-popup__text">Если у вас нет личного кабинета, <a href="#">зарегистрируйтесь</a></p>
+            <form class="login-popup-form">
+                <div class="input-text">
+    <p class="input-text__title">Email</p>
+    <div class="input-text__container">
+        <input type="text">
+        <!-- autocomplete="@@autocomplete" -->
+    </div>
+    <span class="input-text__error">Введите адрес электронной почты.</span>
+</div>
+                <div class="input-password-login">
+    <link rel="prefetch prerender" href="/img/svg/eye-close.svg" />
+    <div class="input-password-login__head">
+        <p class="input-password-login__title">Пароль</p>
+        <button class="input-password-login__forgot" type="button" onclick="forgotClick()">Забыли пароль?</button>
+    </div>
+    
+    <div class="input-password-login__container">
+        <input type="password" autocomplete="password">
+        <button type="button" onclick="typeToggle(event)"><img src="/img/svg/eye.svg" alt="show"></button>
+    </div>
+    <p class="input-password-login__error">Это значение должно содержать от 6 до 20 символов.</p>
+</div>
+
+                
+            </form>
+            <button class="green-button" disabled>Войти</button>
+        </div>
+        <div class="login-popup__content">
+            <div class="login-popup__header">
+               <h3>Восстановить пароль</h3>
+               <button onclick="forgotClose()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <p class="login-popup__text">Введите адрес электронной почты, на который будет выслано письмо для восстановления пароля.</p>
+            <form class="login-popup-form">
+                <div class="input-text">
+    <p class="input-text__title">Email</p>
+    <div class="input-text__container">
+        <input type="text">
+        <!-- autocomplete="@@autocomplete" -->
+    </div>
+    <span class="input-text__error">Аккаунта с таким email не существует.</span>
+</div>
+                
+            </form>
+            <button class="green-button" disabled>Войти</button>
+        </div>
+    </div>
+</div>
+
+
+
 </header>
 
 	<div class="wrapper">
@@ -779,17 +849,6 @@
     </div>
         
 </section>
-			<div class="cookies">
-    <div class="cookies__wrapper">
-        <img src="img/svg/cookie.svg" alt="cookie">
-        <div>
-            <p>Мы используем файлы cookie. Они помогают улучшить ваше взаимодействие с сайтом.</p>
-            <button class="green-button">Принять</button>
-        </div>
-        
-    </div>
-    
-</div>
 
 		</main>
 	</div>
