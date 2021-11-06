@@ -1,0 +1,113 @@
+.stocks-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 24px 40px;
+}
+.stock-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 343px;
+  background: #c4c4c4;
+  border-radius: 2px;
+  padding: 20px;
+  > h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+
+    color: #58575c;
+  }
+  > p {
+    margin-top: auto;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 17px;
+
+    color: #58575c;
+  }
+}
+
+@media (max-width: 1024px) {
+  .stocks-list {
+    gap: 16px;
+  }
+  .stock-item {
+    height: 269px;
+    > h3 {
+      font-size: 18px;
+    }
+    > p {
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .stock-item {
+    padding: 15px;
+    > h3 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    > p {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  .stocks-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 460px) {
+  .stocks-list {
+    gap: 20px;
+    padding: 24px 16px;
+  }
+  .stock-item {
+    padding: 10px 10px 25px;
+    height: 200px;
+    > h3 {
+      font-size: 14px;
+      line-height: 15px;
+    }
+    > p {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .stocks-list {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .stock-item {
+    height: 170px;
+  }
+}
+@media (max-width: 320px) {
+  .stocks-list {
+    padding: 24px 10px;
+  }
+  .stock-item {
+    > h3 {
+      font-size: 13px;
+      line-height: 13px;
+    }
+    > p {
+      font-size: 9px;
+      line-height: 9px;
+    }
+  }
+}
+@media (max-width: 319px) {
+  .stocks-list {
+    grid-template-columns: repeat(auto-fill, minmax(126px, 1fr));
+  }
+}

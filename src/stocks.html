@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Акции",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<div class="wrapper">
+		<main class="main">
+			@@include('components/page-blocks/breadcrumbs-section/_breadcrumbs-section.html')
+			@@include('components/bem-blocks/heading/_heading.html', {"title": "Акции"})
+			@@include('components/page-blocks/stocks-list/_stocks-list.html')
+			@@include('components/page-blocks/light-btn/_light-btn.html')
+			@@include('components/page-blocks/stock-big/_stock-big.html')
+			 
+		</main>
+	</div>
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
+

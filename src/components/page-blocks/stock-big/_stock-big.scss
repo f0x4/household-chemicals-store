@@ -1,0 +1,93 @@
+.stock-big {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 343px;
+  background: #c4c4c4;
+  border-radius: 2px;
+  padding: 50px;
+  margin: 60px 40px 100px;
+  > h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36.4813px;
+    line-height: 45px;
+
+    color: #58575c;
+  }
+  > p {
+    margin-top: auto;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 17px;
+
+    color: #252525;
+  }
+}
+
+@media (max-width: 1024px) {
+  .stock-big {
+    height: 269px;
+    > h3 {
+      font-size: 18px;
+      font-size: 28.4082px;
+      line-height: 32px;
+    }
+    > p {
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .stock-big {
+    margin: 50px 36px 100px;
+    > h3 {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    > p {
+      font-size: 15px;
+      line-height: 14px;
+    }
+  }
+}
+@media (max-width: 460px) {
+  .stock-big {
+    height: 200px;
+    margin: 50px 16px 100px;
+    padding: 40px 10px 25px;
+    > h3 {
+      font-size: 20.2276px;
+      line-height: 22px;
+    }
+    > p {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .stock-big {
+    height: 170px;
+  }
+}
+@media (max-width: 320px) {
+  .stock-big {
+    padding: 50px 10px 40px;
+    margin: 50px 10px 100px;
+    > h3 {
+      font-size: 13px;
+      line-height: 13px;
+    }
+    > p {
+      font-size: 9px;
+      line-height: 9px;
+    }
+  }
+}
+@media (max-width: 319px) {
+}
