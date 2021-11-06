@@ -1,0 +1,31 @@
+.light-btn__btn {
+  display: block;
+  margin-top: 6px;
+  height: 47px;
+  width: 245px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #08a979;
+
+  background: #c1eadd;
+  border-radius: 2px;
+}
+
+@media (max-width: 460px) {
+  .light-btn__btn {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .light-btn {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
