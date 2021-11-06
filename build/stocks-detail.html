@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+				content="Gulp pack for easy html/php markup development">
+	<meta name="keywords"
+				content="">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.svg"
+				type="image/svg+xml">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.webp"
+				type="image/webp">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.png"
+				type="image/x-icon">
+	<link rel="stylesheet"
+				href="css/libs.min.css">
+	<link rel="stylesheet"
+				href="css/style.min.css">
+	<title>Акции детальная</title>
+</head>
+
+
+<body>
+	<header class="header">
+    <div class="branding">
+    <div class="branding__container">
+        <a href="" id="header__logo" class="header__logo">
+            <img src="img/svg/logo.svg" alt="logo">
+        </a>
+        <div class="header__menu menu">
+            <div class="menu__icon">
+                <span></span>
+            </div>
+            <nav class="menu__body">
+                <ul class="menu__list">
+                    <li><a href="#" class="menu__link">Акции</a></li>
+                    <li><a href="#" class="menu__link">Доставка</a></li>
+                    <li><a href="#" class="menu__link">Новости</a></li>
+                    <li><a href="#" class="menu__link">Контакты</a></li>
+
+                    <li>
+                        <a href="#" class="nav-link menu__additional-link ">
+                            <svg class="nav-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#02C087"/>
+                                <path d="M11.7289 4.57198C11.8373 4.34329 12.1627 4.34329 12.2711 4.57198L14.2245 8.69354C14.2683 8.78581 14.3559 8.8495 14.4572 8.86258L18.9807 9.44679C19.2317 9.4792 19.3322 9.78869 19.1482 9.96244L15.8321 13.0939C15.7578 13.164 15.7243 13.2671 15.7432 13.3674L16.5854 17.8501C16.6321 18.0988 16.3689 18.29 16.1468 18.1687L12.1438 15.9825C12.0542 15.9336 11.9458 15.9336 11.8562 15.9825L7.85324 18.1687C7.63113 18.29 7.36787 18.0988 7.4146 17.8501L8.25682 13.3674C8.27568 13.2671 8.24219 13.164 8.16795 13.0939L4.85176 9.96244C4.66776 9.78869 4.76832 9.4792 5.0193 9.44679L9.54279 8.86258C9.64406 8.8495 9.73173 8.78581 9.77546 8.69354L11.7289 4.57198Z" fill="white"/>
+                            </svg>
+                            <span>Бонусная программа</span>  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link menu__additional-link">
+                           <svg class="nav-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <circle cx="12" cy="12" r="12" fill="#02C087"/>
+                               <path d="M17.0909 9.45457H15.1818V6.90912H6.27273C5.57273 6.90912 5 7.48185 5 8.18185V15.1818H6.27273C6.27273 16.2382 7.12545 17.0909 8.18182 17.0909C9.23818 17.0909 10.0909 16.2382 10.0909 15.1818H13.9091C13.9091 16.2382 14.7618 17.0909 15.8182 17.0909C16.8745 17.0909 17.7273 16.2382 17.7273 15.1818H19V12L17.0909 9.45457ZM8.18182 16.1364C7.65364 16.1364 7.22727 15.71 7.22727 15.1818C7.22727 14.6537 7.65364 14.2273 8.18182 14.2273C8.71 14.2273 9.13636 14.6537 9.13636 15.1818C9.13636 15.71 8.71 16.1364 8.18182 16.1364ZM16.7727 10.4091L18.02 12H15.1818V10.4091H16.7727ZM15.8182 16.1364C15.29 16.1364 14.8636 15.71 14.8636 15.1818C14.8636 14.6537 15.29 14.2273 15.8182 14.2273C16.3464 14.2273 16.7727 14.6537 16.7727 15.1818C16.7727 15.71 16.3464 16.1364 15.8182 16.1364Z" fill="white"/>
+                           </svg>
+                           <span>Доставка</span> 
+                        </a>
+                    </li>
+
+                    <li><a href="#" class="menu__phone">+7 (000) 000-00-00</a></li>
+                    <li><a href="#" class="menu__phone">+7 (000) 000-00-00</a></li>
+    
+                </ul>
+            </nav>
+        </div>
+        <a href="#" class="header__phone">+7 (000) 000-00-00</a>
+        <ul class="header__links">
+            <li>
+                <!-- .status-green или .status-red -->
+                <button class="header__link status-red" onclick="loginPopupBtn()">
+                    <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 10.5a5.25 5.25 0 100-10.5 5.25 5.25 0 100 10.5zm0 2.625c-3.504 0-10.5 1.759-10.5 5.25V21h21v-2.625c0-3.491-6.996-5.25-10.5-5.25z" fill="#58575C"/></svg>
+                </button>
+            </li>
+            <li>
+                <a class="header__link" href="#">
+                    <svg width="23" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 20.929l-1.617-1.473C4.139 14.248.346 10.812.346 6.596c0-3.435 2.7-6.134 6.135-6.134 1.94 0 3.803.903 5.019 2.33 1.216-1.427 3.079-2.33 5.02-2.33 3.435 0 6.134 2.699 6.134 6.134 0 4.216-3.792 7.652-9.537 12.872l-1.617 1.46z" fill="#58575C"/></svg>
+                </a>
+            </li>
+            <li>
+                <a class="header__link" href="#">
+                    <span class="header__link-counter">0</span>
+                    <svg width="23" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.947 7.723L12.367.465A1.02 1.02 0 0011.5 0c-.335 0-.67.155-.868.476L6.053 7.723H1.045C.47 7.723 0 8.22 0 8.829c0 .1.01.2.042.299l2.655 10.257C2.937 20.314 3.743 21 4.705 21h13.59c.962 0 1.767-.686 2.018-1.615L22.97 9.128l.03-.299c0-.608-.47-1.106-1.046-1.106h-5.007zm-8.583 0L11.5 2.855l3.136 4.868H8.364zm3.136 8.851c-1.15 0-2.09-.996-2.09-2.213s.94-2.212 2.09-2.212 2.09.995 2.09 2.212-.94 2.213-2.09 2.213z" fill="#58575C"/></svg>
+                </a>
+            </li>
+        </ul>
+        <div id="header__search" class="header__search">
+            <input class="header__search-input" type="text" placeholder="Средство">
+            <button class="green-button" onclick="mobileSearchContentShow()">
+                <img class="search-icon" src="img/svg/search.svg" alt="search">
+            </button>
+        </div>
+        
+    </div>
+</div>
+    <section id="navigation" class="navigation">
+    <div id="navigation__catalog-dropdown" class="navigation__catalog-dropdown">
+        <button class="catalog-dropdown__btn" onclick="dropDownCategories()" >
+            <span>Каталог товаров</span> 
+            <img src="img/svg/arrow.svg" class="catalog-dropdown__icon" alt="arrow">
+        </button>
+        <aside id="catalog-dropdown__content" class="catalog-dropdown__content">
+            <a href="#">Все товары</a>
+            <div class="flyout">
+  <span>Антисептики</span>
+  <img src="./img/svg/arrow-right.svg" alt="arrow right">
+  <div class="flyout__content">
+    <a href="#">Антисептики</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+  </div>
+</div>
+            <div class="flyout">
+  <span>Антисептики</span>
+  <img src="./img/svg/arrow-right.svg" alt="arrow right">
+  <div class="flyout__content">
+    <a href="#">Антисептики</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+  </div>
+</div>
+            <div class="flyout">
+  <span>Антисептики</span>
+  <img src="./img/svg/arrow-right.svg" alt="arrow right">
+  <div class="flyout__content">
+    <a href="#">Антисептики</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+  </div>
+</div>
+            <div class="flyout">
+  <span>Антисептики</span>
+  <img src="./img/svg/arrow-right.svg" alt="arrow right">
+  <div class="flyout__content">
+    <a href="#">Антисептики</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+  </div>
+</div>
+            <div class="flyout">
+  <span>Антисептики</span>
+  <img src="./img/svg/arrow-right.svg" alt="arrow right">
+  <div class="flyout__content">
+    <a href="#">Антисептики</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+  </div>
+</div>
+            <div class="flyout">
+  <span>Антисептики</span>
+  <img src="./img/svg/arrow-right.svg" alt="arrow right">
+  <div class="flyout__content">
+    <a href="#">Антисептики</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+    <a href="#">Для рук</a>
+    <a href="#">Канистры</a>
+  </div>
+</div>
+        </aside>
+    </div>
+    <div class="navigation__search-container">
+        <div id="navigation__search" class="navigation__search">
+            <input id="navigation__search-input" oninput="searchContentShow()" type="text" placeholder="Поиск товаров">
+            
+            <button class="green-button">
+                <img class="search-icon" src="img/svg/search.svg" alt="search">
+            </button>
+        </div>
+    </div>
+    
+    <a href="#" class="navigation__link nav-link">
+        <svg class="nav-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#02C087"/>
+            <path d="M11.7289 4.57198C11.8373 4.34329 12.1627 4.34329 12.2711 4.57198L14.2245 8.69354C14.2683 8.78581 14.3559 8.8495 14.4572 8.86258L18.9807 9.44679C19.2317 9.4792 19.3322 9.78869 19.1482 9.96244L15.8321 13.0939C15.7578 13.164 15.7243 13.2671 15.7432 13.3674L16.5854 17.8501C16.6321 18.0988 16.3689 18.29 16.1468 18.1687L12.1438 15.9825C12.0542 15.9336 11.9458 15.9336 11.8562 15.9825L7.85324 18.1687C7.63113 18.29 7.36787 18.0988 7.4146 17.8501L8.25682 13.3674C8.27568 13.2671 8.24219 13.164 8.16795 13.0939L4.85176 9.96244C4.66776 9.78869 4.76832 9.4792 5.0193 9.44679L9.54279 8.86258C9.64406 8.8495 9.73173 8.78581 9.77546 8.69354L11.7289 4.57198Z" fill="white"/>
+        </svg>
+        <span>Бонусная программа</span>  
+    </a>
+    <a href="#" class="navigation__link nav-link">
+        <svg class="nav-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#02C087"/>
+            <path d="M17.0909 9.45457H15.1818V6.90912H6.27273C5.57273 6.90912 5 7.48185 5 8.18185V15.1818H6.27273C6.27273 16.2382 7.12545 17.0909 8.18182 17.0909C9.23818 17.0909 10.0909 16.2382 10.0909 15.1818H13.9091C13.9091 16.2382 14.7618 17.0909 15.8182 17.0909C16.8745 17.0909 17.7273 16.2382 17.7273 15.1818H19V12L17.0909 9.45457ZM8.18182 16.1364C7.65364 16.1364 7.22727 15.71 7.22727 15.1818C7.22727 14.6537 7.65364 14.2273 8.18182 14.2273C8.71 14.2273 9.13636 14.6537 9.13636 15.1818C9.13636 15.71 8.71 16.1364 8.18182 16.1364ZM16.7727 10.4091L18.02 12H15.1818V10.4091H16.7727ZM15.8182 16.1364C15.29 16.1364 14.8636 15.71 14.8636 15.1818C14.8636 14.6537 15.29 14.2273 15.8182 14.2273C16.3464 14.2273 16.7727 14.6537 16.7727 15.1818C16.7727 15.71 16.3464 16.1364 15.8182 16.1364Z" fill="white"/>
+        </svg>
+        <span>Доставка</span> 
+    </a>
+</section>
+    <menu id="tapbar" class="tapbar">
+    <a href="/" class="tapbar__item tapbar__item-home active">
+        <svg class="tapbar__icon" width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.356916 6.34889C0.132663 6.50907 -0.000427246 6.76769 -0.000427246 7.04328V17.8397C-0.000427246 18.311 0.381623 18.693 0.852906 18.693H5.19068C5.66197 18.693 6.04402 18.311 6.04402 17.8397V12.293C6.04402 11.8217 6.42607 11.4397 6.89735 11.4397H10.0262C10.4975 11.4397 10.8796 11.8217 10.8796 12.293V17.8397C10.8796 18.311 11.2616 18.693 11.7329 18.693H16.0707C16.542 18.693 16.924 18.311 16.924 17.8397V7.04328C16.924 6.76769 16.7909 6.50907 16.5667 6.34889L8.95779 0.913971C8.66108 0.702041 8.26251 0.702041 7.96581 0.913971L0.356916 6.34889Z" fill="#08A979"/>
+        </svg>
+        <span class="tapbar__label">Главная</span>
+    </a>
+    <a href="catalog.html" class="tapbar__item tapbar__item-catalog">
+        <svg class="tapbar__icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 11.3085C0 11.8607 0.447715 12.3085 1 12.3085H8.33333C8.88562 12.3085 9.33333 11.8607 9.33333 11.3085V11.0227C9.33333 10.4705 8.88562 10.0227 8.33333 10.0227H0.999999C0.447714 10.0227 0 10.4705 0 11.0227V11.3085ZM0 15.8799C0 16.4322 0.447715 16.8799 1 16.8799H8.33333C8.88562 16.8799 9.33333 16.4322 9.33333 15.8799V15.5942C9.33333 15.0419 8.88562 14.5942 8.33333 14.5942H0.999999C0.447714 14.5942 0 15.0419 0 15.5942V15.8799ZM0 6.73703C0 7.28931 0.447715 7.73703 1 7.73703H8.33333C8.88562 7.73703 9.33333 7.28931 9.33333 6.73703V6.45131C9.33333 5.89903 8.88562 5.45131 8.33333 5.45131H0.999999C0.447714 5.45131 0 5.89903 0 6.45131V6.73703ZM0.999999 0.879883C0.447714 0.879883 0 1.3276 0 1.87988V2.1656C0 2.71788 0.447715 3.1656 1 3.1656H8.33333C8.88562 3.1656 9.33333 2.71788 9.33333 2.1656V1.87988C9.33333 1.3276 8.88562 0.879883 8.33333 0.879883H0.999999ZM11.6667 1.87988C11.6667 1.3276 12.1144 0.879883 12.6667 0.879883H20C20.5523 0.879883 21 1.3276 21 1.87988V15.8799C21 16.4322 20.5523 16.8799 20 16.8799H12.6667C12.1144 16.8799 11.6667 16.4322 11.6667 15.8799V1.87988Z" fill="#58575C"/>
+        </svg>
+        <span class="tapbar__label">Каталог</span>
+    </a>
+    <a href="/cart" class="tapbar__item tapbar__item-cart">
+        <span class="tapbar__item-counter">0</span>
+        <svg class="tapbar__icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.9468 7.72287L12.3677 0.4647C12.1691 0.1549 11.8345 0 11.5 0C11.1655 0 10.8309 0.1549 10.6323 0.475764L6.05318 7.72287H1.04545C0.470455 7.72287 0 8.22076 0 8.82929C0 8.92887 0.0104545 9.02845 0.0418181 9.12803L2.69727 19.3846C2.93773 20.314 3.74273 21 4.70455 21H18.2955C19.2573 21 20.0623 20.314 20.3132 19.3846L22.9686 9.12803L23 8.82929C23 8.22076 22.5295 7.72287 21.9545 7.72287H16.9468ZM8.36364 7.72287L11.5 2.85458L14.6364 7.72287H8.36364ZM11.5 16.5743C10.35 16.5743 9.40909 15.5785 9.40909 14.3614C9.40909 13.1444 10.35 12.1486 11.5 12.1486C12.65 12.1486 13.5909 13.1444 13.5909 14.3614C13.5909 15.5785 12.65 16.5743 11.5 16.5743Z" fill="#58575C"/>
+        </svg>
+        <span class="tapbar__label">Корзина</span>
+    </a>
+    <button href="/profile" class="tapbar__item tapbar__item-man status-red" onclick="loginPopupBtn()">
+        <div>
+            <svg class="tapbar__icon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5 10.5C13.4006 10.5 15.75 8.15063 15.75 5.25C15.75 2.34938 13.4006 0 10.5 0C7.59937 0 5.25 2.34938 5.25 5.25C5.25 8.15063 7.59937 10.5 10.5 10.5ZM10.5 13.125C6.99563 13.125 0 14.8837 0 18.375V21H21V18.375C21 14.8837 14.0044 13.125 10.5 13.125Z" fill="#58575C"/>
+            </svg>
+        </div>
+                    
+        <span class="tapbar__label">Вход</span>
+    </button>
+    <a href="favorites.html" class="tapbar__item tapbar__item-like">
+        <svg class="tapbar__icon" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.5 20.9289L9.88273 19.4565C4.1385 14.2477 0.346191 10.8123 0.346191 6.59616C0.346191 3.16078 3.04542 0.461548 6.48081 0.461548C8.42158 0.461548 10.2843 1.36501 11.5 2.7927C12.7158 1.36501 14.5785 0.461548 16.5193 0.461548C19.9547 0.461548 22.6539 3.16078 22.6539 6.59616C22.6539 10.8123 18.8616 14.2477 13.1173 19.4677L11.5 20.9289Z" fill="#58575C"/>
+        </svg>
+        <span class="tapbar__label">Избранное</span>
+    </a>
+</menu>
+    <div id="navigation__search-content" class="navigation__search-content">
+    <div class="navigation__search-content-items">
+        <div class="search-content-item">
+    <img src="./img/product.webp" alt="content-item">
+    <a href="#">Сведство для чистки окон</a>
+    <div>
+        <span class="search-content-item__cost-strike">6 000 ₽</span>
+        <span class="search-content-item__cost">3 000 ₽</span>
+    </div>
+    <button></button>
+</div>
+        <div class="search-content-item">
+    <img src="./img/product.webp" alt="content-item">
+    <a href="#">Сведство для чистки окон</a>
+    <div>
+        <span class="search-content-item__cost-strike">6 000 ₽</span>
+        <span class="search-content-item__cost">3 000 ₽</span>
+    </div>
+    <button></button>
+</div>
+        <div class="search-content-item">
+    <img src="./img/product.webp" alt="content-item">
+    <a href="#">Сведство для чистки окон</a>
+    <div>
+        <span class="search-content-item__cost-strike">6 000 ₽</span>
+        <span class="search-content-item__cost">3 000 ₽</span>
+    </div>
+    <button></button>
+</div>
+        <div class="search-content-item">
+    <img src="./img/product.webp" alt="content-item">
+    <a href="#">Сведство для чистки окон</a>
+    <div>
+        <span class="search-content-item__cost-strike">6 000 ₽</span>
+        <span class="search-content-item__cost">3 000 ₽</span>
+    </div>
+    <button></button>
+</div>
+        <div class="search-content-item">
+    <img src="./img/product.webp" alt="content-item">
+    <a href="#">Сведство для чистки окон</a>
+    <div>
+        <span class="search-content-item__cost-strike">6 000 ₽</span>
+        <span class="search-content-item__cost">3 000 ₽</span>
+    </div>
+    <button></button>
+</div>
+        <div class="search-content-item">
+    <img src="./img/product.webp" alt="content-item">
+    <a href="#">Сведство для чистки окон</a>
+    <div>
+        <span class="search-content-item__cost-strike">6 000 ₽</span>
+        <span class="search-content-item__cost">3 000 ₽</span>
+    </div>
+    <button></button>
+</div>
+    </div>
+    <div class="navigation__search-content-button">
+        <a href="#">Показать 52 товара</a>
+    </div>
+</div>
+    <div class="cookies">
+    <div class="cookies__wrapper">
+        <img src="img/svg/cookie.svg" alt="cookie">
+        <div>
+            <p>Мы используем файлы cookie. Они помогают улучшить ваше взаимодействие с сайтом.</p>
+            <button class="green-button">Принять</button>
+        </div>
+        
+    </div>
+    
+</div>
+    <div class="login-popup">
+    <!-- onclick="loginPopupBtn()" -->
+    <div id="login-popup__popup" class="login-popup__popup">
+        <div class="login-popup__content">
+            <div class="login-popup__header">
+               <h3>Авторизация</h3>
+               <button onclick="loginPopupCloseBtn()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <p class="login-popup__text">Если у вас нет личного кабинета, <a href="#">зарегистрируйтесь</a></p>
+            <form class="login-popup-form">
+                <div class="input-text">
+    <p class="input-text__title">Email</p>
+    <div class="input-text__container">
+        <input type="text">
+        <!-- autocomplete="@@autocomplete" -->
+    </div>
+    <span class="input-text__error">Введите адрес электронной почты.</span>
+</div>
+                <div class="input-password-login">
+    <link rel="prefetch prerender" href="/img/svg/eye-close.svg" />
+    <div class="input-password-login__head">
+        <p class="input-password-login__title">Пароль</p>
+        <button class="input-password-login__forgot" type="button" onclick="forgotClick()">Забыли пароль?</button>
+    </div>
+    
+    <div class="input-password-login__container">
+        <input type="password" autocomplete="password">
+        <button type="button" onclick="typeToggle(event)"><img src="/img/svg/eye.svg" alt="show"></button>
+    </div>
+    <p class="input-password-login__error">Это значение должно содержать от 6 до 20 символов.</p>
+</div>
+
+                
+            </form>
+            <button class="green-button" disabled>Войти</button>
+        </div>
+        <div class="login-popup__content">
+            <div class="login-popup__header">
+               <h3>Восстановить пароль</h3>
+               <button onclick="forgotClose()"><img src="./img/svg/close2.svg" alt="close"></button>
+            </div>
+            <p class="login-popup__text">Введите адрес электронной почты, на который будет выслано письмо для восстановления пароля.</p>
+            <form class="login-popup-form">
+                <div class="input-text">
+    <p class="input-text__title">Email</p>
+    <div class="input-text__container">
+        <input type="text">
+        <!-- autocomplete="@@autocomplete" -->
+    </div>
+    <span class="input-text__error">Аккаунта с таким email не существует.</span>
+</div>
+                
+            </form>
+            <button class="green-button" disabled>Войти</button>
+        </div>
+    </div>
+</div>
+
+
+
+</header>
+
+	<div class="wrapper">
+		<main class="main">
+			<div class="breadcrumbs-section">
+    <nav class="breadcrumbs">
+    <ol>
+      <li class="breadcrumbs__item">
+        <a href="">Главная</a>
+        <span></span>
+      </li>
+      
+      <li class="breadcrumbs__item">Каталог</li>
+    </ol>
+</nav>
+
+</div>
+			<a href="#" class="stock-big">
+    <h3>Скидки до 60% на бытовую химию</h3>
+    <p>С 6 октября по 2 ноября</p>
+</a>
+    
+			<ul class="stock-ul">
+    <li>Совершите покупку товаров «Synergetic» с Картой Клуба в супермаркете или оформите заказ в экспресс-доставке или через самовывоз</li>
+    <li>Совершите покупку товаров «Synergetic» с Картой Клуба в супермаркете или оформите заказ в экспресс-доставке или через самовывоз</li>
+    <li>Совершите покупку товаров «Synergetic» с Картой Клуба в супермаркете или оформите заказ в экспресс-доставке или через самовывоз</li>
+    <li>Совершите покупку товаров «Synergetic» с Картой Клуба в супермаркете или оформите заказ в экспресс-доставке или через самовывоз</li>
+</ul>
+    
+			<h2 class="heading">Товары, участвующие в акции</h2>
+			<div class="filter-btn">
+	<button class="button-filter" onclick="filterOpenBtn()">
+    <img src="./img/svg/filter.svg" alt="filter">
+    Фильтр
+</button>
+</div>
+			<section class="sidebar-and-content">
+    
+<div id="catalog-filters__container" class="catalog-filters__container">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            markAllAccordions()
+        });
+    </script>
+
+    <div id="catalog-filters__mobile-nav" class="catalog-filters__mobile-nav">
+        <button class="catalog-filters__back" onclick="backBtn()">
+            <img src="./img/svg/arrow-left.svg" alt="arrow-left">
+            <span>Назад</span>
+        </button>
+        <div class="catalog-filters__title">
+            <span>Фильтры</span>
+        </div>
+        <button id="catalog-filters__reset" class="catalog-filters__reset" onclick="resetAll(event)">
+            <span class="full">Сбросить всё</span>
+            <span class="short">Сбросить</span>
+        </button>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        markAllInputs()
+    });
+</script>
+<button id="reset-all-filter-btn" class="reset-all-filter-btn" onclick="resetAll(event)">
+    <span>Сбросить все</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L11 11" stroke="#58575C"/>
+        <path d="M11 1L1 11" stroke="#58575C"/>
+    </svg>
+
+</button>
+
+
+    <div id="catalog-filters__wrapper" class="catalog-filters__wrapper">
+        <button class="catalog-filters">
+            <span>Тип товара</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            <div id="filter" class="filter">
+
+    <div class="filter-search-input">
+    <input class="filter-search-input__input" type="text" placeholder="Поиск по списку" oninput="filter(event)">
+    <button class="filter-search-input__btn"><img src="./img/svg/search-input.svg" alt="search-input"></button>
+</div>
+
+    
+    <div class="filter__items">
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-gell" name="checkbox-gell" />
+            <label for="checkbox-gell">
+                Гель
+                <span>8</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-spray" name="checkbox-spray" />
+            <label for="checkbox-spray">
+                Спрей
+                <span>3</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-gell-1" name="checkbox-gell" disabled="disabled" />
+            <label for="checkbox-gell-1">
+                Гель
+                <span>0</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-spray-1" name="checkbox-spray" />
+            <label for="checkbox-spray-1">
+                Спрей
+                <span>3</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-gell-2" name="checkbox-gell" />
+            <label for="checkbox-gell-2">
+                Гель
+                <span>8</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-spray-2" name="checkbox-spray"/>
+            <label for="checkbox-spray-2">
+                Спрей
+                <span>3</span>
+            </label>
+        </div>
+    </div>
+    
+        
+    
+
+
+    <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
+
+</div>
+
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Цена</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            
+
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Бренд</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            <div class="filter">
+    <div class="filter-search-input">
+    <input class="filter-search-input__input" type="text" placeholder="Поиск по списку" oninput="filter(event)">
+    <button class="filter-search-input__btn"><img src="./img/svg/search-input.svg" alt="search-input"></button>
+</div>
+
+    <div class="filter__items">
+            <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-brand" />
+            <label for="checkbox-brand">
+                Бренд
+                <span>1</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-ne-brand" />
+            <label for="checkbox-ne-brand">
+                Не бренд
+                <span>8</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-brand-1" />
+            <label for="checkbox-brand-1">
+                Бренд
+                <span>0</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-ne-brand-1" />
+            <label for="checkbox-ne-brand-1">
+                Не бренд
+                <span>4</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-brand-2" />
+            <label for="checkbox-brand-2">
+                Бренд
+                <span>3</span>
+            </label>
+        </div>
+
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-ne-brand-2" />
+            <label for="checkbox-ne-brand-2">
+                Не бренд
+                <span>9</span>
+            </label>
+        </div>
+    </div>
+
+    <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
+
+</div>
+
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Вес товара</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+        
+        </div>
+    
+        <button class="catalog-filters">
+            <span>Объём</span>
+            <img src="./img/svg/arrow-down.svg" alt="arrow-down">
+        </button>
+        <div class="catalog-filters__panel">
+            <div class="filter">
+    <div class="filter__items">
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-size" />
+            <label for="checkbox-size">
+                0 – 0.25 л 
+                <span>34</span>
+            </label>
+        </div>
+    
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-size-1" />
+            <label for="checkbox-size-1">
+                0.25 – 0.5 л 
+                <span>14</span>
+            </label>
+        </div>
+    
+        <div class="checkbox-filter checkbox">
+            <input type="checkbox" id="checkbox-size-2" />
+            <label for="checkbox-size-2">
+                0.5 – 0.75 л 
+                <span>11</span>
+            </label>
+        </div>
+    
+        <div class="checkbox-filter checkbox">
+            
+            <input type="checkbox" id="checkbox-size-3" />
+    
+            <label for="checkbox-size-3">
+                0.75 – 2 л 
+                <span>4</span>
+            </label>
+            
+        </div>
+    </div>
+
+    <button id="reset-filter-btn" class="reset-filter-btn" onclick="reset(event)" >Сбросить</button>
+
+</div>
+
+        </div>
+    
+        <div class="filter-popularity__container">
+    <div class="filter-popularity">
+        <input type="checkbox" id="checkbox-popularity" />
+        
+        <label for="checkbox-popularity">
+            По популярности
+        </label>
+    
+    </div>
+</div>
+
+
+        
+
+    </div>
+    <div id="catalog-filters__show" class="catalog-filters__show">
+        <button id="catalog-filters__show-btn" class="catalog-filters__show-btn" onclick="showClick()">Показать товары</button>
+    </div>
+    
+    
+
+
+</div>
+
+    <div>
+        <div class="catalog-list">
+    <div class="product">
+    <div class="product__top">
+        <div class="product__label">
+            <img src="img/svg/hit.svg" alt="hit">
+        </div>
+        <button class="product__like"></button>
+    </div>
+    <a href="#" class="product__image">
+        <img src="img/product.webp" alt="product">
+    </a>
+    <div class="product__middle">
+        <span class="product__code">Арт. 8383</span>
+        <a href="#"><h4 class="product__title">Гель-антисептик для рук Manufactor 10 л</h4></a>
+        <div class="product__size">
+            <a href="#" class="product__size-item"><span>3</span></a>
+            <a href="#" class="product__size-item"><span>5</span></a>
+            <a href="#" class="product__size-item active"><span>10</span></a>
+        </div>
+    </div>
+    <div class="product__bottom">
+        <div>
+            <div class="product__cost-strike">6 000 ₽</div>
+             <div class="product__cost">3 000 ₽</div>
+        </div>
+        <div class="product__discount"><span>–50%</span></div>
+        <button class="product__button-basket"></button>
+    </div>
+</div>
+    <div class="product">
+    <div class="product__top">
+        <div class="product__label">
+            <img src="img/svg/hit.svg" alt="hit">
+        </div>
+        <button class="product__like"></button>
+    </div>
+    <a href="#" class="product__image">
+        <img src="img/product.webp" alt="product">
+    </a>
+    <div class="product__middle">
+        <span class="product__code">Арт. 8383</span>
+        <a href="#"><h4 class="product__title">Гель-антисептик для рук Manufactor 10 л</h4></a>
+        <div class="product__size">
+            <a href="#" class="product__size-item"><span>3</span></a>
+            <a href="#" class="product__size-item"><span>5</span></a>
+            <a href="#" class="product__size-item active"><span>10</span></a>
+        </div>
+    </div>
+    <div class="product__bottom">
+        <div>
+            <div class="product__cost-strike">6 000 ₽</div>
+             <div class="product__cost">3 000 ₽</div>
+        </div>
+        <div class="product__discount"><span>–50%</span></div>
+        <button class="product__button-basket"></button>
+    </div>
+</div>
+    <div class="product">
+    <div class="product__top">
+        <div class="product__label">
+            <img src="img/svg/hit.svg" alt="hit">
+        </div>
+        <button class="product__like"></button>
+    </div>
+    <a href="#" class="product__image">
+        <img src="img/product.webp" alt="product">
+    </a>
+    <div class="product__middle">
+        <span class="product__code">Арт. 8383</span>
+        <a href="#"><h4 class="product__title">Гель-антисептик для рук Manufactor 10 л</h4></a>
+        <div class="product__size">
+            <a href="#" class="product__size-item"><span>3</span></a>
+            <a href="#" class="product__size-item"><span>5</span></a>
+            <a href="#" class="product__size-item active"><span>10</span></a>
+        </div>
+    </div>
+    <div class="product__bottom">
+        <div>
+            <div class="product__cost-strike">6 000 ₽</div>
+             <div class="product__cost">3 000 ₽</div>
+        </div>
+        <div class="product__discount"><span>–50%</span></div>
+        <button class="product__button-basket"></button>
+    </div>
+</div>
+    <div class="product">
+    <div class="product__top">
+        <div class="product__label">
+            <img src="img/svg/hit.svg" alt="hit">
+        </div>
+        <button class="product__like"></button>
+    </div>
+    <a href="#" class="product__image">
+        <img src="img/product.webp" alt="product">
+    </a>
+    <div class="product__middle">
+        <span class="product__code">Арт. 8383</span>
+        <a href="#"><h4 class="product__title">Гель-антисептик для рук Manufactor 10 л</h4></a>
+        <div class="product__size">
+            <a href="#" class="product__size-item"><span>3</span></a>
+            <a href="#" class="product__size-item"><span>5</span></a>
+            <a href="#" class="product__size-item active"><span>10</span></a>
+        </div>
+    </div>
+    <div class="product__bottom">
+        <div>
+            <div class="product__cost-strike">6 000 ₽</div>
+             <div class="product__cost">3 000 ₽</div>
+        </div>
+        <div class="product__discount"><span>–50%</span></div>
+        <button class="product__button-basket"></button>
+    </div>
+</div>
+    <div class="product">
+    <div class="product__top">
+        <div class="product__label">
+            <img src="img/svg/hit.svg" alt="hit">
+        </div>
+        <button class="product__like"></button>
+    </div>
+    <a href="#" class="product__image">
+        <img src="img/product.webp" alt="product">
+    </a>
+    <div class="product__middle">
+        <span class="product__code">Арт. 8383</span>
+        <a href="#"><h4 class="product__title">Гель-антисептик для рук Manufactor 10 л</h4></a>
+        <div class="product__size">
+            <a href="#" class="product__size-item"><span>3</span></a>
+            <a href="#" class="product__size-item"><span>5</span></a>
+            <a href="#" class="product__size-item active"><span>10</span></a>
+        </div>
+    </div>
+    <div class="product__bottom">
+        <div>
+            <div class="product__cost-strike">6 000 ₽</div>
+             <div class="product__cost">3 000 ₽</div>
+        </div>
+        <div class="product__discount"><span>–50%</span></div>
+        <button class="product__button-basket"></button>
+    </div>
+</div>
+    <div class="product">
+    <div class="product__top">
+        <div class="product__label">
+            <img src="img/svg/hit.svg" alt="hit">
+        </div>
+        <button class="product__like"></button>
+    </div>
+    <a href="#" class="product__image">
+        <img src="img/product.webp" alt="product">
+    </a>
+    <div class="product__middle">
+        <span class="product__code">Арт. 8383</span>
+        <a href="#"><h4 class="product__title">Гель-антисептик для рук Manufactor 10 л</h4></a>
+        <div class="product__size">
+            <a href="#" class="product__size-item"><span>3</span></a>
+            <a href="#" class="product__size-item"><span>5</span></a>
+            <a href="#" class="product__size-item active"><span>10</span></a>
+        </div>
+    </div>
+    <div class="product__bottom">
+        <div>
+            <div class="product__cost-strike">6 000 ₽</div>
+             <div class="product__cost">3 000 ₽</div>
+        </div>
+        <div class="product__discount"><span>–50%</span></div>
+        <button class="product__button-basket"></button>
+    </div>
+</div>
+    <div class="product">
+    <div class="product__top">
+        <div class="product__label">
+            <img src="img/svg/hit.svg" alt="hit">
+        </div>
+        <button class="product__like"></button>
+    </div>
+    <a href="#" class="product__image">
+        <img src="img/product.webp" alt="product">
+    </a>
+    <div class="product__middle">
+        <span class="product__code">Арт. 8383</span>
+        <a href="#"><h4 class="product__title">Гель-антисептик для рук Manufactor 10 л</h4></a>
+        <div class="product__size">
+            <a href="#" class="product__size-item"><span>3</span></a>
+            <a href="#" class="product__size-item"><span>5</span></a>
+            <a href="#" class="product__size-item active"><span>10</span></a>
+        </div>
+    </div>
+    <div class="product__bottom">
+        <div>
+            <div class="product__cost-strike">6 000 ₽</div>
+             <div class="product__cost">3 000 ₽</div>
+        </div>
+        <div class="product__discount"><span>–50%</span></div>
+        <button class="product__button-basket"></button>
+    </div>
+</div>
+    <div class="product">
+    <div class="product__top">
+        <div class="product__label">
+            <img src="img/svg/hit.svg" alt="hit">
+        </div>
+        <button class="product__like"></button>
+    </div>
+    <a href="#" class="product__image">
+        <img src="img/product.webp" alt="product">
+    </a>
+    <div class="product__middle">
+        <span class="product__code">Арт. 8383</span>
+        <a href="#"><h4 class="product__title">Гель-антисептик для рук Manufactor 10 л</h4></a>
+        <div class="product__size">
+            <a href="#" class="product__size-item"><span>3</span></a>
+            <a href="#" class="product__size-item"><span>5</span></a>
+            <a href="#" class="product__size-item active"><span>10</span></a>
+        </div>
+    </div>
+    <div class="product__bottom">
+        <div>
+            <div class="product__cost-strike">6 000 ₽</div>
+             <div class="product__cost">3 000 ₽</div>
+        </div>
+        <div class="product__discount"><span>–50%</span></div>
+        <button class="product__button-basket"></button>
+    </div>
+</div>
+    <div class="product">
+    <div class="product__top">
+        <div class="product__label">
+            <img src="img/svg/hit.svg" alt="hit">
+        </div>
+        <button class="product__like"></button>
+    </div>
+    <a href="#" class="product__image">
+        <img src="img/product.webp" alt="product">
+    </a>
+    <div class="product__middle">
+        <span class="product__code">Арт. 8383</span>
+        <a href="#"><h4 class="product__title">Гель-антисептик для рук Manufactor 10 л</h4></a>
+        <div class="product__size">
+            <a href="#" class="product__size-item"><span>3</span></a>
+            <a href="#" class="product__size-item"><span>5</span></a>
+            <a href="#" class="product__size-item active"><span>10</span></a>
+        </div>
+    </div>
+    <div class="product__bottom">
+        <div>
+            <div class="product__cost-strike">6 000 ₽</div>
+             <div class="product__cost">3 000 ₽</div>
+        </div>
+        <div class="product__discount"><span>–50%</span></div>
+        <button class="product__button-basket"></button>
+    </div>
+</div>
+</div>
+        <nav class="pagination">
+
+    <a class="pagination_btn previous" href="#">Назад</a>
+
+    <ul class="pagination_items">
+
+        <li class="pagination_item active">
+            <a href="#">1</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">2</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">3</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">4</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">5</a>
+        </li>
+        
+        <li class="pagination_item dots">
+            <a>...</a>
+        </li>
+        
+        <li class="pagination_item">
+            <a href="#">145</a>
+        </li>
+
+    </ul>
+    
+    <a class="pagination_btn next" href="#">Дальше</a>
+
+    <a class="pagination_btn all" href="#">Показать все товары</a>
+
+</nav>
+
+    </div>
+    
+</section>
+
+
+
+		</main>
+		<style>
+			.stock-big {
+				margin-bottom: 0;
+			}
+			.heading {
+				padding-top: 100px;
+			}
+			@media (max-width: 1024px) {
+				.heading {
+					padding-top: 110px;
+				}
+			}
+			@media (max-width: 460px) {
+				.heading {
+					padding-top: 80px;
+				}
+			}
+			@media (max-width: 320px) {
+				.heading {
+					padding-top: 60px;
+				}
+			}
+
+		</style>
+	</div>
+	<footer class="footer">
+    <div class="footer__container">
+    <div class="footer__branding">
+            <img class="footer__logo" src="img/svg/logo.svg" alt="logo">
+            <div class="footer__phone">
+                <a href="#">8 800 800-80-80</a>
+                <a href="#">8 800 800-80-80</a>
+            </div>
+            <div class="footer__socials">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        
+    </div>
+
+    <div class="footer__links">
+        <div>
+            <h5>Компания</h5>
+            <a href="#">Акции</a>
+            <a href="#">Новости</a>
+            <a href="#">Полезные статьи</a>
+            <a href="#">Контакты</a>
+        </div>
+        
+    </div>
+
+    <div class="footer__links">
+        <div>
+            <h5>Покупателям</h5>
+            <a href="#">Доставка</a>
+            <a href="#">Оплата</a>
+            <a href="#">Бонусная программа</a>
+            <a href="#">Как заказать</a>
+            <a href="#">Обмен и возврат</a>
+        </div>
+        
+    </div>
+
+    <div class="footer__links">
+        <div>
+            <h5>Информация</h5>
+            <a href="#">Карта сайта</a>
+        </div>
+        
+    </div>
+
+    <div class="footer__newsletter">
+        <h5>Лучшие предложния у вас в почте</h5>
+        <div>
+            <div class="footer__email">
+                <input id="footer__email-input" type="text" placeholder="Электронная почта" oninput="checkEmail()" onchange="checkEmailShowStatus()">
+                <button class="green-button" disabled="disabled" >Подписаться</button>
+            </div>
+            <div id="footer__email-error" class="footer__email-error">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10.5" cy="10.5" r="10" stroke="#FC3C3C"/>
+                    <rect x="9.5" y="8.50647" width="2" height="6.98695" fill="#FC3C3C"/>
+                    <circle cx="10.5" cy="6.50647" r="1" fill="#FC3C3C"/>
+                </svg>
+                <span>Адрес электронной почты должен содержать символ «@».</span>
+            </div>
+            <div id="footer__email-checkbox" class="footer__email-checkbox">
+                <input type="checkbox" id="check_email" name="check_email" onchange="checkEmail()" />
+                <label for="check_email">Я согласен с <a href="#">условиями передачи</a>  данных</label>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <div class="footer__bottom-bar">
+        <a href="#">Договор оферты</a>
+        <a href="#">©2021  Все права защищены</a>
+        <a href="#">Политика конфиденциальности</a>
+    </div>
+</footer>
+
+	<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
