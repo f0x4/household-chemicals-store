@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Нововсти",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<div class="wrapper">
+		<main class="main">
+			@@include('components/page-blocks/breadcrumbs-section/_breadcrumbs-section.html')
+			@@include('components/bem-blocks/heading/_heading.html', {"title": "Нововсти"})
+			@@include('components/page-blocks/news-list/_news-list.html')
+			@@include('components/page-blocks/light-btn/_light-btn.html')
+			 
+		</main>
+	</div>
+	<style>
+		.light-btn {
+			margin-bottom: 100px;
+		}
+	</style>
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
+
