@@ -131,3 +131,21 @@
   text-decoration-line: underline;
   color: #08a979;
 }
+@media (max-width: 460px) {
+  .review-add {
+    width: 100%;
+  }
+  .review-add__btn {
+    width: 100%;
+    height: 47px;
+    justify-content: center;
+
+    font-size: 14px;
+    line-height: 17px;
+
+    background: #c1eadd;
+    border-radius: 2px;
+
+    color: #08a979;
+  }
+}
