@@ -5,9 +5,9 @@ function typeToggle(event) {
     let img = parrent.getElementsByTagName('img')
     if (input[0].type == "password") {
         input[0].type = "text";
-        img[0].src = "/img/svg/eye-close.svg"
+        img[0].src = "img/svg/eye-close.svg"
         return;
     } 
     input[0].type = "password";
-    img[0].src = "/img/svg/eye.svg";
+    img[0].src = "img/svg/eye.svg";
 }
