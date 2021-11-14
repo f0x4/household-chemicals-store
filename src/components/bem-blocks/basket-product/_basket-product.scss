@@ -3,7 +3,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 748px;
   min-height: 177px;
 
   background: #ffffff;
@@ -12,8 +11,8 @@
 
   // Отступы для теней
   margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 40px;
+  margin-left: 0;
+  margin-right: 0;
 
   > :nth-last-child(1) {
     margin-right: 0 !important;
@@ -21,6 +20,24 @@
   > :nth-last-child(n + 1) {
     margin-right: 34px;
   }
+}
+
+.basket-product__back {
+  padding: 6px 17px;
+  background: #c1eadd;
+  border-radius: 2px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 35px;
+
+  color: #08a979;
+}
+
+.basket-product__one {
+  display: flex;
 }
 
 .basket-product__cost-2 {
@@ -34,7 +51,6 @@
   }
 }
 .basket-product__top {
-  margin-left: auto;
   display: flex;
   justify-content: space-between;
 }
@@ -61,6 +77,7 @@
 .basket-product__image {
   display: flex;
   justify-content: center;
+  margin-right: 10px;
 
   img {
     max-width: 154px;
@@ -69,6 +86,8 @@
 }
 
 .basket-product__middle {
+  margin-top: 18px;
+  justify-self: left;
   .basket-product__title {
     margin-top: 14px;
     margin-bottom: 23px;
@@ -207,17 +226,17 @@
   .basket-product {
     min-height: 190px;
     max-width: none;
-    margin-left: 18px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 @media (max-width: 768px) {
   .basket-product {
     min-height: 153px;
-    margin-right: 36px;
-    margin-left: 16px;
   }
 
   .basket-product__image {
+    margin-top: 30px !important;
     img {
       max-width: 137px;
       max-height: 137px;
@@ -225,6 +244,7 @@
   }
 
   .basket-product__middle {
+    margin-top: 0;
     > span {
       font-size: 11px;
     }
@@ -245,8 +265,6 @@
   .basket-product {
     justify-content: space-between;
     min-height: 190px;
-    margin-right: 16px;
-    margin-left: 4px;
     margin-bottom: 0;
     border-bottom: 1px solid #e8e8e8;
   }

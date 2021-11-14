@@ -1,3 +1,38 @@
 .basket {
+  display: flex;
   margin-bottom: 90px;
+  padding: 0 40px;
+}
+.basket__products {
+  margin-right: 125px;
+}
+.basket__checkout {
+  min-width: 326px;
+}
+
+@media (max-width: 1439px) {
+  .basket {
+    flex-direction: column;
+  }
+
+  .basket__products {
+    margin-right: 0;
+    min-width: auto;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .basket {
+    padding: 0 36px;
+  }
+}
+@media (max-width: 460px) {
+  .basket {
+    padding: 0 16px;
+  }
+}
+@media (max-width: 320px) {
+  .basket {
+    padding: 0 10px;
+  }
 }
