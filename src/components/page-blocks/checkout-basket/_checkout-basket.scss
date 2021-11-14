@@ -79,8 +79,52 @@
     color: #08a979;
   }
 }
-@media (max-width: 1024px) {
+
+.checkout-info {
+  margin-top: 20px;
+  display: flex;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 2px;
+  img {
+  }
+  .checkout-info__left {
+    margin-right: 22px;
+  }
+  .checkout-info__title {
+    margin-bottom: 8px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #252525;
+  }
+  .checkout-info__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #58575c;
+  }
+}
+
+@media (max-width: 1439px) {
   .checkout-basket {
     margin-top: 60px;
+  }
+}
+.checkout-basket.a {
+  .basket-product__quantity {
+    display: none;
+  }
+  .basket-product__bottom {
+    display: none;
+  }
+  .basket-product__back {
+    display: block;
   }
 }
