@@ -1,3 +1,6 @@
+.firebase/
+.github/
+
 .vs
 .vscode
 .idea
