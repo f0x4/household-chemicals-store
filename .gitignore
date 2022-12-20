@@ -1,5 +1,5 @@
-.firebase/
-.github/
+.firebase
+.github
 
 .vs
 .vscode
